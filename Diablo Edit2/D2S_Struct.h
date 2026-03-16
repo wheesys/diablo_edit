@@ -200,6 +200,7 @@ public:
 								//野蛮人Barbarian:		0x04
 								//德努伊Druid:			0x05
 								//刺客Assassin:			0x06
+								//术士Warlock:			0x07
 	WORD	unkown2;			//0x101E
 	BYTE	charLevel;			//人物等级
 	DWORD	unkown3;			//0

@@ -148,6 +148,7 @@ END_MESSAGE_MAP()
 void CDlgCharBasicInfo::UpdateUI(const CD2S_Struct& character)
 {
 	switch (character.dwVersion) {
+		case 0x64:m_sVersion = _T("术士君临"); break;
 		case 0x63:m_sVersion = _T("PTR2.5"); break;
 		case 0x62:m_sVersion = _T("PTR2.4"); break;
 		case 0x61:m_sVersion = _T("Resurrected"); break;

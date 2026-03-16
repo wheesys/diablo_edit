@@ -40,7 +40,7 @@ public:
 	DECLARE_MESSAGE_MAP()
 // 自定义成员
 public:
-	static const UINT CLASS_NAME_SIZE = 7;					//角色数量
+	static const UINT CLASS_NAME_SIZE = 8;					//角色数量 (7个原职业 + 1个术士)
 	static const UINT CLASS_SKILL_TAB_SIZE = 3;				//每种角色技能树数量
 	static const UINT CLASS_SKILL_NAME_SIZE = 30;			//每种角色技能数量
 	static const int CLASS_SKILL_INDEX[CLASS_NAME_SIZE][CLASS_SKILL_NAME_SIZE];	//每种角色每个技能索引偏移

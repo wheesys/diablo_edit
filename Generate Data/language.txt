@@ -78,6 +78,7 @@
 	Barbarian Skills	野蛮人技能	野蠻人技能
 	Druid Skills	德鲁依技能	德魯依技能
 	Assassin Skills	刺客技能	刺客技能
+	Warlock Skills	术士技能	術士技能
 	All	全部	全部
 	Items	物品	物品
 	All	全	全
@@ -759,6 +760,35 @@
 	Blades of Ice	寒冰刃	寒冰刃
 	Dragon Flight	飞龙在天	飛龍在天
 	Royal Strike	凤凰攻击	鳳凰攻擊
+	Miasma Bolt	瘴气弹	瘴氣彈
+	Sigil: Lethargy	符印：昏睡	符印：昏睡
+	Ring of Fire	火焰环	火焰環
+	Miasma Chain	瘴气锁链	瘴氣鎖鏈
+	Sigil: Rancor	符印：怨恨	符印：怨恨
+	Flame Wave	火焰波	火焰波
+	Blood Boil	血沸	血沸
+	Enhanced Entropy	强化熵	強化熵
+	Sigil: Death	符印：死亡	符印：死亡
+	Abyss	深渊	深淵
+	Levitation Mastery	悬浮精通	懸浮精通
+	Hex: Bane	咒：灾祸	咒：災禍
+	Cleave	横扫	橫掃
+	Echoing Strike	回声打击	回聲打擊
+	Hex: Purge	咒：净化	咒：淨化
+	Blade Warp	利刃瞬移	利刃瞬移
+	Psychic Ward	心灵护盾	心靈護盾
+	Eldritch Blast	邪异冲击	邪異衝擊
+	Hex: Siphon	咒：虹吸	咒：虹吸
+	Mirrored Blades	镜像之刃	鏡像之刃
+	Demonic Mastery	恶魔精通	惡魔精通
+	Summon Goatman	召唤羊头人	召喚羊頭人
+	Blood Oath	血誓	血誓
+	Death Mark	死亡标记	死亡標記
+	Summon Tainted	召唤污堕者	召喚污墮者
+	Summon Defiler	召唤污秽者	召喚污穢者
+	Engorge	吞噬	吞噬
+	Consume	献祭	獻祭
+	Bind Demon	束缚恶魔	束縛惡魔
 *=======================角色技能树名字（不是技能名）			
 	Bow and Crossbow Skills	弓和十字弓技能	弓和十字弓技能
 	Passive and Magic Skills	被动和魔法技能	被動和魔法技能
@@ -781,6 +811,9 @@
 	Traps	陷阱	陷阱
 	Shadow Disciplines	影子训练	影子訓練
 	Martial Arts	武学艺术	武學藝術
+	Chaos Spells	混沌法术	混沌法術
+	Eldritch Spells	邪术武装	邪術武裝
+	Demon Spells	恶魔法术	惡魔法術
 *=======================时刻名字			
 	During Daytime	在白天	在白天
 	Near Dusk	在黄昏	在黃昏
@@ -794,6 +827,7 @@
 	Barbarian	野蛮人	野蠻人
 	Druid	德鲁依	德魯依
 	Assassin	刺客	刺客
+	Warlock	术士	術士
 *=======================以下是物品名称			
 	Elixir		靈藥
 	Healing Potion		一股邪惡力量
