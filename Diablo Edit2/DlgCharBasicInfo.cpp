@@ -405,7 +405,7 @@ BOOL CDlgCharBasicInfo::OnInitDialog()
 void CDlgCharBasicInfo::OnBnClicked_Skills()
 {
 	int charClass = m_cbCharClass.GetCurSel();
-	if (charClass >= 0 && charClass < 7) {
+	if (charClass >= 0 && charClass < ::theApp.CLASS_NAME_SIZE) {
 		CDlgSkills dlgSkill(charClass, m_bSkills);
 		dlgSkill.DoModal();
 	}

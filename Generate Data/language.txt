@@ -789,6 +789,8 @@
 	Engorge	吞噬	吞噬
 	Consume	献祭	獻祭
 	Bind Demon	束缚恶魔	束縛惡魔
+	Empty Slot 1	空位1	空位1
+	Empty Slot 2	空位2	空位2
 *=======================角色技能树名字（不是技能名）			
 	Bow and Crossbow Skills	弓和十字弓技能	弓和十字弓技能
 	Passive and Magic Skills	被动和魔法技能	被動和魔法技能
