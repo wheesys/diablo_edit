@@ -275,3 +275,6 @@ __pycache__/
 .spec-workflow/archive/
 .spec-workflow/specs/
 .spec-workflow/steering/
+
+# Compiled tools
+/Generate Data/gen_data
