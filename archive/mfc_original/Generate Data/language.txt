@@ -1,0 +1,4811 @@
+*LANG			
+	&English	简体中文(&Simplified Chinese)	繁體中文(&Traditional Chinese)
+	Warning	警告	警告
+	Error	错误	錯誤
+	no title	无标题	無標題
+	Unknown	未知	未知
+	Freezing	冰冻	冰凍
+	Poisoned	中毒	中毒
+	Fire Resist	火焰抵抗	火焰抵抗
+	Cold Resist	冰冷抵抗	冰冷抵抗
+	Lightning Resist	闪电抵抗	閃電抵抗
+	Normal	普通	普通
+			
+100	Foundry	铸造台	鑄造臺
+	Level	等级	等級
+	Owner	拥有者	擁有者
+	Quality	质量	質量
+	Defence	防御	防御
+	Quantity	数量	數量
+	Durability	耐久度	耐久度
+	Property Transparency	属性悬浮窗透明度	屬性懸浮窗透明度
+	Hide	隐藏	隱藏
+	Socket	有孔	有孔
+	Indestructible	不可修复	不可修復
+	Ethereal	不可破坏	不可破壞
+	Found	锻造	鑄造
+	Prefix Suffix	前后缀	前后綴
+	Add	添加	添加
+	Edit	编辑	編輯
+	Delete	删除	刪除
+*=======================菜单项的提示信息			
+	Create a new character	创建新角色	創建新角色
+	Open an existing character	打开现有角色	打開現有角色
+	Save current character	保存当前角色	保存當前角色
+	Save current character to another file	用新文件保存当前角色	用新文件保存當前角色
+	Close current character	关闭当前角色；提示保存	關閉當前角色；提示保存
+	Exit the application	退出应用程序；提示保存	退出應用程序；提示保存
+	Show/Hide toolbar	显示或隐藏工具栏	顯示或隱藏工具欄
+	Show/Hide status bar	显示或隐藏状态栏	顯示或隱藏狀態欄
+	"Show application info, version and license"	显示程序信息、版本号和版权	顯示程序信息、版本號和版權
+	Import an item from file	从文件导入一件装备	從文件導入一件裝備
+	Save the item to a file	将装备导出到文件	將裝備導出到文件
+	Copy the item	复制装备	複製裝備
+	Paste the item copied	粘贴已复制的装备	粘貼已複製的裝備
+	Modify the item	修改装备的属性	修改裝備的屬性
+	Create a new item	创建新装备	創建新裝備
+	Create a new item from current one	创建新装备并复制当前装备的属性	創建新裝備并複製當前裝備的屬性
+	Remove the item	删除装备	刪除裝備
+*=======================角色物品UI弹出菜单			
+	&Import	导入(&I)	導入(&I)
+	&Export	导出(&E)	導出(&E)
+	&Copy	复制(&C)	複製(&C)
+	&Paste	粘贴(&P)	粘貼(&P)
+	&Modify	修改(&M)	修改(&M)
+	&New	新建(&N)	新建(&N)
+	&New from	从当前新建(&N)	從當前新建(&N)
+	&Remove	删除(&R)	刪除(&R)
+*=======================系统菜单			
+	&File	文件(&F)	文件(&F)
+	&View	视图(&V)	視圖(&V)
+	&Help	帮助(&H)	幫助(&H)
+	&New	新建(&N)	新建(&N)
+	&Open	打开(&O)	打開(&O)
+	&Save	保存(&S)	保存(&S)
+	Save &As …	另存为(&A)…	另存為(&A)…
+	&Close	关闭(&C)	關閉(&C)
+	E&xit	退出(&X)	退出(&X)
+	Tool &Bar	工具栏(&B)	工具欄(&B)
+	S&tatus Bar	状态栏(&T)	狀態欄(&T)
+	&Language	语言(&L)	語言(&L)
+	&About Diablo Edit …	关于Diablo Edit(&A) …	關於Diablo Edit(&A) …
+*=======================其他窗口UI			
+	Please Choose a character class	请选择角色	請選擇角色
+	Amazon Skills	亚马逊技能	亞馬遜技能
+	Sorceress Skills	法师技能	法師技能
+	Necromancer Skills	死灵法师技能	死靈法師技能
+	Paladin Skills	圣骑士技能	聖騎士技能
+	Barbarian Skills	野蛮人技能	野蠻人技能
+	Druid Skills	德鲁依技能	德魯依技能
+	Assassin Skills	刺客技能	刺客技能
+	Warlock Skills	术士技能	術士技能
+	All	全部	全部
+	Items	物品	物品
+	All	全	全
+	OK	确认	確認
+	Cancel	取消	取消
+*=======================新建物品窗口UI			
+	New Item	创建物品	創建物品
+	Create	创建	創建
+	Cancel	取消	取消
+*=======================铸造台窗口UI			
+	Level	等级	等級
+	Owner	拥有者	擁有者
+	Class	角色	角色
+	Unidentified	未辨识	未辨識
+	Ethereal	无形	無形
+	Durability	耐久度	耐久度
+	Indestructible	无法破坏	無法破壞
+	Quantity	数量	數量
+	Quality	质量	質量
+	Sockets	镶孔	鑲孔
+	Defence	防御	防禦
+	Monster	怪物	怪物
+	First Name	名字一	名字1
+	Second Name	名字二	名字2
+	Sub Type	子类	子類
+	Prefix 1	前缀1	前綴1
+	Suffix 1	后缀1	後綴1
+	Set Name	套装名称	套裝名字
+	Unique Name	暗金装备	暗金裝備
+	Rune Word	符文之语	符文之語
+	Save	保存	保存
+	Cancel	取消	取消
+	Properties	属性	屬性
+	Set 1	套装1	套裝1
+	Set 2	套装2	套裝2
+	Set 3	套装3	套裝3
+	Set 4	套装4	套裝4
+	Set 5	套装5	套裝5
+	Rune Word	符文之语	符文之語
+	Code	代码	代碼
+	Description	说明	説明
+*=======================物品属性悬浮窗口UI			
+	Crude	粗糙的	粗糙的
+	Superior	超强的	超強的
+	Defence: %d	防御: %d	防禦: %d
+	One Hand Damage: %d to %d	单手伤害: %d 到 %d	單手傷害: %d 到 %d
+	Two Hands Damage: %d to %d	双手伤害: %d 到 %d	雙手傷害: %d 到 %d
+	Quantity: %d	数量：%d	數量：%d
+	Durability: %d / %d	耐久度: %d 之 %d	耐久度: %d 之 %d
+	Indestructible	无法破坏	無法破壞
+	Ethereal(cannot be repaired)	无形的(无法修复)	無形的(無法修復)
+	Sockets(%d/%d)	有凹槽(%d/%d)	有凹槽(%d/%d)
+	%s's Ear	(%s)的耳朵	(%s)的耳朵
+	Level %d	%d级	%d級
+	Unidentified	未辨识	未辨識
+*=======================角色装备信息UI			
+	Sockets	孔	孔
+	Iron Golem	金属石魔	金屬石魔
+	Cube	方块	方塊
+	Belt	腰带	腰帶
+	Corpse	尸体	尸體
+	Mercenary	雇佣兵	僱傭兵
+	Name	姓名	姓名
+	Type	类型	類型
+	Exp.	经验	經驗
+	Dead	死亡	死亡
+	Double click to resume	双击还原物品	雙擊還原物品
+	Recycle	回收站	回收站
+*=======================角色基本信息UI			
+	Basic Info	基本信息	基本信息
+	Waypoints	小站	小站
+	Missions	任务	任務
+	Skills	技能	技能
+	Mana	法力	法力
+	Version	版本	版本
+	Character	角色	角色
+	Name	名字	名字
+	Title	称谓	稱謂
+			
+10	Last game time	最近游戏时间	最近遊戲時間
+	Last position	最后位置	最後位置
+	Level	等级	等級
+	Experience	经验	經驗
+	Level And Experience	等级与经验对照表	等級與經驗對照表
+	Character Stats	人物基本属性	人物基本屬性
+	Strength	力量	力量
+	Dexterity	敏捷	敏捷
+	Vitality	体力	體力
+	Energy	精力	精力
+	Stat Points	状态点剩余	狀態點剩餘
+	Basic Value	基础值	基礎值
+	Current	当前值	當前值
+	Stamina	耐力	耐力
+	Life	生命	生命
+	Ladder	天梯	天梯
+	Expansion	资料片	資料片
+	Hardcore	专家级	專家級
+	Died before	以前死过	以前死過
+	Skill Points	技能点剩余	技能點剩餘
+	Gold in person	身上金钱	身上金錢
+	Gold in stash	箱子金钱	箱子金錢
+*=======================对话框消息			
+	"Character name format error\nLength:  2-15 chars\nContent: a-z,A-Z,-,_\nCaution: Invalid name may cause character fail to load"	人物名字格式错误\n长度：2-15个字符\n包括：字母，文字，-，_\n注意：无效名字可能导致角色无法加载	人物名字格式錯誤\n長度：2-15個字符\n包括：字母，數字，-，_\n注意：非法名字可能導致角色無法加載
+	Character level is between 1-127	人物等级必须在1-127之间	人物等級必須在1-127之間
+	"Strength, Energy, Dexterity, Vitality and Stat Points is between 0-1023\nLife, Mana and Stamina is between 0-8191\nSkill Points is between 0-255"	力量、敏捷、体力、精力和状态点数必须在0-1023之间\n耐力、生命和法力值必须在0-8191之间\n技能点数必须在0-255之间	力量、敏捷、體力、精力和狀態點數值必須在0-1023之間\n耐力、生命和法力值必須在0-8191之間\n技能點數值必須在0-255之間
+	Too many golds in person or stash	身上或箱子的金钱数过多	身上或箱子的金錢數過多
+	Please choose character class	请选择一种角色	請選擇一種角色
+	Skill levels must be between 0-127	技能等级必须在0-127之间	技能等級必須在0-127之間
+	(%c%c%c%c)Unrecognised Item Code	(%c%c%c%c)不能识别的物品代码	(%c%c%c%c)不可識別的物品代碼
+	Unkown Item Quality: iQuality = %d	未知的物品等级：iQuality = %d	未知的物品等級：iQuality = %d
+	Save the character %s ?	是否保存已打开的人物 %s ？	是否保存已打開的人物 %s  ？
+	"Character name and file name are different, continue?"	人物名字与文件名不同，是否继续？	人物名字與文件名不同，是否繼續？
+			
+11	The file isn't in d2s format	文件不是正确的d2s格式	文件不是正確的d2s格式
+	File length is incorrect	文件长度错误	文件長度錯誤
+	Quest info data format error	任务数据格式错误	任務數據格式錯誤
+	Waypoint info data format error	小站数据格式错误	小站數據格式錯誤
+	Player Stats data format error	人物属性格式错误	人物屬性格式錯誤
+	Player Skills data format error	人物技能格式错误	人物技能格式錯誤
+	Item List data format error	物品列表格式错误	物品列表格式錯誤
+	Item data format error	物品格式错误	物品格式錯誤
+	Corpse data format error	尸体数据格式错误	尸體數據格式錯誤
+	Mercenary data format error	雇佣兵数据格式错误	僱傭兵數據格式錯誤
+	Golem data format error	Golem数据格式错误	Golem數據格式錯誤
+	Ear level must be between 1 and 99	耳朵等级必须在1和99之间	耳朵等級必須在1和99之間
+	Invalid character class	人物角色错误	人物角色錯誤
+	Item drop level must be between 1 and 99	物品掉落等级必须在1和99之间	物品掉落等級必須在1和99之間
+	Invalid item quality	物品质量错误	物品質量錯誤
+	Invalid item subtype	物品子类错误	物品子類錯誤
+	Personalized name format error\nRequirement: 1-15 regular characters	个性化名字格式错误\n要求：1-15个英文字符	個性化名字格式錯誤\n要求：1-15個英文字符
+	Item defence must be between 10 and 2057	物品防御必须在10到2057之间	物品防禦必須在10到2057之間
+	Item max durability must be between 0 and 255	物品最大耐久度必须在0到255之间	物品最大耐久度必須在0到255之間
+	Item durability must be within max durability	物品耐久度必须在最大值范围内	物品耐久度必須在最大值範圍內
+	Item sockets count must be 7 or less	物品最多只能有7个孔	物品最多只能有7個孔
+	Quantity must be between 0 and 511	数量值必须在0到511之间	數量值必須在0到511之間
+	Invalid monster name index	怪物名字索引错误	怪物名字所以錯誤
+	Invalid first name index	物品名索引错误	物品名索引錯誤
+	Invalid last name index	物品姓索引错误	物品姓索引錯誤
+	Invalid prefix 1 index	物品前缀1索引错误	物品前綴1索引錯誤
+	Invalid prefix 2 index	物品前缀2索引错误	物品前綴2索引錯誤
+	Invalid prefix 3 index	物品前缀3索引错误	物品前綴3索引錯誤
+	Invalid suffix 1 index	物品后缀1索引错误	物品後綴1索引錯誤
+	Invalid suffix 2 index	物品后缀2索引错误	物品後綴2索引錯誤
+	Invalid suffix 3 index	物品后缀3索引错误	物品後綴3索引錯誤
+	Invalid set item name index	套装物品索引错误	套裝物品索引錯誤
+	Invalid unique item name index	暗金物品索引错误	暗金物品索引錯誤
+	Invalid magic prefix index	物品魔法前缀索引错误	物品魔法前綴索引錯誤
+	Invalid magic suffix index	物品魔法后缀索引错误	物品魔法後綴索引錯誤
+	Invalid mercenary type index	雇佣兵类型错误	僱傭兵類型錯誤
+	Invalid mercenary name index	雇佣兵名字错误	僱傭兵名字錯誤
+	Sockets must be enough for gems	物品孔数必须能容纳所有镶嵌的宝石	物品孔數必須能容納所有鑲嵌的寶石
+*=======================Barbarian类型雇佣兵名字			
+	Varaya		
+	Khan	可汗	
+	Klisk		
+	Bors		
+	Brom		
+	Wiglaf		
+	Hrothgar		
+	Scyld		
+	Healfdane		
+	Heorogar		
+	Halgaunt		
+	Hygelac		
+	Egtheow		
+	Bohdan		
+	Wulfgar		
+	Hild		
+	Heatholaf		
+	Weder		
+	Vikhyat		
+	Unferth		
+	Sigemund		
+	Heremod		
+	Hengest		
+	Folcwald		
+	Frisian		
+	Hnaef		
+	Guthlaf		
+	Oslaf		
+	Yrmenlaf		
+	Garmund		
+	Freawaru		
+	Eadgils		
+	Onela		
+	Damien		
+	Erfor		
+	Weohstan		
+	Wulf		
+	Bulwye		
+	Lief		
+	Magnus		
+	Klatu		
+	Drus		
+	Hoku		
+	Kord		
+	Uther		
+	Ip		
+	Ulf		
+	Tharr		
+	Kaelim		
+	Ulric		
+	Alaric		
+	Ethelred		
+	Caden		
+	Elgifu		
+	Tostig		
+	Alcuin		
+	Emund		
+	Sigurd		
+	Gorm		
+	Hollis		
+	Ragnar		
+	Torkel		
+	Wulfstan		
+	Alban		
+	Barloc		
+	Bill		
+	Theodoric		
+*=======================Eastern Sorceror类型雇佣兵名字			
+	Jenali		
+	Barani		
+	Jabari		
+	Devak		
+	Raldin		
+	Telash		
+	Ajheed		
+	Narphet		
+	Khaleel		
+	Phaet		
+	Geshef		
+	Vanji		
+	Haphet		
+	Thadar		
+	Yatiraj		
+	Rhadge		
+	Yashied		
+	Jarulf		
+	Flux		
+	Scorch		
+*=======================Desert Mercenary类型雇佣兵名字			
+	Hazade		
+	Alhizeer		
+	Azrael		
+	Ahsab		
+	Chalan		
+	Haseen		
+	Razan		
+	Emilio		
+	Pratham		
+	Fazel		
+	Jemali		
+	Kasim		
+	Gulzar		
+	Mizan		
+	Leharas		
+	Durga		
+	Neeraj		
+	Ilzan		
+	Zanarhi		
+	Waheed		
+	Vikhyat		
+*=======================Rogue Scouts类型雇佣兵名字			
+	Aliza		
+	Amplisa		
+	Annor		
+	Abhaya		
+	Elly		
+	Paige		
+	Basanti		
+	Blaise		
+	Kyoko		
+	Klaudia		
+	Kundri		
+	Kyle		
+	Visala		
+	Elexa		
+	Floria		
+	Fiona		
+	Gwinni		
+	Gaile		
+	Hannah		
+	Heather		
+	Iantha		
+	Diane		
+	Isolde		
+	Divo		
+	Ithera		
+	Itonya		
+	Liene		
+	Maeko		
+	Mahala		
+	Liaza		
+	Meghan		
+	Olena		
+	Oriana		
+	Ryann		
+	Rozene		
+	Raissa		
+	Sharyn		
+	Shikha		
+	Debi		
+	Tylena		
+	Wendy		
+*=======================雇佣兵类型名字			
+	Scout - Normal - Fire Arrow		
+	Scout - Normal - Cold Arrow		
+	Scout - Nightmare - Fire Arrow		
+	Scout - Nightmare - Cold Arrow		
+	Scout - Hell - Fire Arrow		
+	Scout - Hell - Cold Arrow		
+	Mercenary - Normal - Combat		
+	Mercenary - Normal - Defensive		
+	Mercenary - Normal - Offensive		
+	Mercenary - Nightmare - Combat		
+	Mercenary - Nightmare - Defensive		
+	Mercenary - Nightmare - Offensive		
+	Mercenary - Hell - Combat		
+	Mercenary - Hell - Defensive	沙漠雇佣兵 - 地狱 - 防御型	
+	Mercenary - Hell - Offensive		
+	Sorceror - Normal - Fire Spells		
+	Sorceror - Normal - Cold Spells		
+	Sorceror - Normal - Lightning Spells		
+	Sorceror - Nightmare - Fire Spells		
+	Sorceror - Nightmare - Cold Spells		
+	Sorceror - Nightmare - Lightning Spells		
+	Sorceror - Hell - Fire Spells		
+	Sorceror - Hell - Cold Spells		
+	Sorceror - Hell - Lightning Spells		
+	Barbarian - Normal		
+	Barbarian - Normal		
+	Barbarian - Nightmare		
+	Barbarian - Nightmare		
+	Barbarian - Hell		
+	Barbarian - Hell		
+	Mercenary - Prayer Arura (D2R only)	沙漠雇佣兵 - 祈祷光环 (D2R only)	
+	Mercenary - Defiance Arura (D2R only)	沙漠雇佣兵 - 反抗光环 (D2R only)	
+	Mercenary - Blessed Arura (D2R only)	沙漠雇佣兵 - 精准祝福光环 (D2R only)	
+	Mercenary - Thorns Arura (D2R only)	沙漠雇佣兵 - 荆棘光环 (D2R only)	
+	Mercenary - Holy Freeze Arura (D2R only)	沙漠雇佣兵 - 神圣冰冻光环 (D2R only)	
+	Mercenary - Might Arura (D2R only)	沙漠雇佣兵 - 力量光环 (D2R only)	
+	Barbarian - Frenzy (D2R only)	野蛮人 - 狂乱 (D2R only)	
+	Barbarian - Frenzy (D2R only)	野蛮人 - 狂乱 (D2R only)	
+	Barbarian - Frenzy (D2R only)	野蛮人 - 狂乱 (D2R only)	
+*=======================物品种类名字			
+	General items	一般物品	一般物品
+	Helmets	头盔	頭盔
+	Helmets (Barbarian only)	野蛮人专用头盔	野蠻人專用頭盔
+	Helmets (Druid only)	德鲁伊专用头盔	德魯伊專用頭盔
+	Gloves	手套	手套
+	Boots	鞋子	鞋子
+	Belts	腰带	腰帶
+	Armors	护甲	護甲
+	Shields	盾牌	盾牌
+	Shields (Paladin only)	圣骑士专用盾牌	聖騎士專用盾牌
+	Shields (Necromancer only)	死灵法师专用盾牌	死靈法師專用盾牌
+	Axes	斧头	斧頭
+	Wands (Necromancer only)	死灵法师专用法杖	死靈法師專用法杖
+	Clubs	棍棒	棍棒
+	Scepters (Paladin only)	圣骑士专用杖	聖騎士專用杖
+	Swords	刀剑	刀劍
+	Knifes	飞刀	飛刀
+	Javelins	标枪	標槍
+	Spears	长矛	長矛
+	Staffs (Sorceress only)	法师专用法杖	法師專用法杖
+	Bows	弓弩	弓弩
+	Poisons	毒药	毒藥
+	Quest Items	任务物品	任務物品
+	Claws (Assasin only)	刺客专用刀爪	刺客專用刀爪
+	Orbs (Sorceress only)	法师专用球	法師專用球
+	Bow and spears (Amazon only)	亚马逊专用弓和矛	亞馬遜專用弓和矛
+*=======================物品质量名字			
+	Low	白色低级	白色低級
+	Normal	白色普通	白色普通
+	High	白色高级	白色高級
+	Magical	蓝色魔法	藍色魔法
+	Set	绿色套装	綠色套裝
+	Rare	黄金装备	黃金裝備
+	Unique	暗金装备	暗金裝備
+	Crafted	橙色合成	橙色合成
+*=======================游戏难度			
+	Normal	普通	普通
+	Nightmare	恶梦	噩夢
+	Hell	地狱	地獄
+*=======================小站名字			
+	Rogue Encampment	萝格营地	蘿格營地
+	Cold Plains	冰冷之原	冰冷之原
+	Stony Field	石块旷野	石塊曠野
+	Dark Wood	黑暗森林	黑暗森林
+	Black Marsh	黑色荒地	黑色荒地
+	Outer Cloister	外侧回廊	外側迴廊
+	Jail Level 1	监牢第一层	監牢第一層
+	Inner Cloister	内侧回廊	内側迴廊
+	Catacombs Level 2	地下墓穴第二层	地下墓穴第二層
+	Lut Gholein	鲁.高因	魯.高因
+	Sewers Level 2	下水道第二层	下水道第二層
+	Dry Hills	干燥的高地	乾燥的高地
+	Halls of the Dead Level 2	死亡之殿第二层	死亡之殿第二層
+	Far Oasis	遥远的绿洲	遙遠的綠洲
+	Lost City	遗失的城市	遺失的城市
+	Palace Cellar Level 1 	皇宫监牢第一层	皇宮監牢第一層
+	Arcane Sanctuary	神秘避难所	神秘避難所
+	Canyon of the Magi	卫士的峡谷	衛士的峽谷
+	Kurast Docktown	库拉斯特海港	庫拉斯特海港
+	Spider Forest	蜘蛛森林	蜘蛛森林
+	Great Marsh	庞大湿地	龐大濕地
+	Flayer Jungle	剥皮森林	剝皮森林
+	Lower Kurast	库拉斯特下层	庫拉斯特下層
+	Kurast Bazaar	库拉斯特商场	庫拉斯特商場
+	Upper Kurast	库拉斯特上层	庫拉斯特上層
+	Travincal	崔凡克	崔凡克
+	Durance of Hate Level 2	憎恨的囚牢第二层	憎恨的囚牢第二層
+	The Pandemonium Fortress	群魔堡垒	群魔堡壘
+	City of the Damned	神罚之城	神罰之城
+	River of Flame	火焰之河	火焰之河
+	Harrogath	哈洛加斯	哈洛加斯
+	Rigid Highlands	冰冻高地	冰凍高地
+	Arreat Plateau	亚瑞特高原	亞瑞特高原
+	Crystalline Passage	水晶通道	水晶通道
+	Glacial Trail	冰河路径	冰河路徑
+	Halls of Anguish	痛苦之厅	痛苦之廰
+	Tundra Wastelands	冰冻苔原	冰凍苔原
+	The Ancients' way	远古之路	遠古之路
+	The Worldstone Keep Level 2	世界之石要塞第二层	世界之石要塞第二層
+*=======================任务名字			
+	Den of Evil	邪恶洞穴	邪惡洞穴
+	Sisters' Burial Grounds	修女埋骨之地	修女埋骨之地
+	The Search for Cain	凯恩的搜索	凱恩的搜索
+	The Forgotten Tower	遗忘之塔	遺忘之塔
+	Tools of the Trade	交易的工具	交易的工具
+	Sisters to the Slaughter	屠杀的修女	屠殺的修女
+	Radament's Lair	罗达门特的巢穴	羅達門特的巢穴
+	The Horadric Staff	赫拉迪克之杖	赫拉迪克之杖
+	Tainted Sun	堕落的太阳	墮落的太陽
+	Arcane Sanctuary	神秘避难所	神秘避難所
+	The Summoner	召唤者	召喚者
+	The Seven Tombs	七个古墓	七個古墓
+	The Golden Bird	黄金鸟	黃金鳥
+	Blade of the Old Religion	古代宗教之刃	古代宗教之刃
+	Khalim's Will	克林姆的意志	克林姆的意志
+	Lam Esen's Tome	蓝.依森的古书	藍.依森的古書
+	The Blackened Temple	转为黑暗的神殿	轉爲黑暗的神殿
+	The Guardian	守护者	守護者
+	The Fallen Angel	堕落的天使	墮落的天使
+	Hell's Forge	地狱熔炉	地獄熔爐
+	Terror's End	恐怖的结局	恐怖的結局
+	Siege on Harrogath	哈洛加斯围城战	哈洛加斯圍城戰
+	Rescue on Mount Arreat	亚瑞特山的救援行动	亞瑞特山的救援行動
+	Prison of Ice	冰之囚	冰之囚
+	Betrayal of Harrogath	哈洛加斯的反叛行动	哈洛加斯的反叛行動
+	Rite of Passage	通道的祭典	通道的祭典
+	Eve of Destruction	毁灭的前夕	毀滅的前夕
+	Moo Moo Farm	杀死母牛之王	殺死母牛之王
+	Reset Stats Points	重置技能和属性点	重置技能和屬性點
+*=======================通用技能名字			
+	Attack	一般攻击	一般攻擊
+	Kick	脚踢	腳踢
+	Throw	投掷	投擲
+	Unsummon	取消召唤	取消召喚
+	Left Hand Throw	左手投掷	左手投擲
+	Left Hand Swing	左手挥动	左手揮動
+197	Firestorm	火焰风暴	火焰風暴
+217	Scroll of Identify	辨识卷轴	辨識卷軸
+	Tome of Identify	辨识之书	辨識之書
+	Scroll of Town Portal	回城卷轴	回城卷軸
+	Tome of Town Portal	回城之书	回城之書
+350	Delirium	迪勒瑞姆	迪勒瑞姆
+371	Mark of the Bear	熊之印记	熊之印記
+372	Mark of the Wolf	狼之印记	狼之印記
+1023	An Evil Force	一股邪恶力量	一股邪惡力量
+*=======================角色技能名字			
+	Magic Arrow	魔法箭	魔法箭
+	Fire Arrow	火焰箭	火焰箭
+	Cold Arrow	冰箭	冰箭
+	Multiple Shot	多重箭	多重箭
+	Exploding Arrow	爆裂箭	爆裂箭
+	Ice Arrow	急冻箭	急凍箭
+	Guided Arrow	导引箭	導引箭
+	Strafe	炮轰	砲轟
+	Immolation Arrow	牺牲之箭	犧牲之箭
+	Freezing Arrow	冻结之箭	凍結之箭
+	Inner Sight	内视	内視
+	Critical Strike	致命攻击	致命攻擊
+	Dodge	闪避	閃避
+	Slow Missiles	慢速箭	慢速箭
+	Avoid	躲避	躲避
+	Penetrate	刺入	刺入
+	Dopplezon	诱饵	誘餌
+	Evade	回避	迴避
+	Valkyrie	女武神	女武神
+	Pierce	穿刺	穿刺
+	Jab	戳刺	戳刺
+	Power Strike	威力一击	威力一擊
+	Poison Javelin	毒枪	毒槍
+	Impale	刺爆	刺爆
+	Lightning Bolt	闪电球	閃電球
+	Charged Strike	充能一击	充能一擊
+	Plague Javelin	瘟疫标枪	瘟疫標槍
+	Fend	击退	擊退
+	Lightning Strike	闪电攻击	閃電攻擊
+	Lightning Fury	闪电之怒	閃電之怒
+	Fire Bolt	火弹	火彈
+	Warmth	暖气	暖氣
+	Inferno	地狱之火	地獄之火
+	Blaze	炽烈之径	熾烈之徑
+	Fire Ball	火球	火球
+	Fire Wall	火墙	火墻
+	Enchant	强化	強化
+	Meteor	陨石	隕石
+	Fire Mastery	支配之焰	支配之焰
+	Hydra	九头海蛇	九頭海蛇
+	Charged Bolt	充能弹	充能彈
+	Static Field	静态力场	靜態力場
+	Telekinesis	心灵传动	心靈傳動
+	Nova	新星	新星
+	Lightning	闪电	閃電
+	Chain Lightning	连锁闪电	連鎖閃電
+	Teleport	传送	傳送
+	Thunder Storm	雷云风暴	雷云風暴
+	Energy Shield	能量护盾	能量護盾
+	Lightning Mastery	支配闪电	支配閃電
+	Ice Bolt	冰弹	冰彈
+	Frozen Armor	冰封装甲	冰封裝甲
+	Frost Nova	霜之新星	霜之新星
+	Ice Blast	冰风暴	冰風暴
+	Shiver Armor	碎冰甲	碎冰甲
+	Glacial Spike	冰尖柱	冰尖柱
+	Blizzard	暴风雪	暴風雪
+	Chilling Armor	寒冰装甲	寒冰裝甲
+	Frozen Orb	冰封球	冰封球
+	Cold Mastery	支配冰冷	支配冰冷
+	Amplify Damage	伤害加深	傷害加深
+	Dim Vision	微暗灵视	微暗靈視
+	Weaken	削弱	削弱
+	Iron Maiden	攻击反噬	攻擊反噬
+	Terror	恐惧	恐懼
+	Confuse	迷乱	迷亂
+	Life Tap	偷取生命	偷取生命
+	Attract	吸引	吸引
+	Decrepify	衰老	衰老
+	Lower Resist	降低抵抗	降低抵抗
+	Teeth	牙	牙
+	Bone Armor	白骨装甲	白骨裝甲
+	Poison Dagger	淬毒匕首	淬毒匕首
+	Corpse Explosion	尸体爆炸	屍體爆炸
+	Bone Wall	骨墙	骨墻
+	Poison Explosion	毒爆	毒爆
+	Bone Spear	骨矛	骨矛
+	Bone Prison	骨牢	骨牢
+	Poison Nova	剧毒新星	劇毒新星
+	Bone Spirit	白骨之魂	白骨之魂
+	Skeleton Mastery	支配骷髅	支配骷髏
+	Raise Skeleton	骷髅复苏	骷髏復甦
+	Clay Golem	黏土石魔	黏土石魔
+	Golem Mastery	支配石魔	支配石魔
+	Raise Skeletal Mage	复苏骷髅法师	復甦骷髏法師
+	Blood Golem	鲜血石魔	鮮血石魔
+	Summon Resist	召唤反抗	召喚反抗
+	Iron Golem	钢铁石魔	鋼鐵石魔
+	Fire Golem	火焰石魔	火焰石魔
+	Revive	重生	重生
+	Sacrifice	牺牲	犧牲
+	Smite	重击	重擊
+	Holy Bolt	圣光弹	聖光彈
+	Zeal	白热	白熱
+	Charge	突击	突擊
+	Vengeance	复仇	復仇
+	Blessed Hammer	祝福之锤	祝福之鎚
+	Conversion	转换	轉換
+	Holy Shield	神圣之盾	神聖之盾
+	Fist of the Heavens	天堂之拳	天堂之拳
+	Might	力量	力量
+	Holy Fire	圣火	聖火
+	Thorns	刺针	刺針
+	Blessed Aim	祝福瞄准	祝福瞄準
+	Concentration	专注	專注
+	Holy Freeze	神圣冰冻	神聖冰凍
+	Holy Shock	神圣冲击	神聖衝擊
+	Sanctuary	庇护所	庇護所
+	Fanaticism	狂热	狂熱
+	Conviction	信念	信念
+	Prayer	祈祷	祈禱
+	Resist Fire	抗火	抗火
+	Defiance	反抗	反抗
+	Resist Cold	抗冰冷	抗冰冷
+	Cleansing	净化	淨化
+	Resist Lightning	抵抗闪电	抵抗閃電
+	Vigor	精力	精力
+	Meditation	冥思	冥思
+	Redemption	救赎	救贖
+	Salvation	救助	救助
+	Bash	重击	重擊
+	Leap	跳跃	跳躍
+	Double Swing	双手挥击	雙手揮擊
+	Stun	击昏	擊昏
+	Double Throw	双手投掷	雙手投擲
+	Leap Attack	跳跃攻击	跳躍攻擊
+	Concentrate	专心	專心
+	Frenzy	狂乱	狂亂
+	Whirlwind	旋风	旋風
+	Berserk	狂战士	狂戰士
+	Sword Mastery	支配长剑	支配長劍
+	Axe Mastery	支配斧头	支配斧頭
+	Mace Mastery	支配钉头锤	支配釘頭鎚
+	Pole Arm Mastery	支配长棍	支配長棍
+	Throwing Mastery	支配飞掷	支配飛擲
+	Spear Mastery	支配长矛	支配長矛
+	Increased Stamina	增加耐力	增加耐力
+	Iron Skin	铁布衫	鉄布衫
+	Increased Speed	加速	加速
+	Natural Resistance	自然抵抗	自然抵抗
+	Howl	狂嗥	狂嗥
+	Find Potion	找寻药剂	找尋藥劑
+	Taunt	嘲弄	嘲弄
+	Shout	大叫	大叫
+	Find Item	找寻物品	找尋物品
+	Battle Cry	战嗥	戰嗥
+	Battle Orders	战斗体制	戰鬥體制
+	Grim Ward	残酷喝阻	殘酷嚇阻
+	War Cry	战斗狂嗥	戰鬥狂嗥
+	Battle Command	战斗指挥	戰鬥指揮
+	Raven	乌鸦	烏鴉
+	Poison Creeper	毒花藤	劇毒藤蔓
+	Oak Sage	橡木智者	橡木智者
+	Summon Spirit Wolf	召唤鬼狼	召喚鬼狼
+	Carrion Vine	食尸藤	食屍藤蔓
+	Heart of Wolverine	狼獾之心	狼獾之心
+	Summon Fenris	召唤狂狼	召喚狂狼
+	Solar Creeper	太阳藤	太陽藤蔓
+	Spirit of Barbs	棘灵	棘靈
+	Summon Grizzly	召唤灰熊	召喚灰熊
+	Wearwolf	狼人变化	狼人變化
+	Shape Shifting	变形术	變形朮
+	Wearbear	熊人变化	熊人變化
+	Feral Rage	野性狂暴	野性狂暴
+	Maul	撞槌	撞鎚
+	Rabies	狂犬病	狂犬病
+	Fire Claws	焰爪	焰爪
+	Hunger	饥饿	飢餓
+	Shock Wave	震波	震波
+	Fury	狂怒	狂怒
+	Firestorm	火风暴	火風暴
+	Molten Boulder	熔浆巨岩	熔漿巨岩
+	Arctic Blast	极地风暴	極地風暴
+	Eruption	火山爆	火山爆
+	Cyclone Armor	飓风装甲	颶風裝甲
+	Twister	镰鼬风	鎌鼬風
+	Volcano	火山	火山
+	Tornado	龙卷风	龍捲風
+	Armageddon	毁天灭地	毀天滅地
+	Hurricane	暴风	暴風
+	Fire Trauma	火焰爆震	火焰爆震
+	Shock Field	雷电网	雷電網
+	Blade Sentinel	刃之守卫	刃之守衛
+	Charged Bolt Sentry	电能守卫	電能守衛
+	Wake of Fire Sentry	火焰复苏	火焰復甦
+	Blade Fury	刃之怒	刃之怒
+	Lightning Sentry	雷光守卫	雷光守衛
+	Inferno Sentry	复苏狱火	復甦獄火
+	Death Sentry	亡者守卫	亡者守衛
+	Blade Shield	刀刃之盾	刀刃之盾
+	Claw Mastery	支配利爪	支配利爪
+	Psychic Hammer	心灵战锤	心靈戰鎚
+	Quickness	加速	加速
+	Weapon Block	武器格挡	武器格擋
+	Cloak of Shadows	魔影斗篷	魔影斗篷
+	Fade	能量消解	能量消解
+	Shadow Warrior	影子战士	影子戰士
+	Mind Blast	心灵爆震	心靈爆震
+	Venom	毒牙	毒牙
+	Shadow Master	影子大师	影子大師
+	Tiger Strike	虎击	虎擊
+	Dragon Talon	龙爪	龍爪
+	Fists of Fire	焰拳	焰拳
+	Dragon Claw	双龙爪	雙龍爪
+	Cobra Strike	眼镜蛇攻击	眼鏡蛇攻擊
+	Claws of Thunder	雷电爪	雷電爪
+	Dragon Tail	神龙摆尾	神龍擺尾
+	Blades of Ice	寒冰刃	寒冰刃
+	Dragon Flight	飞龙在天	飛龍在天
+	Royal Strike	凤凰攻击	鳳凰攻擊
+	Miasma Bolt	瘴气弹	瘴氣彈
+	Sigil: Lethargy	符印：昏睡	符印：昏睡
+	Ring of Fire	火焰环	火焰環
+	Miasma Chain	瘴气锁链	瘴氣鎖鏈
+	Sigil: Rancor	符印：怨恨	符印：怨恨
+	Flame Wave	火焰波	火焰波
+	Blood Boil	血沸	血沸
+	Enhanced Entropy	强化熵	強化熵
+	Sigil: Death	符印：死亡	符印：死亡
+	Abyss	深渊	深淵
+	Levitation Mastery	悬浮精通	懸浮精通
+	Hex: Bane	咒：灾祸	咒：災禍
+	Cleave	横扫	橫掃
+	Echoing Strike	回声打击	回聲打擊
+	Hex: Purge	咒：净化	咒：淨化
+	Blade Warp	利刃瞬移	利刃瞬移
+	Psychic Ward	心灵护盾	心靈護盾
+	Eldritch Blast	邪异冲击	邪異衝擊
+	Hex: Siphon	咒：虹吸	咒：虹吸
+	Mirrored Blades	镜像之刃	鏡像之刃
+	Demonic Mastery	恶魔精通	惡魔精通
+	Summon Goatman	召唤羊头人	召喚羊頭人
+	Blood Oath	血誓	血誓
+	Death Mark	死亡标记	死亡標記
+	Summon Tainted	召唤污堕者	召喚污墮者
+	Summon Defiler	召唤污秽者	召喚污穢者
+	Engorge	吞噬	吞噬
+	Consume	献祭	獻祭
+	Bind Demon	束缚恶魔	束縛惡魔
+	Empty Slot 1	空位1	空位1
+	Empty Slot 2	空位2	空位2
+*=======================角色技能树名字（不是技能名）			
+	Bow and Crossbow Skills	弓和十字弓技能	弓和十字弓技能
+	Passive and Magic Skills	被动和魔法技能	被動和魔法技能
+	Javelin and Spear Skills	标枪和长矛技能	標槍和長矛技能
+	Fire Spells	火焰法术	火焰法術
+	Lightning Spells	闪电法术	閃電法術
+	Cold Spells	冰冻法术	冰凍法術
+	Curses	诅咒	詛咒
+	Poison and Bone Spells	毒素和白骨法术	毒素和白骨法術
+	Summoning Spells	召唤法术	召喚法術
+	Combat Skills	作战技能	作戰技能
+	Offensive Auras	攻击灵气	攻擊靈氣
+	Defensive Auras	防御性灵气	防禦性靈氣
+	Combat Skills	战斗技能	戰鬥技能
+	Combat Masteries	战斗专家	戰鬥專家
+	Warcries	呐喊	呐喊
+	Summoning	召唤	召喚
+	Lycanthropy	外型变形	外型變形
+	Elemental	元素	元素
+	Traps	陷阱	陷阱
+	Shadow Disciplines	影子训练	影子訓練
+	Martial Arts	武学艺术	武學藝術
+	Chaos Spells	混沌法术	混沌法術
+	Eldritch Spells	邪术武装	邪術武裝
+	Demon Spells	恶魔法术	惡魔法術
+*=======================时刻名字			
+	During Daytime	在白天	在白天
+	Near Dusk	在黄昏	在黃昏
+	During Nighttime	在夜间	在夜間
+	Near Dawn	在黎明	在黎明
+*=======================角色名字			
+	Amazon	亚马逊	亞馬遜
+	Sorceress	法师	法師
+	Necromancer	死灵法师	死靈法師
+	Paladin	圣骑士	聖騎士
+	Barbarian	野蛮人	野蠻人
+	Druid	德鲁依	德魯依
+	Assassin	刺客	刺客
+	Warlock	术士	術士
+*=======================以下是物品名称			
+	Elixir		靈藥
+	Healing Potion		一股邪惡力量
+	Mana Potion		一股邪惡力量
+	Full Healing Potion		一股邪惡力量
+	Full Mana Potion		一股邪惡力量
+	Stamina Potion		體力藥劑
+	Antidote Potion		解毒藥劑
+	Rejuvenation Potion		回復活力藥劑
+	Full Rejuvenation Potion		全面回復活力藥劑
+	Thawing Potion		溶解藥劑
+	Town Portal Book		城鎮傳送之書
+	Identify Book		辨識之書
+	Amulet		護身符
+	Top of The Horadric Staff		赫拉迪克之杖頂端
+	Ring		戒指
+	Gold		黃金
+	Scroll of Jnifuss		艾尼弗斯卷軸
+	Key To The Cairn Stones		石塚之鑰
+	Arrows		箭矢
+	Torch		火焰
+	Bolts		十字弓彈
+	Town Portal Scroll		城鎮傳送卷軸
+	Identify Scroll		辨識卷軸
+	Heart		心臟
+	Brain		腦
+	Jawbone		顎骨
+	Eye		眼球
+	Horn		角
+	Diablo's Horn	暗黑破坏神之角	暗黑破壞神之角
+	Tail		尾巴
+	Flag		旗幟
+	Standard of Heroes	英雄旗帜	英雄旗幟
+	Fang		尖牙
+	Quill		硬毛
+	Soul		靈魂
+	Scalp		頭皮
+	Spleen		脾臟
+	Key		鑰匙
+	The Black Tower Key		黑塔之鑰
+	Key of Terror	恐惧之钥	恐懼之鑰
+	Key of Hate	憎恨之钥	憎恨之鑰
+	Key of Destruction	毁灭之钥	毀滅之鑰
+	Potion of Life		生命藥劑
+	Jade Figurine		玉製小人
+	Gold Bird		黃金鳥
+	Lam esen's tome		藍.伊森之書
+	Horadric Cube		赫拉迪克方塊
+	Horadric Scroll		赫拉迪克卷軸
+	Mephisto SoulStone		墨菲斯托的靈魂之石
+	Book of Skill		技能之書
+	Khalim Eye		克林姆的眼球
+	Baal's Eye	巴尔之眼	巴爾之眼
+	Khalim Heart		克林姆的心臟
+	Khalim Brain		克林姆的大腦
+	Mephisto's Brain	墨菲斯托之脑	墨菲斯托之腦
+	Ear		耳朵
+	Chipped Amethyst		碎裂的紫寶石
+	Flawed Amethyst		裂開的紫寶石
+	Amethyst		紫寶石
+	Flawless Amethyst		無瑕疵的紫寶石
+	Perfect Amethyst		完美的紫寶石
+	Chipped Topaz		碎裂的黄寶石
+	Flawed Topaz		裂開的黄寶石
+	Topaz		黄寶石
+	Flawless Topaz		無瑕疵的黄寶石
+	Perfect Topaz		完美的黄寶石
+	Chipped Saphire		碎裂的藍寶石
+	Flawed Saphire		裂開的藍寶石
+	Saphire		藍寶石
+	Flawless Saphire		無瑕疵的藍寶石
+	Perfect Saphire		完美的藍寶石
+	Chipped Emerald		碎裂的綠寶石
+	Flawed Emerald		裂開的綠寶石
+	Emerald		綠寶石
+	Flawless Emerald		無瑕疵的綠寶石
+	Perfect Emerald		完美的綠寶石
+	Chipped Ruby		碎裂的紅寶石
+	Flawed Ruby		裂開的紅寶石
+	Ruby		紅寶石
+	Flawless Ruby		無瑕疵的紅寶石
+	Perfect Ruby		完美的紅寶石
+	Chipped Diamond		碎裂的鑽石
+	Flawed Diamond		裂開的鑽石
+	Diamond		鑽石
+	Flawless Diamond		無瑕疵的鑽石
+	Perfect Diamond		完美的鑽石
+	Minor Healing Potion		輕微治療藥劑
+	Light Healing Potion		輕型治療藥劑
+	Healing Potion		治療藥劑
+	Greater Healing Potion		強力藥劑
+	Super Healing Potion		超級治療藥劑
+	Minor Mana Potion		輕微法力藥劑
+	Light Mana Potion		輕型法力藥劑
+	Mana Potion		法力藥劑
+	Greater Mana Potion		強力法力藥劑
+	Super Mana Potion		超級法力藥劑
+	Chipped Skull		碎裂的骷髏
+	Flawed Skull		裂開的骷髏
+	Skull		骷髏
+	Flawless Skull		無瑕疵的骷髏
+	Perfect Skull		完美的骷髏
+	Herb		藥草
+	Small Charm		小護身符
+	Large Charm		大型護身符
+	Grand Charm		超大型護身符
+	Small Red Potion		一股邪惡力量
+	Large Red Potion		一股邪惡力量
+	Small Blue Potion		一股邪惡力量
+	Large Blue Potion		一股邪惡力量
+	El Rune (1)	符文：El (1)	符文：El (1)
+	Eld Rune (2)	符文：Eld (2)	符文：Eld (2)
+	Tir Rune (3)	符文：Tir (3)	符文：Tir (3)
+	Nef Rune (4)	符文：Nef (4)	符文：Nef (4)
+	Eth Rune (5)	符文：Eth (5)	符文：Eth (5)
+	Ith Rune (6)	符文：Ith (6)	符文：Ith (6)
+	Tal Rune (7)	符文：Tal (7)	符文：Tal (7)
+	Ral Rune (8)	符文：Ral (8)	符文：Ral (8)
+	Ort Rune (9)	符文：Ort (9)	符文：Ort (9)
+	Thul Rune (10)	符文：Thul (10)	符文：Thul (10)
+	Amn Rune (11)	符文：Amn (11)	符文：Amn (11)
+	Sol Rune (12)	符文：Sol (12)	符文：Sol (12)
+	Shael Rune (13)	符文：Shael (13)	符文：Shael (13)
+	Dol Rune (14)	符文：Dol (14)	符文：Dol (14)
+	Hel Rune (15)	符文：Hel (15)	符文：Hel (15)
+	Io Rune (16)	符文：Io (16)	符文：Io (16)
+	Lum Rune (17)	符文：Lum (17)	符文：Lum (17)
+	Ko Rune (18)	符文：Ko (18)	符文：Ko (18)
+	Fal Rune (19)	符文：Fal (19)	符文：Fal (19)
+	Lem Rune (20)	符文：Lem (20)	符文：Lem (20)
+	Pul Rune (21)	符文：Pul (21)	符文：Pul (21)
+	Um Rune (22)	符文：Um (22)	符文：Um (22)
+	Mal Rune (23)	符文：Mal (23)	符文：Mal (23)
+	Ist Rune (24)	符文：Ist (24)	符文：Ist (24)
+	Gul Rune (25)	符文：Gul (25)	符文：Gul (25)
+	Vex Rune (26)	符文：Vex (26)	符文：Vex (26)
+	Ohm Rune (27)	符文：Ohm (27)	符文：Ohm (27)
+	Lo Rune (28)	符文：Lo (28)	符文：Lo (28)
+	Sur Rune (29)	符文：Sur (29)	符文：Sur (29)
+	Ber Rune (30)	符文：Ber (30)	符文：Ber (30)
+	Jah Rune (31)	符文：Jah (31)	符文：Jah (31)
+	Cham Rune (32)	符文：Cham (32)	符文：Cham (32)
+	Zod Rune (33)	符文：Zod (33)	符文：Zod (33)
+	Jewel		寶石
+	Malah's Potion		馬拉之藥
+	Scroll of Knowledge		知識卷軸
+	Scroll of Resistances		抵抗卷軸
+	Token of Absolution	赦免徽章	赦免徽章
+	Twisted Essence of Destruction	溃烂的毁灭精华	潰爛的毀滅精華
+	Twisted Essence of Terror	燃烧的恐惧精华	燃燒的恐懼精華
+	Twisted Essence of Hatred	充盈的憎恨精华	充盈的憎恨精華
+	Twisted Essence of Suffering	扭曲的苦痛精华	扭曲的苦痛精華
+	Cap		
+	Skull Cap		
+	Helm		
+	Full Helm		
+	Great Helm		
+	Crown		
+	Mask		
+	Bone Helm		
+	War Hat		
+	Sallet		
+	Casque		
+	Basinet		
+	Winged Helm		
+	Grand Crown		
+	Death Mask		
+	Grim Helm		
+	Shako		
+	Hydraskull		
+	Armet		
+	Giant Conch		
+	Spired Helm		
+	Corona		
+	Demonhead		
+	Bone Visage		
+	Circlet		
+	Coronet		
+	Tiara		
+	Diadem		
+	Jawbone Cap		
+	Fanged Helm		
+	Horned Helm		
+	Assault Helmet		
+	Avenger Guard		
+	Jawbone Visor		
+	Lion Helm		
+	Range Mask		
+	Savage Helmet		
+	Slayer Guard		
+	Carnage Helm		
+	Fury Visor		
+	Destroyer Helm		
+	Conqueror Crown		
+	Guardian Crown		
+	Wolf Head		
+	Hawk Helm		
+	Antlers		
+	Falcon Mask		
+	Spirit Mask		
+	Alpha Helm		
+	Griffon Headdress		
+	Hunter's Guise		
+	Sacred Feathers		
+	Totemic Mask		
+	Blood Spirit		
+	Sun Spirit		
+	Earth Spirit		
+	Sky Spirit		
+	Dream Spirit		
+	Leather Gloves		
+	Heavy Gloves		
+	Chain Gloves		
+	Light Gauntlets		
+	Gauntlets		
+	Demonhide Gloves		
+	Sharkskin Gloves		
+	Heavy Bracers		
+	Battle Gauntlets		
+	War Gauntlets		
+	Bramble Mitts		
+	Vampirebone Gloves		
+	Vambraces		
+	Crusader Gauntlets		
+	Ogre Gauntlets		
+	Boots		
+	Heavy Boots		
+	Chain Boots		
+	Light Plated Boots		
+	Greaves		
+	Demonhide Boots		
+	Sharkskin Boots		
+	Mesh Boots		
+	Battle Boots		
+	War Boots		
+	Wyrmhide Boots		
+	Scarabshell Boots		
+	BoneWeave Boots		
+	Mirrored Boots		
+	Myrmidon Greaves		
+	Sash		
+	Light Belt		
+	Belt		
+	Heavy Belt		
+	Plated Belt		
+	Demonhide Sash		
+	Sharkskin Belt		
+	Mesh Belt		
+	Battle Belt		
+	War Belt		
+	Spiderweb Sash		
+	Vampirefang Belt		
+	Mithril Coil		
+	Troll Belt		
+	Colossus Girdle		
+	Quilted Armor		
+	Leather Armor		
+	Hard Leather Armor		
+	Studded Leather		
+	Ring Mail		
+	Scale Mail		
+	Chain Mail		
+	Breast Plate		
+	Splint Mail		
+	Plate Mail		
+	Field Mail		
+	Gothic Plate		
+	Full Plate Mail		
+	Ancient Armor		
+	Light Plate		
+	Ghost Armor		
+	Serpentskin Armor		
+	Demonhide Armor		
+	Trellised Armor		
+	Linked Mail		
+	Tigulated Mail		
+	Mesh Armor		
+	Cuirass		
+	Russet Armor		
+	Templar Coat		
+	Sharktooth Armor		
+	Embossed Plate		
+	Chaos Armor		
+	Ornate Plate		
+	Mage Plate		
+	Dusk Shroud		
+	Wyrmhide		
+	Scarab Husk		
+	Wire Fleece		
+	Diamond Mail		
+	Loricated Mail		
+	Boneweave		
+	Great Hauberk		
+	Balrog Skin		
+	Hellforge Plate		
+	Kraken Shell		
+	Lacquered Plate		
+	Shadow Plate		
+	Sacred Armor		
+	Archon Plate		
+	Buckler		
+	Small Shield		
+	Large Shield		
+	Kite Shield		
+	Tower Shield		
+	Gothic Shield		
+	Bone Shield		
+	Spiked Shield		
+	Defender		
+	Round Shield		
+	Scutum		
+	Dragon Shield		
+	Pavise		
+	Ancient Shield		
+	Grim Shield		
+	Barbed Shield		
+	Heater		
+	Luna		
+	Hyperion		
+	Monarch		
+	Aegis		
+	Ward		
+	Troll Nest		
+	Blade Barrier		
+	Targe		
+	Rondache		
+	Heraldic Shield		
+	Aerin Shield		
+	Crown Shield		
+	Akaran Targe		
+	Akaran Rondache		
+	Protector Shield		
+	Gilded Shield		
+	Royal Shield		
+	Sacred Targe		
+	Sacred Rondache		
+	Kurast Shield		
+	Zakarum Shield		
+	Vortex Shield		
+	Preserved Head		
+	Zombie Head		
+	Unraveller Head		
+	Gargoyle Head		
+	Demon Head		
+	Mummified Trophy		
+	Fetish Trophy		
+	Sexton Trophy		
+	Cantor Trophy		
+	Hierophant Trophy		
+	Minion Skull		
+	Hellpawn Skull		
+	Overseer Skull		
+	Succubus Skull		
+	Bloodlord Skull		
+	Hand Axe		
+	Axe		
+	Double Axe		
+	Military Pick		
+	War Axe		
+	Large Axe		
+	Broad Axe		
+	Battle Axe		
+	Great Axe		
+	Gaint Axe		
+	Hatchet		
+	Cleaver		
+	Twin Axe		
+	Crowbill		
+	Naga		
+	Military Axe		
+	Bearded Axe		
+	Tabar		
+	Gothic Axe		
+	Ancient Axe		
+	Tomahawk		
+	Small Crescent		
+	Ettin Axe		
+	War Spike		
+	Berserker Axe		
+	Feral Axe		
+	Silver-Edged Axe		
+	Decapitator		
+	Champion Axe		
+	Glorious Axe		
+	Wand		
+	Yew Wand		
+	Bone Wand		
+	Grim Wand		
+	Burnt Wand		
+	Petrified Wand		
+	Tomb Wand		
+	Grave Wand		
+	Polished Wand		
+	Ghost Wand		
+	Lich Wand		
+	Unearthed Wand		
+	Club		
+	Spiked Club		
+	Mace		
+	Morning Star		
+	Flail		
+	War Hammer		
+	Maul		
+	Great Maul		
+	Cudgel		
+	Barbed Club		
+	Flanged Mace		
+	Jagged Star		
+	Knout		
+	Battle Hammer		
+	War Club		
+	Martel De Fer		
+	Truncheon		
+	Tyrant Club		
+	Reinforced Mace		
+	Devil Star		
+	Scourge		
+	Legendary Mallet		
+	Ogre Maul		
+	Thunder Maul		
+	Scepter		
+	Grand Scepter		
+	War Scepter		
+	Rune Scepter		
+	Holy Water Sprinkler		
+	Divine Scepter		
+	Mighty Scepter		
+	Seraph Rod		
+	Caduceus		
+	Short Sword		
+	Scimitar		
+	Sabre		
+	Falchion		
+	Crystal Sword		
+	Broad Sword		
+	Long Sword		
+	War Sword		
+	Tow Handed Sword		
+	Claymore		
+	Giant Sword		
+	Bastard Sword		
+	Flamberge		
+	Great Sword		
+	Dagger		
+	Dirk		
+	Kris		
+	Blade		
+	Gladius		
+	Cutlass		
+	Shamshir		
+	Tulwar		
+	Dimensional Blade		
+	Battle Sword		
+	Rune Sword		
+	Ancient Sword		
+	Espandon		
+	Dacian Falx		
+	Tusk Sword		
+	Gothic Sword		
+	Zweihander		
+	Executioner Sword		
+	Poignard		
+	Rondel		
+	Cinquedeas		
+	Stiletto		
+	Falcata		
+	Ataghan		
+	Elegant Blade		
+	Hydra Edge		
+	Phase Blade		
+	Conquest Sword		
+	Cryptic Sword		
+	Mythical Sword		
+	Legend Sword		
+	Highland Blade		
+	Balrog Blade		
+	Champion Sword		
+	Colossus Sword		
+	Colossus Blade		
+	Bone Knife		
+	Mithril Point		
+	Fanged Knife		
+	Legend Spike		
+	Throwing Knife		
+	Throwing Axe		
+	Balanced Knife		
+	Balanced Axe		
+	Battle Dart		
+	Francisca		
+	War Dart		
+	Hurlbat		
+	Flying Knife		
+	Flying Axe		
+	Winged Knife		
+	Winged Axe		
+	Javelin		
+	Pilum		
+	Short Spear		
+	Glaive		
+	Throwing Spear		
+	War Javelin		
+	Great Pilum		
+	Simbilan		
+	Spiculum		
+	Harpoon		
+	Hyperion Javelin		
+	Stygian Pilum		
+	Balrog Spear		
+	Ghost Glaive		
+	Winged Harpoon		
+	Spear		
+	Trident		
+	Brandistock		
+	Spetum		
+	Pike		
+	Bardiche		
+	Voulge		
+	Scythe		
+	Poleaxe		
+	Halberd		
+	War Scythe		
+	War Spear		
+	Fuscina		
+	War Fork		
+	Yari		
+	Lance		
+	Lochaber Axe		
+	Bill		
+	Battle Scythe		
+	Partizan		
+	Bec-de-Corbin		
+	Grim Scythe		
+	Hyperion Spear		
+	Stygain Pike		
+	Mancatcher		
+	Ghost Spear		
+	War Pike		
+	Ogre Axe		
+	Colossus Voulge		
+	Thresher		
+	Cryptic Axe		
+	Great Poleaxe		
+	Giant Thresher		
+	Short Staff		
+	Long Staff		
+	Ganrled Staff		
+	Battle Staff		
+	War Staff		
+	Jo Staff		
+	Quarter Staff		
+	Cedar Staff		
+	Gothic Staff		
+	Rune Staff		
+	Walking Stick		
+	Stalagmite		
+	Elder Staff		
+	Shillelagh		
+	Archon Staff		
+	Short Bow		
+	Hunter's Bow		
+	Long Bow		
+	Composite Bow		
+	Short Battle Bow		
+	Long Battle Bow		
+	Short War Bow		
+	Long War Bow		
+	Light Crossbow		
+	Crossbow		
+	Heavy Crossbow		
+	Repeating Crossbow		
+	Edge Bow		
+	Razor Bow		
+	Cedar Bow		
+	Double Bow		
+	Short Siege Bow		
+	Large Siege Bow		
+	Rune Bow		
+	Gothic Bow		
+	Arbalest		
+	Siege Crossbow		
+	Ballista		
+	Chu-ko-Nu		
+	Spider Bow		
+	Blade Bow		
+	Shadow Bow		
+	Great Bow		
+	Diamond Bow		
+	Crusader Bow		
+	Ward Bow		
+	Hydra Bow		
+	Pellet Bow		
+	Gorgon Crossbow		
+	Colossus Crossbow		
+	Demon Crossbow		
+	Rancid Gas Potion		
+	Oil Potion		
+	Choking Gas Potion		
+	Exploding Potion		
+	Strangling Gas Potion		
+	Fulminating Potion		
+	Decoy Gidbinn		
+	The Gidbinn		
+	Wirt's Leg		
+	Horadric Malus		
+	Hell Forge Hammer		
+	Horadric Staff		
+	Staff Of Kings		
+	Khalim's Flail		
+	Khalim's Will		
+	Katar		
+	Wrist Blade		
+	Hatchet Hands		
+	Cestus		
+	Claws		
+	Blade Talons		
+	Scissors Katar		
+	Quhab		
+	Wrist Spike		
+	Fascia		
+	Hand Scythe		
+	Greater Claws		
+	Greater Talons		
+	Scissors Quhab		
+	Suwayyah		
+	Wrist Sword		
+	War Fist		
+	Battle Cestus		
+	Feral Claws		
+	Runic Talons		
+	Scissors Suwayyah		
+	Eagle Orb		
+	Sacred Globe		
+	Smoked Sphere		
+	Clasped Orb		
+	Jared's Stone		
+	Glowing Orb		
+	Crystalline Globe		
+	Cloudy Sphere		
+	Sparkling Ball		
+	Swirling Crystal		
+	Heavenly Stone		
+	Eldritch Orb		
+	Demon Heart		
+	Vortex Orb		
+	Dimensional Shard		
+	Stag Bow		
+	Reflex Bow		
+	Maiden Spear		
+	Maiden Pike		
+	Maiden Javelin		
+	Ashwood Bow		
+	Ceremonial Bow		
+	Ceremonial Spear		
+	Ceremonial Pike		
+	Ceremonial Javelin		
+	Matriarchal Bow		
+	Grand Matron Bow		
+	Matriarchal Spear		
+	Matriarchal Pike		
+	Matriarchal Javelin		
+*=======================以下是属性名称(Property Name)			
+	%+d Strength	%+d 力量	%+d 力量
+	%+d Energy	%+d 精力	%+d 精力
+	%+d Dexterity	%+d 敏捷	%+d 敏捷
+	%+d Vitality	%+d 体力	%+d 體力
+	Stat Point	状态点数	狀態點數
+	Skill Point	技能点数	技能點數
+	Life	生命	生命
+	%+d Max Life	%+d 最大生命	%+d 最大生命
+	Mana	法力	法力
+	%+d Max Mana	%+d 最大法力	%+d 最大法力
+	Stamina	耐力	耐力
+	%+d Max Stamina	%+d 最大耐力	%+d 最大耐力
+	Level	等级	等級
+	Experience	经验	經驗
+	Gold	金币	金幣
+	Goldbank	存储箱金币	存儲箱金幣
+	%+d%% Enhanced Defense	%+d%%防御强化	%+d%%防禦强化
+	%+d%% - %d%% Enhanced Damage	%+d%% - %d%%增强伤害	%+d%% - %d%%增强傷害
+	%+d%% Enhanced Min Damage	%+d%%增加最小伤害	%+d%%增加最小傷害
+	%+d Attack Rating	%+d命中率	%+d準確率
+	%+d%% Chance of Blocking	%+d%% 格挡几率	%+d%% 格擋可能性
+	%+d Min 1-Handed Damage	%+d 单手最小伤害	%+d 單手最小傷害
+	%+d Max 1-Handed Damage	%+d 单手最大伤害	%+d 單手最大傷害
+	%+d Min 2-Handed Damage	%+d 双手最小伤害	%+d 雙手最小傷害
+	%+d Max 2-Handed Damage	%+d 双手最大伤害	%+d 雙手最大傷害
+	Damage %+d%% NV	伤害增加 %+d%%	傷害增加 %+d%%
+	Regenerate Mana %d%% NV	法力重生 %d%%	法力重生 %d%%
+	Regenerate Mana Plus %+d%%	法力重生增强 %+d%%	法力重生增强 %+d%%
+	Heal Stemina %+d%%	耐力恢复增强 %+d%%	耐力回復增强 %+d%%
+	Lastexp	上一等級经验	上一等級經驗
+	Nextxp	下一等级经验	下一等級經驗
+	%+d Defense	%+d 防御	%+d防禦
+	%+d Defense vs Missile	%+d 远程防御	%+d 遠程防禦
+	%+d Defense vs Melee	%+d 近战防御	%+d 近戰防御
+	Damage Reduced By %+d	伤害减少%+d	傷害減少%+d
+	Magic Damage Reduced By %+d	法术伤害减少 %+d	法術傷害減少 %+d
+	Damage Reduced By %+d%%	伤害减少 %+d%%	傷害減少 %+d%%
+	%+d%% Magic Resist	%+d%% 魔法抵抗	%+d%% 魔法抵抗
+	%+d%% Max Magic Resist	%+d%% 最大魔法抵抗	%+d%% 最大魔法抵抗
+	%+d%% Fire Resist	%+d%% 火抗	%+d%% 火抗
+	%+d%% Max Fire Resist	%+d%% 最大火抗	%+d%% 最大火抗
+	%+d%% Lightning Resist	%+d%% 闪电抵抗	%+d%% 閃電抵抗
+	%+d%% Max Lightning Resist	%+d%% 最大闪电抵抗	%+d%% 最大閃電抵抗
+	%+d%% Cold Resist	%+d%% 寒抗	%+d%% 寒抗
+	%+d%% Max Cold Resist	%+d%% 最大寒抗	%+d%% 最大寒抗
+	%+d%% Poison Resist	%+d%% 毒抗	%+d%% 毒抗
+	%+d%% Max Poison Resist	%+d%% 最大毒抗	%+d%% 最大毒抗
+	Damageaure	伤害灵气	傷害靈氣
+	%+d - %d Fire Damage	%+d - %d 火焰伤害	%+d - %d 火焰傷害
+	%+d Max Fire Damage	%+d 最大火焰伤害	%+d 最大火焰伤害
+	%+d - %d Lightning Damage	%+d - %d 闪电伤害	%+d - %d 閃電傷害
+	%+d Max Lightning Damage	%+d 最大闪电伤害	%+d 最大閃電傷害
+	%+d - %d Magic Damage	%+d - %d 魔法伤害	%+d - %d 魔法傷害
+	%+d Max Magic Damage	%+d 最大魔法伤害	%+d 最大魔法伤害
+	%+d - %d Cold Damage Freezing %d sec	%+d - %d 冰冷伤害 %d 每秒	%+d - %d 冰冷傷害 %d 每秒
+	%+d Max Cold Damage	%+d 最大寒冷伤害	%+d 最大寒冷伤害
+	%+d * Cold Length	%+d 冻结持续时间	%+d 冻结持續时间
+	%+d - %d Poison Damage Over %d sec	%+d - %d 毒素伤害维持 %d 每秒	%+d - %d 毒素傷害維持 %d 每秒
+	%+d Max Poison Damage	%+d 最大毒伤害	%+d 最大毒傷害
+	%+d *Poison Length	%+d 中毒持续时间	%+d 中毒持續時間
+	%+d%% Life Stolen per Hit Min	%+d%%击中时偷取生命	%+d%%擊中時偷取生命 
+	%+d%% Life Stolen per Hit Max	%+d%% 偷取生命伤害最大值	%+d%% 偷取生命伤害最大值
+	%+d%% Mana Stolen per Hit Min	%+d%%击中时偷取法力	%+d%%擊中時偷取法力
+	%+d%% Mana Stolen per Hit Max	%+d%% 击中时偷取法力伤害最大值	%+d%% 击中时偷取法力伤害最大值
+	Stamina Drain Min	%+d%% 偷取耐力伤害最小值	%+d%% 偷取耐力力伤害最小值
+	Stamina Drain Max	%+d%% 偷取耐力伤害最大值	%+d%% 偷取耐力伤害最大值
+	Stun Length	使目标昏迷时间	使目標昏迷時間
+	Run/Walk Speed %+d%% NV	跑步/步行速度 %+d%%	跑步/步行速度 %+d%%
+	Attack Speed %+d%% NV	攻击速度 %+d%%	攻擊速度 %+d%%
+	Other Animrate	减慢敌人	減慢敵人
+	Quantity	数量	數量
+	Value %+d	数值 %+d	數值 %+d
+	%+d Durability	%+d 装备耐久	%+d 裝備耐久
+	%+d Max Durability	%+d 最大装备耐久	%+d 最大裝備耐久
+	%+d Replenish Life	%+d 生命补满/吸取生命	%+d 生命補滿/吸取生命
+	Increase Max Durability %+d%%	增加耐久性上限 %+d%%	增加耐久性上限 %+d%%
+	Increase Max Life %+d%%	增加生命上限%+d%%	增加生命上限%+d%%
+	Increase Max Mana %+d%%	增加法力上限%+d%%	增加法力上限%+d%%
+	Attacker Takes Damage of %+d	攻击者受到伤害 %+d	攻擊者受到傷害 %+d
+	%+d%% Extra Gold From Monsters	%+d%% 额外金币从怪物身上取得	%+d%% 額外金幣從怪物身上取得
+	%+d%% Better Chance of Getting Magic Items	%+d%% 更佳的机会取得魔法装备	%+d%% 更加的機會取得魔法裝備
+	Knock Back %+d	击退 %+d	擊退 %+d
+	Time Duration %+d	持续时间 %+d	持續時間 %+d
+	%+d %s Skill	%+d增加%s 技能	%+d增加%s 技能
+	Unsentparaml		
+	%+d%% Experience Gained	%+d%% 转为经验值获得	%+d%% 轉為經驗值獲得
+	%+d Life After Each Kill	%+d 生命在杀死后获得	%+d 生命在殺死后獲得
+	Reduced Prices %+d%%	降低价格 %+d%%	降低價格 %+d%%
+	Double Herb Duration	加倍草药持续时间	加倍草藥持續時間
+	%+d Light Radius	%+d 照亮范围	%+d 照亮范围
+	Light Color NV %d	照亮颜色 %d	照亮顔色 %d
+	Requirements %+d%%	需求 %+d%%	需求 %+d%%
+	%+d Item Level Require	%+d 需要等级	%+d 需要等級
+	%+d%% Increase Attack Speed	%+d%% 增加攻击速度	%+d%% 增加攻擊速度
+	Item Level Require %+d%%	需要等级 %+d%%	需要等级 %+d%%
+	Last Block Frame		
+	%+d%% Faster Run/Walk	%+d%% 跑步/步行	%+d%% 跑動/行走
+	%+d to %s	%+d 致 %s	%+d 致 %s
+	Change Character State to %s	状态赋予 %s	狀態賦予 %s
+	%+d%% Faster Hit Recovery Rate	%+d%% 快速再度攻击	%+d%% 快速再度攻擊
+	Monster Player Count		
+	Poison Override	毒牙	毒牙
+	%+d%% Faster Block Rate	%+d%% 快速格挡	%+d%% 快速格擋
+	Bypass Undead	击退不死生物	擊退不死生物
+	Bypass Demons	击退恶魔	擊退惡魔
+	%+d%% Faster Cast Rate	%+d%% 高速施法速度	%+d%% 高速施法速度
+	Bypass Beast	击退野兽	擊退野獸
+	%+d to %s (%s only)	%+d 致 %s (限%s 使用)	%+d 致 %s (限%s 使用)
+	Slain Monsters Rest In Peace %+d	杀死怪物回复平静 %+d	殺死怪物回復平靜 %+d
+	Curse Resist %+d	抵抗诅咒的几率%+d	抵抗詛咒的幾率%+d
+	Poison Length Reduced by %+d%%	毒素的持续效果降低 %+d%%	毒素的持續效果降低 %+d%%
+	Damage %+d	伤害增加%+d	傷害增加%+d
+	Hit Causes Monster Flee %+d%%	击中时使怪物逃跑 %+d%%	擊中時使怪物逃跑 %+d%%
+	Hit Blinds Target %+d	击中时使目标致盲 %+d	擊中時使目標致盲 %+d
+	-%d%% Damage Mana	-%d%% 受损的生命转移至法力	-%d%% 受損的生命轉移至法力
+	Ignore Target Defense	无视目标防御	無視目標防禦
+	-%d%% Target Defense	减少目标防御 -%d%%	減少目標防禦 -%d%% 
+	Prevent Monster Heal %+d	防止怪物治疗	防止怪物治療
+	Half Freeze Duration	冰冻时间减半	冰凍時間減半
+	%+d%% Bonus Attack Rating	%+d%% 额外的攻击命中率加成	%+d%% 額外的攻擊命中率加成
+	%+d Monster Defense Per Hit	%+d 每次击中降低怪物防御	%+d 每次擊中后降低怪物防禦
+	%+d%% Damage to Demons	对恶魔系怪物的伤害增加 %+d%%	對惡魔系怪物的傷害增加 %+d%%
+	%+d%% Damage to Undead	对不死系怪物的伤害增加 %+d%%	對不死系怪物的傷害增加 %+d%%
+	%+d Attack Rating vs Demons	%+d 对恶魔的命中率	%+d 對惡魔的命中率
+	%+d Attack Rating vs Undead	%+d 对不死生物命中率	%+d 對不死生物命中率
+	Throwable	可投掷	可投擲
+	%+d Fire Skills	%+d 火焰技能	%+d 火焰技能
+	%+d All Skills	全部技能 %+d	全部技能 %+d 
+	Attacker Takes Lightning Damage of %+d	攻击者受到 %+d 电击伤害	攻擊者受到 %+d 電擊傷害
+	Iron Maiden Level	攻击反噬	攻擊反噬
+	Life Tap Level	偷取生命	偷取生命
+	Thorns Percent	刺针	刺針
+	Bone Armor	白骨装甲	白骨裝甲
+	Bone Armor Max	最大白骨装甲	最大白骨裝甲
+	Freezes Target %+d	冻结目标 %+d	凍結目標 %+d
+	%+d%% Chance of Open Wounds	%+d%% 撕开伤口机会	%+d%% 撕開傷口機會
+	%+d%% Chance of Crushing Blow	%+d%% 造成压碎性打击的几率	%+d%% 造成壓碎性打擊的幾率
+	%+d Kick Damage	%+d 脚踢伤害	%+d 脚踢傷害
+	%+d Mana After Each Kill	%+d 法力在杀死敌人后获得	%+d 法力在殺死敵人后獲得
+	%+d Life After Each Demon Kill	%+d 生命在杀死恶魔后获得	%+d 生命在殺死惡魔后獲得
+	Extra Blood %d	额外生命值 %d	額外生命值 %d
+	%+d%% Chance of Deadly Strike	%+d%% 致命攻击	%+d%% 致命攻擊
+	Fire Absorb %+d%%	火焰吸收 %+d%%	火焰吸收 %+d%%
+	%+d File Absorb	%+d 火焰吸收	%+d 火焰吸收
+	Lightning Absorb %+d%%	闪电吸收 %+d%%	閃電吸收 %+d%%
+	%+d Lightning Absorb	%+d 闪电吸收	%+d 閃電吸收
+	Magic Absorb %+d%%	魔法吸收 %+d%%	魔法吸收 %+d%%
+	%+d Magic Absorb	魔法吸收 %+d%%	魔法吸收 %+d%%
+	Cold Absorb %+d%%	寒冰吸收 %+d%%	寒冰吸收 %+d%%
+	%+d Cold Absorb	%+d 寒冰吸收	%+d 寒冰吸收
+	Slows Target by %+d%%	使目标速度降低 %+d%%	使目標速遞降低 %+d%%
+	Level %+d %s Aura When Equipped	装备 %+d 级的 %s 灵气	裝備 %+d 級的 %s 靈氣
+	Indestructible	装备无法破坏	裝備無法破壞
+	Cannot Be Frozen	无法冻结	無法凍結
+	%+d%% Slower Stamina Drain	%+d%% 减缓精力消耗	%+d%% 減緩精力消耗
+	%+d%% Chance of Reanimate as %s	杀死怪物后有	%+d%% 几率复活为 %s
+	%+d%% Chance of Piercing Attack	%+d%% 穿刺攻击	%+d%% 穿刺攻擊
+	Fires Magic Arrows or Bolts %+d	射出魔法箭矢 %+d	射出魔法箭矢 %+d
+	Fires Explosive Arrows or Bolts %+d	箭矢或十字弓弹火焰爆炸 %+d	箭矢或十字弓弹火焰爆炸 %+d
+	%+d to Min Throw Damage NV	%+d 投掷最小伤害	%+d 投擲最小傷害
+	%+d to Max Throw Damage NV	%+d 投掷最大伤害	%+d 投擲最大傷害
+	handofathena	慢速箭	慢速箭
+	staminapercent	精力	精力
+	passive_staminapercent	增加耐力	增加耐力
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	%+d%% to Attack Rating vs %s	%+d%% 转为命中率相对 %s	%+d%% 轉爲命中率相對 %s
+	%+d%% to Damage vs %s	%+d%% 转为伤害相对 %s	%+d%% 轉爲傷害相對 %s
+	Fade %d	隐身	隱身
+	Armor Override	防御百分比	防禦百分比
+	Unused		
+	Unused		
+	Unused		
+	Unused		
+	Monster Cold Immunity is Sundered	破除怪物的冰寒免疫	破除怪物的冰寒免疫
+	%+d %s (%s only)	%+d %s (只限%s)	%+d %s (只限%s)
+	Monster Fire Immunity is Sundered	破除怪物的火焰免疫	破除怪物的火焰免疫
+	Monster Lightning Immunity is Sundered	破除怪物的闪电免疫	破除怪物的閃電免疫
+	Monster Poison Immunity is Sundered	破除怪物的毒素免疫	破除怪物的毒素免疫
+	Monster Physical Immunity is Sundered	破除怪物的物理免疫	破除怪物的物理免疫
+	Monster Magic Immunity is Sundered	破除怪物的魔法免疫	破除怪物的魔法免疫
+	Add %+d Sockets	增加 %+d 凹槽	增加 %+d 凹槽
+	%+d%% Chance to Cast Level %d %s When Attack	攻击时有%+d%%机会施展等级%d %s	攻擊時%+d%%機會施展等級%d %s
+	%+d%% Chance to Cast Level %d %s When Kill	当杀死敌人 %+d%% 机会施展等级%d %s	殺死敵人時%+d%%機會施展等級%d %s
+	%+d%% Chance to Cast Level %d %s When Death	当死亡时%+d%%机会施展等级%d %s	死亡時%+d%%機會施展等級%d %s
+	%+d%% Chance to Cast Level %d %s When Striking	当打击时有%+d%%机会施展等级%d %s	打擊時%+d%%機會施展等級%d %s
+	%+d%% Chance to Cast Level %d %s When Levelup	当升级时%+d%%机会施展等级%d %s	升級時%+d%%機會施展等級%d %s
+	%+d%% Chance for Finishing Moves to not Consume Charges	%+d%% 几率使终结技不消耗集气的力量	%+d%% 機率使終結技不消耗集氣的力量
+	%+d%% Chance to Cast Level %d %s When Struck	被击中时有 %+d%% 几率释放 %d级 %s 技能	被擊中時有 %+d%% 几率釋放 %d級 %s 技能
+	Unused		
+	Unused		
+	Level %+d %s (%d/%d Charges)	等级 %+d %s (%d/%d 聚气)	
+	Unused		
+	Unused		
+	Unused		
+	Unused		
+	Unused		
+	Unused		
+	Unused		
+	Unused		
+	Unused		
+	%+g Defence per Level	%+g 防御(以角色等级决定)	%+g 防禦(以角色等級決定)
+	%+g Enhanced Defence per Level	%+g 防御强化(以角色等级决定)	%+g 防禦强化(以角色等級決定)
+	%+g Life per Level	%+g 生命(以角色等级决定)	%+g 生命(以角色等級決定)
+	%+g Mana per Level	%+g 法力(以角色等级决定)	%+g 法力(以角色等級決定)
+	%+g Max Damage per Level	%+g 最大伤害值(以角色等级决定)	%+g 每級最大值(以角色等級決定)
+	%+g Enhanced Max Damage per Level	%+g 增加最大伤害上限(以角色等级决定)	%+g 增加最伤害上限(以角色等級決定)
+	%+g Strength per Level	%+g 力量(以角色等级决定)	%+g 每級力量(以角色等級決定)
+	%+g Dexterity per Level	%+g 敏捷(以角色等级决定)	%+g 敏捷(以角色等級決定)
+	%+g Energy per Level	%+g 精力(以角色等级决定)	%+g 精力(以角色等級決定)
+	%+g Vitality per Level	%+g 体力(以角色等级决定)	%+g 體力(以角色等級決定)
+	%+g Attack Rating per Level	%+g 命中率(以角色等级决定)	%+g 命中率(以角色等級決定)
+	%+g%% Bonus to Attack Rating per Level	%+g%% 额外的攻击命中率加成(以角色等级决定)	%+g%% 額外的攻擊命中率加成(以角色等級決定)
+	%+g Max Cold Damage per Level	%+g 寒冷伤害最大值(以角色等级决定)	%+g 寒冷傷害最大值(以角色等級決定)
+	%+g Max Fire Damage per Level	%+g 火焰伤害最大值(以角色等级决定)	%+g 火焰傷害最大值(以角色等級決定)
+	%+g Max Lightning Damage per Level	%+g 闪电伤害最大值(以角色等级决定)	%+g 閃電傷害最大值(以角色等級決定)
+	%+g Max Poison Damage per Level	%+g 毒素伤害最大值(以角色等级决定)	%+g 毒素傷害最大值(以角色等級決定)
+	Cold Resist %+g%% per Level	寒抗 %+g%% (以角色等级决定)	寒抗 %+g%% (以角色等級決定)
+	Fire Resist %+g%% per Level	火抗 %+g%% (以角色等级决定)	火抗 %+g%% (以角色等級決定)
+	Lightning Resist %+g%% per Level	抗闪电 %+g%% (以角色等级决定)	抗閃電 %+g%% (以角色等級決定)
+	Poison Resist %+g%% per Level	毒抗 %+g%% (以角色等级决定)	毒抗 %+g%% (以角色等級決定)
+	%+g Cold Absorb per Level	%+g 吸收冰冷伤害 (以角色等级决定)	%+g 吸收冰冷傷害 (以角色等級決定)
+	%+g Fire Absorb per Level	%+g 吸收火焰伤害 (以角色等级决定)	%+g 吸收火焰傷害 (以角色等級決定)
+	%+g Lightning Absorb per Level	%+g 吸收闪电伤害 (以角色等级决定)	%+g 吸收閃電傷害 (以角色等級決定)
+	%+g Poison Absorb per Level	%+g 吸收毒素伤害 (以角色等级决定)	%+g 吸收毒素傷害 (以角色等級決定)
+	Attacker Takes Damage of %+g per Level	攻击者受到伤害%+g(以角色等级决定)	攻擊者收到傷害%+g (以角色等級決定)
+	%+g%% Extra Gold from Monsters per Level	%+g%% 额外金币从怪物身上取得 (以角色等级决定)	%+g%% 額外金幣從怪物身上取得 (以角色等級決定)
+	%+g%% Better Chance of Getting Magic Items per Level	%+g%% 更加的机会取得魔法装备 (以角色等级决定)	%+g%% 更佳的機會取得魔法裝備  (以角色等級決定)
+	Heal Stamina Plus %+g%% per Level	回复体力加 %+g%% (以角色等级决定)	回復體力加 %+g%% (以角色等級決定)
+	%+g Max Stamina per Level	%+g 最大精力值 (以角色等级决定)	%+g 最大精力值 (以角色等級決定)
+	%+g%% Damage to Demons per Level	%+g%% 对恶魔的伤害 (以角色等级决定)	%+g%% 對惡魔的傷害 (以角色等級決定)
+	%+g%% Damage to Undead per Level	%+g%% 对不死生物的伤害 (以角色等级决定)	%+g%% 對不死生物的傷害 (以角色等級決定)
+	%+g to Attack Rating vs Demons per Level	%+g%% 对抗恶魔的命中率 (以角色等级决定)	%+g%% 對抗惡魔的準確率 (以角色等級決定)
+	%+g to Attack Rating vs Undead per Level	%+g%% 对抗不死生物的命中率 (以角色等级决定)	%+g%% 對抗不死生物的準確率 (以角色等級決定)
+	%+g%% Chance of Crushing Blow per Level	%+g%% 造成压碎性打击的几率 (以角色等级决定)	%+g%% 造成壓碎性打擊的幾率 (以角色等級決定)
+	%+g%% Chance of Open Wounds per Level	%+g%% 撕开伤口的几率 (以角色等级决定)	%+g%% 撕開傷口的幾率 (以角色等級決定)
+	%+g Kick Damage per Leve	%+g 脚踢伤害 (以角色等级决定)	%+g 脚踢伤害脚踢傷害 (以角色等級決定)
+	%+g%% Chance of Deadly Strike per Level	%+g%% 致命攻击 (以角色等级决定)	%+g%% 致命攻擊 (以角色等級決定)
+	Find Gems per Level	宝石掉落	寶石掉落
+	Repairs 1 Durability in %d Seconds	回复装备耐久度1于 %d 秒内	回復裝備耐久度1於 %d 秒内
+	Replenishes 1 Quantity in %d Seconds	在 %d 秒内回复数量1	在 %d 秒内回復數量1
+	Increased Stack Size %+d	增加的空间 %+d	增加的空間 %+d
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	Uncoded		
+	%+d - %d Defense (Increases %s)	%+d - %d 防御 (%s 增加)	%+d - %d 防禦 (%s 增加)
+	%+d - %d Enhanced Defense (Increases %s)	%+d - %d 防御强化 (%s 增加)	%+d - %d 防禦强化 (%s 增加)
+	%+d - %d Life (Increases %s)	%+d - %d 生命 (%s 增加)	%+d - %d 生命 (%s 增加)
+	%+d - %d Mana (Increases %s)	%+d - %d 法力 (%s 增加)	%+d - %d 法力 (%s 增加)
+	%+d - %d Max Damage (Increases %s)	%+d - %d 最大伤害值 (%s 增加)	%+d - %d 最大傷害值 (%s 增加)
+	%+d - %d Enhanced Max Damage (Increases %s)	%+d - %d 傷害上限 (在 %s 增加)	%+d - %d 傷害上限 (%s 增加)
+	%+d - %d Strength (Increases %s)	%+d - %d 力量 (%s 增加)	%+d - %d 力量 (%s 增加)
+	%+d - %d Dexterity (Increases %s)	%+d - %d 敏捷 (%s 增加)	%+d - %d 敏捷 (%s 增加)
+	%+d - %d Energy (Increases %s)	%+d - %d 精力 (%s 增加)	%+d - %d 精力 (%s 增加)
+	%+d - %d Vitality (Increases %s)	%+d - %d 体力 (%s 增加)	%+d - %d 體力 (%s 增加)
+	%+d - %d Attack Rating (Increases %s)	%+d - %d 命中率 (%s 增加)	%+d - %d 準確率 (%s 增加)
+	%+d - %d Enhanced Attack Rating (Increases %s)	%+d - %d 额外的攻击命中率 (%s 增加)	%+d - %d 額外的攻擊準確率 (%s 增加)
+	%+d - %d Max Cold Damage (Increases %s)	%+d - %d 寒冷伤害最大值 (%s 增加)	%+d - %d 寒冷傷害最大值 (%s 增加)
+	%+d - %d Max Fire Damage (Increases %s)	%+d - %d 火焰伤害最大值 (%s 增加)	%+d - %d 火焰傷害最大值 (%s 增加)
+	%+d - %d Max Lightning Damage (Increases %s)	%+d - %d 雷电伤害最大值 (%s 增加)	%+d - %d 雷電傷害最大值 (%s 增加)
+	%+d - %d Max Poison Damage (Increases %s)	%+d - %d 毒素伤害最大值 (%s 增加)	%+d - %d 毒素傷害最大值 (%s 增加)
+	%+d%% - %d%% Cold Resist (Increases %s)	%+d%% - %d%% 寒冷抗性 (%s 增加)	%+d%% - %d%% 寒冷抗性 (%s 增加)
+	%+d%% - %d%% Fire Resist (Increases %s)	%+d%% - %d%% 火焰抗性 (%s 增加)	%+d%% - %d%% 火焰抗性 (%s 增加)
+	%+d%% - %d%% Lightning Resist (Increases %s)	%+d%% - %d%% 雷电抗性 (%s 增加)	%+d%% - %d%% 雷電抗性 (%s 增加)
+	%+d%% - %d%% Poison Resist (Increases %s)	%+d%% - %d%% 毒素抗性 (%s 增加)	%+d%% - %d%% 毒素抗性 (%s 增加)
+	%+d - %d Cold Absorb (Increases %s)	%+d - %d 吸收冰冷伤害 (%s 增加)	%+d - %d 吸收冰冷傷害 (%s 增加)
+	%+d - %d Fire Absorb (Increases %s)	%+d - %d 吸收火焰伤害 (%s 增加)	%+d - %d 吸收火焰傷害 (%s 增加)
+	%+d - %d Lightning Absorb (Increases %s)	%+d - %d 吸收雷电伤害 (%s 增加)	%+d - %d 吸收雷電傷害 (%s 增加)
+	%+d - %d Poison Absorb (Increases %s)	%+d - %d 吸收毒素伤害 (%s 增加)	%+d - %d 吸收毒素傷害 (%s 增加)
+	%+d%% - %d%% Extra Gold from Monsters (Increases %s)	%+d%% - %d%% 额外的金币从怪物身上取得 (%s 增加)	%+d%% - %d%% 額外的金幣從怪物身上取得 (%s 增加)
+	%+d%% - %d%% Better Chance of Getting Magic Items (Increases %s)	%+d%% - %d%% 更加的机会取得魔法装备 (%s 增加)	%+d%% - %d%% 更佳的機會取得魔法裝備 (%s 增加)
+	Heal Stamina Plus %+d - %d%% (Increases %s)	回复体力加 %+d - %d%% (%s 增加)	回復體力加%+d - %d%% (%s 增加)
+	%+d - %d Stamina (Increases %s)	%+d - %d  最大精力值 (%s 增加)	%+d - %d 最大精力值 (%s 增加)
+	%+d%% - %d%% Damage to Demons (Increases %s)	%+d%% - %d%% 对恶魔的伤害 (%s 增加)	%+d%% - %d%% 對惡魔的傷害 (%s 增加)
+	%+d%% - %d%% Damage to Undead (Increases %s)	%+d%% - %d%% 对不死生物的伤害 (%s 增加)	%+d%% - %d%% 對不死生物的傷害 (%s 增加)
+	%+d - %d Attack Rating vs Demons (Increases %s)	%+d - %d 对抗恶魔的命中率 (%s 增加)	%+d - %d 對抗惡魔的準確率 (%s 增加)
+	%+d - %d Attack Rating vs Undead (Increases %s)	%+d - %d 对抗不死生物的命中率 (%s 增加)	%+d - %d 對抗不死生物的準確率 (%s 增加)
+	%+d%% - %d%% Chance of Crushing Blow (Increases %s)	%+d%% - %d%% 造成压碎性打击的几率 (%s 增加)	%+d%% - %d%% 造成壓碎性打擊的幾率 (%s 增加)
+	%+d%% - %d%% Chance of Open Wounds (Increases %s)	%+d%% - %d%% 撕开伤口的几率 (%s 增加)	%+d%% - %d%% 撕開傷口的幾率 (%s 增加)
+	%+d - %d Kick Damage (Increases %s)	%+d - %d 脚踢伤害 (%s 增加)	%+d - %d 脚踢伤害脚踢傷害 (%s 增加)
+	%+d - %d Chance of  Deadly Strike (Increases %s)	%+d - %d 致命攻击 (%s 增加)	%+d - %d 致命攻擊 (%s 增加)
+	Item Find Gems (by time)	宝石掉落	寶石掉落
+	%+d%% Enemy Cold Resist	%+d%% 敌人冰冻系抗性	%+d%% 敵人冰凍係抗性
+	%+d%% Enemy Fire Resist	%+d%% 敌人火焰系抗性	%+d%% 敵人火焰係抗性
+	%+d%% Enemy Lightning Resist	%+d%% 敌人雷电系抗性	%+d%% 敵人雷電係抗性
+	%+d%% Enemy Poison Resist	%+d%% 敌人毒素系抗性	%+d%% 敵人毒素係抗性
+	Item Damage vs Monster		
+	Item Damage Percent vs Monster		
+	Item Tohit vs Monster		
+	Item Tohit Percent vs Monster		
+	Item AC vs Monster		
+	Item AC Percent vs Monster		
+	Fire Length		
+	Burning Min		
+	Burning Max		
+	Progressive Damage		
+	Progressive Steal		
+	Progressive Other		
+	Progressive Fire		
+	Progressive Cold		
+	Progressive Lightning		
+	Item Extra Charges %+d		
+	Progressive Tohit		
+	Poison Count		
+	Damage Frame Rate		
+	Pierce IDX		
+	%+d%% Fire Skill Damage	%+d%% 火焰技能伤害	%+d%% 火焰技能傷害
+	%+d%% Lightning Skill Damage	%+d%% 雷电系技能伤害	%+d%% 雷電係技能傷害
+	%+d%% Cold Skill Damage	%+d%% 冰冻技能伤害	%+d%% 冰凍技能傷害
+	%+d%% Poison Skill Damage	%+d%% 毒素技能伤害	%+d%% 毒素技能傷害
+	%+d%% Enemy Fire Resist	%+d%% 敌人火焰系抗性	%+d%% 敵人火焰係抗性
+	%+d%% Enemy Lightning Resist	%+d%% 敌人雷电系抗性	%+d%% 敵人雷電係抗性
+	%+d%% Enemy Cold Resist	%+d%% 敌人冰冻系抗性	%+d%% 敵人冰凍係抗性
+	%+d%% Enemy Poison Resist	%+d%% 敌人毒素系抗性	%+d%% 敵人毒素係抗性
+	Passive Critical Strike %d	致命一击 %d	致命一擊 %d
+	Passive Dodge %d	闪避 %d	閃避 %d
+	Passive Avoid %d	躲避 %d	躲避 %d
+	Passive Evade %d	回避 %d	回避 %d
+	Passive Warmth %d	暖气 %d	暖氣 %d
+	Passive Mastery Melee TH %d	支配近战武器-攻击命中率 %d	支配近戰武器-攻擊命中率 %d
+	Passive Mastery Melee Damage %d	支配近战武器-伤害 %d	支配近戰武器-傷害 %d
+	Passive Mastery Melee Crit %d	支配近战武器-致命一击 %d	支配近戰武器-致命一擊 %d
+	Passive Mastery Throw TH %d	支配飞掷-攻击命中率 %d	支配飛擲-攻擊命中率 %d
+	Passive Mastery Throw Damage %d	支配飞掷-伤害 %d	支配飛擲-傷害 %d
+	Passive Mastery Throw Crit %d	支配飞掷-致命一击 %d	支配飛擲-致命一擊 %d
+	Passive Weapon Block %d	武器格挡 %d	武器格擋 %d
+	Passive Summon Resist %d	召唤反抗 %d	召喚反抗 %d
+	Modifier List Skill		
+	Modifier List Level		
+	Last Sent HP PCT		
+	Source Unit Type		
+	Source Unit ID		
+	Short Paraml		
+	Quest Item Difficulty %d	任务物品难度 %d	任務物品難度 %d
+	Passive Magic Mastery %d	支配魔法 %d	支配魔法 %d
+	Passive Magic Pierce %d	魔法穿透 %d	魔法穿透 %d
+*=======================以下是怪物名称(Monster Names)			
+	Skeleton		
+	Returned		
+	BoneWarrior		
+	BurningDead		
+	Horror		
+	Zombie	僵尸	僵尸
+	HungryDead		
+	Ghoul		
+	DrownedCarcass		
+	PlagueBearer		
+	Afflicted		
+	Tainted		
+	Misshapen		
+	Disfigured		
+	Damned		
+	FoulCrow		
+	BloodHawk		
+	BlackRaptor		
+	CloudStalker		
+	Fallen		
+	Carver		
+	Devilkin		
+	DarkOne		
+	WarpedFallen		
+	Brute		
+	Yeti		
+	Crusher		
+	WailingBeast		
+	GargantuanBeast		
+	SandRaider		
+	Marauder		
+	Invader		
+	Infidel		
+	Assailant		
+	unused		
+	unused		
+	unused		
+	unused		
+	Ghost		
+	Wraith		
+	Specter		
+	Apparition		
+	DarkShape		
+	DarkHunter		
+	VileHunter		
+	DarkStalker		
+	BlackRogue		
+	FleshHunter		
+	DuneBeast		
+	RockDweller		
+	JungleHunter		
+	DoomApe		
+	TempleGuard		
+	MoonClan		
+	NightClan		
+	BloodClan		
+	HellClan		
+	DeathClan		
+	FallenShaman		
+	CarverShaman		
+	DevilkinShaman		
+	DarkShaman		
+	WarpedShaman		
+	QuillRat		
+	SpikeFiend		
+	ThornBeast		
+	RazorSpine		
+	JungleUrchin		
+	SandMaggot		
+	RockWorm		
+	Devourer		
+	GiantLamprey		
+	WorldKiller		
+	TombViper		
+	ClawViper		
+	Salamander		
+	PitViper		
+	SerpentMagus		
+	SandLeaper		
+	CaveLeaper		
+	TombCreeper		
+	TreeLurker		
+	RazorPitDemon		
+	Huntress		
+	SaberCat		
+	NightTiger		
+	HellCat		
+	Itchies		
+	BlackLocusts		
+	PlagueBugs		
+	HellSwarm		
+	DungSoldier		
+	SandWarrior		
+	Scarab		
+	SteelWeevil		
+	AlbinoRoach		
+	DriedCorpse		
+	Decayed		
+	Embalmed		
+	PreservedDead		
+	Cadaver		
+	HollowOne		
+	Guardian		
+	Unraveler		
+	Horadrim Ancient		
+	Baal Subject Mummy		
+	unused		
+	unused		
+	unused		
+	unused		
+	CarrionBird		
+	UndeadScavenger		
+	HellBuzzard		
+	WingedNightmare		
+	Sucker		
+	Feeder		
+	BloodHook		
+	BloodWing		
+	Gloam		
+	SwampGhost		
+	BurningSoul		
+	BlackSoul		
+	Arach		
+	SandFisher		
+	PoisonSpinner		
+	FlameSpider		
+	SpiderMagus		
+	ThornedHulk		
+	BrambleHulk		
+	Thrasher		
+	Spikefist		
+	GhoulLord		
+	NightLord		
+	DarkLord		
+	BloodLord		
+	Banished		
+	DesertWing		
+	Fiend		
+	Gloombat		
+	BloodDiver		
+	DarkFamiliar		
+	RatMan		
+	Fetish		
+	Flayer		
+	SoulKiller		
+	StygianDoll		
+	DeckardCain		
+	Gheed		
+	Akara		
+	dummy		
+	Kashya		
+	dummy		
+	Dummy		
+	Dummy		
+	Charsi		
+	Warriv		
+	Andariel		
+	dummy		
+	dummy		
+	dummy		
+	DarkRanger		
+	VileArcher		
+	DarkArcher		
+	BlackArcher		
+	FleshArcher		
+	DarkSpearwoman		
+	VileLancer		
+	DarkLancer		
+	BlackLancer		
+	FleshLancer		
+	SkeletonArcher		
+	ReturnedArcher		
+	BoneArcher		
+	BurningDeadArcher		
+	HorrorArcher		
+	Warriv		
+	Atma		
+	Drognan		
+	Fara		
+	dummy		
+	SandMaggotYoung		
+	RockWormYoung		
+	DevourerYoung		
+	GiantLampreyYoung		
+	WorldKillerYoung		
+	dummy		
+	Blunderbore		
+	Gorbelly		
+	Mauler		
+	Urdar		
+	SandMaggotEgg		
+	RockWormEgg		
+	DevourerEgg		
+	GiantLampreyEgg		
+	WorldKillerEgg		
+	dummy		
+	Dummy		
+	dummy		
+	Greiz		
+	Elzix		
+	Geglash		
+	Jerhyn		
+	Lysander		
+	Dummy		
+	dummy		
+	dummy		
+	FoulCrowNest		
+	BloodHawkNest		
+	BlackVultureNest		
+	CloudStalkerNest		
+	Meshif		
+	Duriel		
+	Undead RatMan		
+	Undead Fetish		
+	Undead Flayer		
+	Undead SoulKiller		
+	Undead StygianDoll		
+	unused		
+	unused		
+	unused		
+	unused		
+	unused		
+	unused		
+	unused		
+	unused		
+	unused		
+	unused		
+	Maggot		
+	MummyGenerator		
+	Radament		
+	unused		
+	unused		
+	unused		
+	unused		
+	FlyingScimitar		
+	Zakarumite		
+	Faithful		
+	Zealot		
+	Sexton		
+	Cantor		
+	Heirophant		
+	Heirophant		
+	Mephisto		
+	Diablo		
+	DeckardCain		
+	DeckardCain		
+	DeckardCain		
+	Swamp Dweller		
+	Bog Creature		
+	Slime Prince		
+	Summoner		
+	tyrael		
+	asheara		
+	hratli		
+	alkor		
+	ormus		
+	izual		
+	halbu		
+	WaterWatcherLimb		
+	RiverStalkerLimb		
+	StygianWatcherLimb		
+	WaterWatcherHead		
+	RiverStalkerHead		
+	StygianWatcherHead		
+	meshif		
+	DeckardCain		
+	navi		
+	Bloodraven		
+	Dummy		
+	Dummy		
+	RogueScout		
+	Dummy		
+	Dummy		
+	GargoyleTrap		
+	ReturnedMage		
+	BoneMage		
+	BurningDeadMage		
+	HorrorMage		
+	RatManShaman		
+	FetishShaman		
+	FlayerShaman		
+	SoulKillerShaman		
+	StygianDollShaman		
+	larva		
+	SandMaggotQueen		
+	RockWormQueen		
+	DevourerQueen		
+	GiantLampreyQueen		
+	WorldKillerQueen		
+	ClayGolem		
+	BloodGolem		
+	IronGolem		
+	FireGolem		
+	Dummy		
+	Dummy		
+	NightMarauder		
+	Dummy		
+	Natalya		
+	FleshSpawner		
+	StygianHag		
+	Grotesque		
+	FleshBeast		
+	StygianDog		
+	GrotesqueWyrm		
+	Groper		
+	Strangler		
+	StormCaster		
+	Corpulent		
+	CorpseSpitter		
+	MawFiend		
+	DoomKnight		
+	AbyssKnight		
+	OblivionKnight		
+	QuillBear		
+	SpikeGiant		
+	ThornBrute		
+	RazorBeast		
+	GiantUrchin		
+	Dummy		
+	Dummy		
+	Dummy		
+	Dummy		
+	Dummy		
+	Dummy		
+	Dummy		
+	Dummy		
+	a trap		
+	a trap		
+	a trap		
+	a trap		
+	a trap		
+	Kaelan		
+	Dummy		
+	Diablo		
+	SuckerNest		
+	FeederNest		
+	BloodHookNest		
+	BloodWingNest		
+	Guard		
+	Dummy		
+	Dummy		
+	Dummy		
+	Dummy		
+	Dummy		
+	Dummy		
+	Council Member		
+	Council Member		
+	Council Member		
+	Turret		
+	Turret		
+	Turret		
+	Hydra		
+	Hydra		
+	Hydra		
+	a trap		
+	Dummy		
+	Dopplezon		
+	Valkyrie		
+	Dummy		
+	Iron Wolf		
+	Balrog		
+	PitLord		
+	VenomLord		
+	NecroSkeleton		
+	NecroMage		
+	Griswold		
+	compellingorb		
+	tyrael		
+	youngdiablo		
+	a trap		
+	Dummy		
+	LightningSpire		
+	FireTower		
+	Slinger		
+	SpearCat		
+	NightSlinger		
+	HellSlinger		
+	Dummy		
+	Dummy		
+	ReturnedMage		
+	BoneMage		
+	BaalColdMage		
+	HorrorMage		
+	ReturnedMage		
+	BoneMage		
+	BurningDeadMage		
+	HorrorMage		
+	ReturnedMage		
+	BoneMage		
+	BurningDeadMage		
+	HorrorMage		
+	Hell Bovine		
+	Dummy		
+	Dummy		
+	SpearCat		
+	NightSlinger		
+	RatMan		
+	Fetish		
+	Flayer		
+	SoulKiller		
+	StygianDoll		
+	Dummy		
+	The Smith		
+	TrappedSoul		
+	TrappedSoul		
+	Jamella		
+	Izual		
+	RatMan		
+	Malachai		
+	The Feature Creep		
+	Wake of Destruction		
+	Charged Bolt Sentry		
+	Lightning Sentry		
+	Blade Creeper		
+	Invis Pet		
+	Inferno Sentry		
+	Death Sentry		
+	Shadow Warrior		
+	Shadow Master		
+	Druid Hawk		
+	Druid Spirit Wolf		
+	Druid Fenris		
+	Spirit of Barbs		
+	Heart of Wolverine		
+	Oak Sage		
+	Druid Plague Poppy		
+	Druid Cycle of Life		
+	Vine Creature		
+	Druid Bear		
+	Eagle		
+	Wolf		
+	Bear		
+	Barricade Door		
+	Barricade Door		
+	Prison Door		
+	Barricade Tower		
+	RotWalker		
+	ReanimatedHorde		
+	ProwlingDead		
+	UnholyCorpse		
+	DefiledWarrior		
+	Siege Beast		
+	CrushBiest		
+	BloodBringer		
+	GoreBearer		
+	DeamonSteed		
+	SnowYeti1		
+	SnowYeti2		
+	SnowYeti3		
+	SnowYeti4		
+	WolfRider1		
+	WolfRider2		
+	WolfRider3		
+	Minionexp		
+	Slayerexp		
+	IceBoar		
+	FireBoar		
+	HellSpawn		
+	IceSpawn		
+	GreaterHellSpawn		
+	GreaterIceSpawn		
+	FanaticMinion		
+	BerserkSlayer		
+	ConsumedIceBoar		
+	ConsumedFireBoar		
+	FrenziedHellSpawn		
+	FrenziedIceSpawn		
+	InsaneHellSpawn		
+	InsaneIceSpawn		
+	Succubusexp		
+	VileTemptress		
+	StygianHarlot		
+	Hell Temptress		
+	Blood Temptress		
+	Dominus		
+	VileWitch		
+	StygianFury		
+	Blood Witch		
+	Hell Witch		
+	OverSeer		
+	Lasher		
+	OverLord		
+	BloodBoss		
+	HellWhip		
+	MinionSpawner		
+	MinionSlayerSpawner		
+	MinionIce/fireBoarSpawner		
+	MinionIce/fireBoarSpawner		
+	Minionice/hellSpawnSpawner		
+	MinionIce/fireBoarSpawner		
+	MinionIce/fireBoarSpawner		
+	Minionice/hellSpawnSpawner		
+	Imp1		
+	Imp2		
+	Imp3		
+	Imp4		
+	Imp5		
+	CatapultS		
+	CatapultE		
+	CatapultSiege		
+	CatapultW		
+	Frozen Horror1		
+	Frozen Horror2		
+	Frozen Horror3		
+	Frozen Horror4		
+	Frozen Horror5		
+	Blood Lord1		
+	Blood Lord2		
+	Blood Lord3		
+	Blood Lord4		
+	Blood Lord5		
+	Larzuk		
+	Drehya		
+	Malah		
+	Nihlathak Town		
+	Qual-Kehk		
+	Catapult Spotter S		
+	Catapult Spotter E		
+	Catapult Spotter Siege		
+	Catapult Spotter W		
+	DeckardCain		
+	tyrael		
+	Act 5 Combatant		
+	Act 5 Combatant		
+	Barricade Wall Right		
+	Barricade Wall Left		
+	Nihlathak		
+	Drehya		
+	Evil hut		
+	Death Mauler1		
+	Death Mauler2		
+	Death Mauler3		
+	Death Mauler4		
+	Death Mauler5		
+	POW		
+	Act 5 Townguard		
+	Act 5 Townguard		
+	Ancient Statue 1		
+	Ancient Statue 2		
+	Ancient Statue 3		
+	Ancient Barbarian 1		
+	Ancient Barbarian 2		
+	Ancient Barbarian 3		
+	Baal Throne		
+	Baal Crab		
+	Baal Taunt		
+	Putrid Defiler1		
+	Putrid Defiler2		
+	Putrid Defiler3		
+	Putrid Defiler4		
+	Putrid Defiler5		
+	Pain Worm1		
+	Pain Worm2		
+	Pain Worm3		
+	Pain Worm4		
+	Pain Worm5		
+	Bunny		
+	Council Member		
+	VenomLord		
+	Baal Crab to Stairs		
+	Act 5 Hireling 1hs		
+	Act 5 Hireling 2hs		
+	Baal Tentacle		
+	Baal Tentacle		
+	Baal Tentacle		
+	Baal Tentacle		
+	Baal Tentacle		
+	Injured Barbarian 1		
+	Injured Barbarian 2		
+	Injured Barbarian 3		
+	Baal Crab Clone		
+	Baals Minion		
+	Baals Minion		
+	Baals Minion		
+	Worldstone Effect		
+	BurningDeadArcher		
+	BoneArcher		
+	BurningDeadArcher		
+	ReturnedArcher		
+	HorrorArcher		
+	Afflicted		
+	Tainted		
+	Misshapen		
+	Disfigured		
+	Damned		
+	MoonClan		
+	NightClan		
+	HellClan		
+	BloodClan		
+	DeathClan		
+	FoulCrow		
+	BloodHawk		
+	BlackRaptor		
+	CloudStalker		
+	ClawViper		
+	PitViper		
+	Salamander		
+	TombViper		
+	SerpentMagus		
+	Marauder		
+	Infidel		
+	SandRaider		
+	Invader		
+	Assailant		
+	Death Mauler1		
+	QuillRat		
+	SpikeFiend		
+	RazorSpine		
+	CarrionBird		
+	ThornedHulk		
+	Slinger		
+	Slinger		
+	Slinger		
+	VileArcher		
+	DarkArcher		
+	VileLancer		
+	DarkLancer		
+	BlackLancer		
+	Blunderbore		
+	Mauler		
+	ReturnedMage		
+	BurningDeadMage		
+	ReturnedMage		
+	HorrorMage		
+	BoneMage		
+	HorrorMage		
+	HorrorMage		
+	Huntress		
+	SaberCat		
+	CaveLeaper		
+	TombCreeper		
+	Ghost		
+	Wraith		
+	Specter		
+	Succubusexp		
+	Hell Temptress		
+	Dominus		
+	Hell Witch		
+	VileWitch		
+	Gloam		
+	BlackSoul		
+	BurningSoul		
+	Carver		
+	Devilkin		
+	DarkOne		
+	CarverShaman		
+	DevilkinShaman		
+	DarkShaman		
+	BoneWarrior		
+	Returned		
+	Gloombat		
+	Fiend		
+	Blood Lord1		
+	Blood Lord4		
+	Scarab		
+	SteelWeevil		
+	Flayer		
+	StygianDoll		
+	SoulKiller		
+	Flayer		
+	StygianDoll		
+	SoulKiller		
+	FlayerShaman		
+	StygianDollShaman		
+	SoulKillerShaman		
+	TempleGuard		
+	TempleGuard		
+	Guardian		
+	Unraveler		
+	Horadrim Ancient		
+	Horadrim Ancient		
+	Zealot		
+	Zealot		
+	Heirophant		
+	Heirophant		
+	Grotesque		
+	FleshSpawner		
+	GrotesqueWyrm		
+	FleshBeast		
+	WorldKiller		
+	WorldKillerYoung		
+	WorldKillerEgg		
+	Slayerexp		
+	HellSpawn		
+	GreaterHellSpawn		
+	Arach		
+	Balrog		
+	PitLord		
+	Imp1		
+	Imp4		
+	Undead StygianDoll		
+	Undead SoulKiller		
+	Strangler		
+	StormCaster		
+	MawFiend		
+	BloodLord		
+	GhoulLord		
+	DarkLord		
+	UnholyCorpse		
+	DoomKnight		
+	DoomKnight		
+	OblivionKnight		
+	OblivionKnight		
+	Cadaver		
+*=======================以下是魔法前缀(Magic Prefix)			
+0			
+1			
+2	Sturdy		
+3	Strong		
+4	Glorious		
+5	Blessed		
+6	Saintly		
+7	Holy		
+8	Devious		
+9	Fortified		
+10			
+11			
+12			
+13	Jagged		
+14	Deadly		
+15	Vicious		
+16	Brutal		
+17	Massive		
+18	Savage		
+19	Merciless		
+20	Vulpine		
+21			
+22			
+23			
+24			
+25	Tireless		
+26	Rugged		
+27	Bronze		
+28	Iron		
+29	Steel		
+30	Silver		
+31			
+32	Gold		
+33	Platinum		
+34	Meteoric		
+35	Sharp		
+36	Fine		
+37	Warrior's		
+38	Soldier's		
+39	Knight's		
+40	Lord's		
+41	King's		
+42	Howling		
+43	Fortuitous		
+44			
+45			
+46			
+47			
+48			
+49	Glimmering		
+50	Glowing		
+51			
+52			
+53	Lizard's		
+54			
+55	Snake's		
+56	Serpent's		
+57	Serpent's		
+58	Drake's		
+59	Dragon's		
+60	Dragon's		
+61	Wyrm's		
+62			
+63			
+64	Prismatic		
+65	Prismatic		
+66	Azure		
+67	Lapis		
+68	Lapis		
+69	Cobalt		
+70	Cobalt		
+71			
+72	Sapphire		
+73			
+74			
+75	Crimson		
+76	Burgundy		
+77	Burgundy		
+78	Garnet		
+79	Garnet		
+80			
+81	Ruby		
+82			
+83			
+84	Ocher		
+85	Tangerine		
+86	Tangerine		
+87	Coral		
+88	Coral		
+89			
+90	Amber		
+91			
+92			
+93	Beryl		
+94	Jade		
+95	Jade		
+96	Viridian		
+97	Viridian		
+98			
+99	Emerald		
+100			
+	Fletcher's		
+	Archer's		
+	Archer's		
+	Monk's		
+	Priest's		
+	Priest's		
+	Summoner's		
+	Necromancer's		
+	Necromancer's		
+	Angel's		
+	Arch-Angel's		
+	Arch-Angel's		
+	Slayer's		
+	Berserker's		
+	Berserker's		
+116			
+117			
+	Triumphant		
+	Stout		
+	Stout		
+	Stout		
+	Burly		
+	Burly		
+	Burly		
+	Stalwart		
+	Stalwart		
+	Stalwart		
+	Stout		
+	Stout		
+	Stout		
+	Burly		
+	Burly		
+	Stalwart		
+	Stalwart		
+	Stout		
+	Stout		
+	Burly		
+	Stalwart		
+	Blanched		
+	Eburin		
+	Bone		
+	Ivory		
+	Sturdy		
+	Sturdy		
+	Strong		
+	Glorious		
+	Blessed		
+	Saintly		
+	Holy		
+	Godly		
+	Devious		
+	Blank		
+	Null		
+	Antimagic		
+	Red		
+	Red		
+	Sanguinary		
+	Sanguinary		
+	Bloody		
+	Red		
+	Sanguinary		
+	Bloody		
+	Red		
+	Sanguinary		
+	Bloody		
+	Scarlet		
+	Crimson		
+	Jagged		
+	Jagged		
+	Jagged		
+	Forked		
+	Forked		
+	Serrated		
+	Serrated		
+	Jagged		
+	Jagged		
+	Forked		
+	Forked		
+	Serrated		
+	Jagged		
+	Forked		
+	Serrated		
+	Carbuncle		
+	Carmine		
+	Vermillion		
+	Jagged		
+	Deadly		
+	Vicious		
+	Brutal		
+	Massive		
+	Savage		
+	Merciless		
+	Ferocious		
+	Cruel		
+	Cinnabar		
+	Rusty		
+	Realgar		
+	Ruby		
+	Vulpine		
+	Dun		
+	Tireless		
+	Tireless		
+	Brown		
+	Rugged		
+	Rugged		
+	Rugged		
+	Rugged		
+	Rugged		
+	Rugged		
+	Rugged		
+	Rugged		
+	Rugged		
+	Rugged		
+	Rugged		
+	Vigorous		
+	Chestnut		
+	Maroon		
+	Bronze		
+	Bronze		
+	Bronze		
+	Iron		
+	Iron		
+	Iron		
+	Steel		
+	Steel		
+	Steel		
+	Bronze		
+	Bronze		
+	Bronze		
+	Iron		
+	Iron		
+	Steel		
+	Steel		
+	Bronze		
+	Bronze		
+	Iron		
+	Steel		
+	Bronze		
+	Iron		
+	Steel		
+	Silver		
+	Gold		
+	Platinum		
+	Meteoric		
+	Strange		
+	Weird		
+	Nickel		
+	Tin		
+	Silver		
+	Argent		
+	Fine		
+	Fine		
+	Sharp		
+	Fine		
+	Sharp		
+	Fine		
+	Sharp		
+	Fine		
+	Warrior's		
+	Soldier's		
+	Knight's		
+	Lord's		
+	King's		
+	Master's		
+	Grandmaster's		
+	Glimmering		
+	Glowing		
+	Bright		
+	Screaming		
+	Howling		
+	Wailing		
+	Screaming		
+	Howling		
+	Wailing		
+	Lucky		
+	Lucky		
+	Lucky		
+	Lucky		
+	Lucky		
+	Lucky		
+	Felicitous		
+	Fortuitous		
+	Emerald		
+	Lizard's		
+	Lizard's		
+	Lizard's		
+	Snake's		
+	Snake's		
+	Snake's		
+	Serpent's		
+	Serpent's		
+	Serpent's		
+	Lizard's		
+	Lizard's		
+	Lizard's		
+	Snake's		
+	Snake's		
+	Serpent's		
+	Serpent's		
+	Lizard's		
+	Lizard's		
+	Snake's		
+	Serpent's		
+	Lizard's		
+	Snake's		
+	Serpent's		
+	Serpent's		
+	Drake's		
+	Dragon's		
+	Dragon's		
+	Wyrm's		
+	Great Wyrm's		
+	Bahamut's		
+	Zircon		
+	Jacinth		
+	Turquoise		
+	Shimmering		
+	Shimmering		
+	Shimmering		
+	Shimmering		
+	Shimmering		
+	Shimmering		
+	Shimmering		
+	Rainbow		
+	Scintillating		
+	Prismatic		
+	Chromatic		
+	Shimmering		
+	Rainbow		
+	Scintillating		
+	Prismatic		
+	Chromatic		
+	Shimmering		
+	Rainbow		
+	Scintillating		
+	Shimmering		
+	Scintillating		
+	Azure		
+	Lapis		
+	Cobalt		
+	Sapphire		
+	Azure		
+	Lapis		
+	Cobalt		
+	Sapphire		
+	Azure		
+	Lapis		
+	Cobalt		
+	Sapphire		
+	Azure		
+	Lapis		
+	Lapis		
+	Cobalt		
+	Cobalt		
+	Sapphire		
+	Lapis Lazuli		
+	Sapphire		
+	Crimson		
+	Russet		
+	Garnet		
+	Ruby		
+	Crimson		
+	Russet		
+	Garnet		
+	Ruby		
+	Crimson		
+	Russet		
+	Garnet		
+	Ruby		
+	Russet		
+	Russet		
+	Garnet		
+	Garnet		
+	Ruby		
+	Garnet		
+	Ruby		
+	Tangerine		
+	Ocher		
+	Coral		
+	Amber		
+	Tangerine		
+	Ocher		
+	Coral		
+	Amber		
+	Tangerine		
+	Ocher		
+	Coral		
+	Amber		
+	Tangerine		
+	Ocher		
+	Ocher		
+	Coral		
+	Coral		
+	Amber		
+	Camphor		
+	Ambergris		
+	Beryl		
+	Viridian		
+	Jade		
+	Emerald		
+	Beryl		
+	Viridian		
+	Jade		
+	Emerald		
+	Beryl		
+	Viridian		
+	Jade		
+	Emerald		
+	Beryl		
+	Viridian		
+	Viridian		
+	Jade		
+	Jade		
+	Emerald		
+	Beryl		
+	Jade		
+	Triumphant		
+	Victorious		
+	Aureolin		
+	Mechanist's		
+	Artificer's		
+	Jeweler's		
+	Assamic		
+	Arcadian		
+	Unearthly		
+	Astral		
+	Elysian		
+	Celestial		
+	Diamond		
+	Fletcher's		
+	Acrobat's		
+	Harpoonist's		
+	Fletcher's		
+	Bowyer's		
+	Archer's		
+	Acrobat's		
+	Gymnast's		
+	Athlete's		
+	Harpoonist's		
+	Spearmaiden's		
+	Lancer's		
+	Burning		
+	Sparking		
+	Chilling		
+	Burning		
+	Blazing		
+	Volcanic		
+	Sparking		
+	Charged		
+	Powered		
+	Chilling		
+	Freezing		
+	Glacial		
+	Hexing		
+	Fungal		
+	Graverobber's		
+	Hexing		
+	Blighting		
+	Accursed		
+	Fungal		
+	Noxious		
+	Venomous		
+	Graverobber's		
+	Vodoun		
+	Golemlord's		
+	Lion Branded		
+	Captain's		
+	Preserver's		
+	Lion Branded		
+	Hawk Branded		
+	Rose Branded		
+	Captain's		
+	Commander's		
+	Marshal's		
+	Preserver's		
+	Warder's		
+	Guardian's		
+	Expert's		
+	Fanatic		
+	Sounding		
+	Expert's		
+	Veteran's		
+	Master's		
+	Fanatic		
+	Raging		
+	Furious		
+	Sounding		
+	Resonant		
+	Echoing		
+	Trainer's		
+	Spiritual		
+	Nature's		
+	Trainer's		
+	Caretaker's		
+	Keeper's		
+	Spiritual		
+	Feral		
+	Communal		
+	Nature's		
+	Terra's		
+	Gaea's		
+	Entrapping		
+	Mentalist's		
+	Shogukusha's		
+	Entrapping		
+	Trickster's		
+	Cunning		
+	Mentalist's		
+	Psychic		
+	Shadow		
+	Shogukusha's		
+	Sensei's		
+	Kenshi's		
+	Miocene		
+	Miocene		
+	Oligocene		
+	Oligocene		
+	Eocene		
+	Eocene		
+	Paleocene		
+	Paleocene		
+	Knave's		
+	Jack's		
+	Jester's		
+	Joker's		
+	Trump		
+	Loud		
+	Calling		
+	Yelling		
+	Shouting		
+	Gritty		
+	Paradox		
+	Paradox		
+	Robineye		
+	Sparroweye		
+	Falconeye		
+	Hawkeye		
+	Eagleeye		
+	Visionary		
+	Mnemonic		
+	Snowflake		
+	Shivering		
+	Boreal		
+	Hibernal		
+	Ember		
+	Smoldering		
+	Smoking		
+	Flaming		
+	Scorching		
+	Static		
+	Glowing		
+	Buzzing		
+	Arcing		
+	Shocking		
+	Septic		
+	Envenomed		
+	Corosive		
+	Toxic		
+	Pestilent		
+	Maiden's		
+	Valkyrie's		
+	Maiden's		
+	Valkyrie's		
+	Monk's		
+	Priest's		
+	Monk's		
+	Priest's		
+	Monk's		
+	Priest's		
+	Summoner's		
+	Necromancer's		
+	Summoner's		
+	Necromancer's		
+	Angel's		
+	Arch-Angel's		
+	Angel's		
+	Arch-Angel's		
+	Slayer's		
+	Berserker's		
+	Slayer's		
+	Berserker's		
+	Slayer's		
+	Berserker's		
+	Shaman's		
+	Hierophant's		
+	Shaman's		
+	Hierophant's		
+	Magekiller's		
+	Witch-hunter's		
+	Magekiller's		
+	Witch-hunter's		
+	Compact		
+	Thin		
+	Dense		
+	Consecrated		
+	Pure		
+	Sacred		
+	Hallowed		
+	Divine		
+	Pearl		
+	Crimson		
+	Red		
+	Sanguinary		
+	Bloody		
+	Red		
+	Sanguinary		
+	Red		
+	Jagged		
+	Forked		
+	Serrated		
+	Jagged		
+	Forked		
+	Jagged		
+	Snowflake		
+	Shivering		
+	Boreal		
+	Hibernal		
+	Snowflake		
+	Shivering		
+	Boreal		
+	Hibernal		
+	Snowflake		
+	Shivering		
+	Boreal		
+	Hibernal		
+	Ember		
+	Smoldering		
+	Smoking		
+	Flaming		
+	Ember		
+	Smoldering		
+	Smoking		
+	Flaming		
+	Ember		
+	Smoldering		
+	Smoking		
+	Flaming		
+	Static		
+	Glowing		
+	Arcing		
+	Shocking		
+	Static		
+	Glowing		
+	Arcing		
+	Shocking		
+	Static		
+	Glowing		
+	Arcing		
+	Shocking		
+	Septic		
+	Envenomed		
+	Toxic		
+	Pestilent		
+	Septic		
+	Envenomed		
+	Toxic		
+	Pestilent		
+	Septic		
+	Envenomed		
+	Toxic		
+	Pestilent		
+	Tireless		
+	Lizard's		
+	Azure		
+	Crimson		
+	Tangerine		
+	Beryl		
+	Godly		
+	Cruel		
+*=======================以下是魔法后缀(Magic Suffix)			
+0			
+	of Health		
+	of Protection		
+	of Absorption		
+	of Life		
+5			
+	of Warding		
+	of the Sentinel		
+	of Guarding		
+	of Negation		
+10			
+	of Piercing		
+	of Bashing		
+	of Puncturing		
+	of Thorns		
+	of Spikes		
+	of Readiness		
+	of Alacrity		
+	of Swiftness		
+	of Quickness		
+	of Blocking		
+	of Deflecting		
+	of the Apprentice		
+	of the Magus		
+	of Frost		
+	of the Glacier		
+	of Frost		
+	of Warmth		
+	of Flame		
+	of Fire		
+	of Burning		
+	of Flame		
+	of Shock		
+	of Lightning		
+	of Thunder		
+	of Shock		
+	of Craftsmanship		
+	of Quality		
+	of Maiming		
+	of Slaying		
+	of Gore		
+	of Carnage		
+	of Slaughter		
+	of Maiming		
+	of Worth		
+	of Measure		
+	of Excellence		
+	of Performance		
+	of Measure		
+	of Blight		
+	of Venom		
+	of Pestilence		
+	of Blight		
+	of Dexterity		
+	of Dexterity		
+	of Skill		
+	of Skill		
+	of Accuracy		
+	of Precision		
+	of Precision		
+	of Perfection		
+	of Balance		
+	of Stability		
+63			
+	of Regeneration		
+	of Regeneration		
+	of Regeneration		
+	of Regrowth		
+	of Regrowth		
+	of Vileness		
+70			
+	of Greed		
+	of Wealth		
+	of Chance		
+	of Fortune		
+	of Energy		
+	of Energy		
+	of the Mind		
+	of Brilliance		
+	of Sorcery		
+	of Wizardry		
+	of the Bear		
+	of Light		
+	of Radiance		
+	of the Sun		
+	of Life		
+	of the Jackal		
+	of the Fox		
+	of the Wolf		
+	of the Wolf		
+	of the Tiger		
+	of the Mammoth		
+	of the Mammoth		
+	of the Colosuss		
+	of the Leech		
+	of the Locust		
+	of the Bat		
+	of the Vampire		
+	of Defiance		
+	of Amelioration		
+	of Remedy		
+101			
+	of Simplicity		
+	of Ease		
+104			
+	of Strength		
+	of Might		
+	of the Ox		
+	of the Ox		
+	of the Giant		
+	of the Giant		
+	of the Titan		
+	of Pacing		
+	of Haste		
+	of Speed		
+	of Health		
+	of Protection		
+	of Absorption		
+	of Life		
+	of Life Everlasting		
+	of Protection		
+	of Absorption		
+	of Life		
+	of Anima		
+	of Warding		
+	of the Sentinel		
+	of Guarding		
+	of Negation		
+	of the Sentinel		
+	of Guarding		
+	of Negation		
+	of Coolness		
+	of Incombustibility		
+	of Amianthus		
+	of Fire Quenching		
+	of Coolness		
+	of Incombustibility		
+	of Amianthus		
+	of Fire Quenching		
+	of Faith		
+	of Resistance		
+	of Insulation		
+	of Grounding		
+	of the Dynamo		
+	of Resistance		
+	of Insulation		
+	of Grounding		
+	of the Dynamo		
+	of Stoicism		
+	of Warming		
+	of Thawing		
+	of the Dunes		
+	of the Sirocco		
+	of Warming		
+	of Thawing		
+	of the Dunes		
+	of the Sirocco		
+	of Desire		
+	of Piercing		
+	of Bashing		
+	of Puncturing		
+	of Thorns		
+	of Spikes		
+	of Razors		
+	of Swords		
+	of Malice		
+	of Readiness		
+	of Alacrity		
+	of Swiftness		
+	of Quickness		
+	of Alacrity		
+	of Fervor		
+	of Blocking		
+	of Deflecting		
+	of the Apprentice		
+	of the Magus		
+	of Frost		
+	of the Icicle		
+	of the Glacier		
+	of Winter		
+	of Frost		
+	of Frigidity		
+	of Warmth		
+	of Flame		
+	of Fire		
+	of Burning		
+	of Incineration		
+	of Flame		
+	of Passion		
+	of Shock		
+	of Lightning		
+	of Thunder		
+	of Storms		
+	of Shock		
+	of Ennui		
+	of Craftsmanship		
+	of Quality		
+	of Maiming		
+	of Slaying		
+	of Gore		
+	of Carnage		
+	of Slaughter		
+	of Butchery		
+	of Evisceration		
+	of Maiming		
+	of Craftsmanship		
+	of Craftsmanship		
+	of Craftsmanship		
+	of Quality		
+	of Quality		
+	of Maiming		
+	of Maiming		
+	of Craftsmanship		
+	of Craftsmanship		
+	of Quality		
+	of Quality		
+	of Maiming		
+	of Craftsmanship		
+	of Quality		
+	of Maiming		
+	of Ire		
+	of Wrath		
+	of Carnage		
+	of Worth		
+	of Measure		
+	of Excellence		
+	of Performance		
+	of Transcendence		
+	of Worth		
+	of Measure		
+	of Excellence		
+	of Performance		
+	of Joyfulness		
+	of Bliss		
+	of Blight		
+	of Venom		
+	of Pestilence		
+	of Anthrax		
+	of Blight		
+	of Envy		
+	of Dexterity		
+	of Skill		
+	of Accuracy		
+	of Precision		
+	of Perfection		
+	of Nirvana		
+	of Dexterity		
+	of Skill		
+	of Accuracy		
+	of Precision		
+	of Perfection		
+	of Dexterity		
+	of Skill		
+	of Accuracy		
+	of Precision		
+	of Dexterity		
+	of Dexterity		
+	of Dexterity		
+	of Dexterity		
+	of Dexterity		
+	of Dexterity		
+	of Daring		
+	of Balance		
+	of Equilibrium		
+	of Stability		
+	of Balance		
+	of Balance		
+	of Balance		
+	of Truth		
+	of Regeneration		
+	of Regeneration		
+	of Regeneration		
+	of Regrowth		
+	of Regrowth		
+	of Revivification		
+	of Honor		
+	of Vileness		
+	of Greed		
+	of Wealth		
+	of Greed		
+	of Greed		
+	of Greed		
+	of Greed		
+	of Greed		
+	of Greed		
+	of Avarice		
+	of Chance		
+	of Fortune		
+	of Fortune		
+	of Luck		
+	of Fortune		
+	of Good Luck		
+	of Prosperity		
+	of Energy		
+	of the Mind		
+	of Brilliance		
+	of Sorcery		
+	of Wizardry		
+	of Enlightenment		
+	of Energy		
+	of the Mind		
+	of Brilliance		
+	of Sorcery		
+	of Wizardry		
+	of Energy		
+	of the Mind		
+	of Brilliance		
+	of Sorcery		
+	of Knowledge		
+	of the Bear		
+	of Light		
+	of Radiance		
+	of the Sun		
+	of the Jackal		
+	of the Fox		
+	of the Wolf		
+	of the Tiger		
+	of the Mammoth		
+	of the Colosuss		
+	of the Squid		
+	of the Whale		
+	of the Jackal		
+	of the Fox		
+	of the Wolf		
+	of the Tiger		
+	of the Mammoth		
+	of the Colosuss		
+	of the Jackal		
+	of the Fox		
+	of the Wolf		
+	of the Tiger		
+	of the Mammoth		
+	of Life		
+	of Life		
+	of Life		
+	of Substinence		
+	of Substinence		
+	of Substinence		
+	of Vita		
+	of Vita		
+	of Vita		
+	of Life		
+	of Life		
+	of Substinence		
+	of Substinence		
+	of Vita		
+	of Vita		
+	of Life		
+	of Substinence		
+	of Vita		
+	of Spirit		
+	of Hope		
+	of the Leech		
+	of the Locust		
+	of the Lamprey		
+	of the Leech		
+	of the Locust		
+	of the Lamprey		
+	of the Leech		
+	of the Bat		
+	of the Wraith		
+	of the Vampire		
+	of the Bat		
+	of the Wraith		
+	of the Vampire		
+	of the Bat		
+	of Defiance		
+	of Amelioration		
+	of Remedy		
+	of Simplicity		
+	of Ease		
+	of Freedom		
+	of Strength		
+	of Might		
+	of the Ox		
+	of the Giant		
+	of the Titan		
+	of Atlus		
+	of Strength		
+	of Might		
+	of the Ox		
+	of the Giant		
+	of the Titan		
+	of Strength		
+	of Might		
+	of the Ox		
+	of the Giant		
+	of Strength		
+	of Strength		
+	of Strength		
+	of Strength		
+	of Strength		
+	of Strength		
+	of Virility		
+	of Pacing		
+	of Haste		
+	of Speed		
+	of Traveling		
+	of Acceleration		
+	of Inertia		
+	of Inertia		
+	of Inertia		
+	of Self-Repair		
+	of Fast Repair		
+	of Ages		
+	of Replenishing		
+	of Propogation		
+	of the Kraken		
+	of Memory		
+	of the Elephant		
+	of Power		
+	of Grace		
+	of Grace and Power		
+	of the Yeti		
+	of the Phoenix		
+	of the Efreeti		
+	of the Cobra		
+	of the Elements		
+	of Firebolts		
+	of Firebolts		
+	of Firebolts		
+	of Charged Shield		
+	of Charged Shield		
+	of Charged Shield		
+	of Icebolt		
+	of Frozen Armor		
+	of Static Field		
+	of Telekinesis		
+	of Frost Shield		
+	of Ice Blast		
+	of Blaze		
+	of Fire Ball		
+	of Nova		
+	of Nova		
+	of Nova Shield		
+	of Nova Shield		
+	of Nova Shield		
+	of Lightning		
+	of Lightning		
+	of Shiver Armor		
+	of Fire Wall		
+	of Enchant		
+	of Chain Lightning		
+	of Chain Lightning		
+	of Chain Lightning		
+	of Teleport Shield		
+	of Teleport Shield		
+	of Teleport Shield		
+	of Glacial Spike		
+	of Meteor		
+	of Thunder Storm		
+	of Energy Shield		
+	of Blizzard		
+	of Chilling Armor		
+	of Hydra Shield		
+	of Frozen Orb		
+	of Dawn		
+	of Sunlight		
+	of Magic Arrows		
+	of Magic Arrows		
+	of Fire Arrows		
+	of Fire Arrows		
+	of Inner Sight		
+	of Inner Sight		
+	of Jabbing		
+	of Jabbing		
+	of Cold Arrows		
+	of Cold Arrows		
+	of Multiple Shot		
+	of Multiple Shot		
+	of Power Strike		
+	of Power Strike		
+	of Poison Jab		
+	of Poison Jab		
+	of Exploding Arrows		
+	of Exploding Arrows		
+	of Slow Missiles		
+	of Slow Missiles		
+	of Impaling Strike		
+	of Impaling Strike		
+	of Lightning Javelin		
+	of Lightning Javelin		
+	of Ice Arrows		
+	of Ice Arrows		
+	of Guided Arrows		
+	of Guided Arrows		
+	of Charged Strike		
+	of Charged Strike		
+	of Plague Jab		
+	of Plague Jab		
+	of Immolating Arrows		
+	of Immolating Arrows		
+	of Fending		
+	of Fending		
+	of Freezing Arrows		
+	of Freezing Arrows		
+	of Lightning Strike		
+	of Lightning Strike		
+	of Lightning Fury		
+	of Lightning Fury		
+	of Fire Bolts		
+	of Fire Bolts		
+	of Charged Bolts		
+	of Charged Bolts		
+	of Ice Bolts		
+	of Ice Bolts		
+	of Frozen Armor		
+	of Frozen Armor		
+	of Static Field		
+	of Static Field		
+	of Telekinesis		
+	of Telekinesis		
+	of Frost Novas		
+	of Frost Novas		
+	of Ice Blasts		
+	of Ice Blasts		
+	of Blazing		
+	of Blazing		
+	of Fire Balls		
+	of Fire Balls		
+	of Novas		
+	of Novas		
+	of Lightning		
+	of Lightning		
+	of Shiver Armor		
+	of Shiver Armor		
+	of Fire Walls		
+	of Fire Walls		
+	of Enchantment		
+	of Enchantment		
+	of Chain Lightning		
+	of Chain Lightning		
+	of Teleportation		
+	of Teleportation		
+	of Glacial Spikes		
+	of Glacial Spikes		
+	of Meteors		
+	of Meteors		
+	of Thunder Storm		
+	of Thunder Storm		
+	of Energy Shield		
+	of Energy Shield		
+	of Blizzards		
+	of Blizzards		
+	of Chilling Armor		
+	of Chilling Armor		
+	of Hydras		
+	of Hydras		
+	of Frozen Orbs		
+	of Frozen Orbs		
+	of Amplify Damage		
+	of Amplify Damage		
+	of Teeth		
+	of Teeth		
+	of Bone Armor		
+	of Bone Armor		
+	of Raise Skeletons		
+	of Raise Skeletons		
+	of Dim Vision		
+	of Dim Vision		
+	of Weaken		
+	of Weaken		
+	of Poison Dagger		
+	of Poison Dagger		
+	of Corpse Explosions		
+	of Corpse Explosions		
+	of Clay Golem Summoning		
+	of Clay Golem Summoning		
+	of Iron Maiden		
+	of Iron Maiden		
+	of Terror		
+	of Terror		
+	of Bone Walls		
+	of Bone Walls		
+	of Raise Skeletal Mages		
+	of Raise Skeletal Mages		
+	of Confusion		
+	of Confusion		
+	of Life Tap		
+	of Life Tap		
+	of Poison Explosion		
+	of Poison Explosion		
+	of Bone Spears		
+	of Bone Spears		
+	of Blood Golem Summoning		
+	of Blood Golem Summoning		
+	of Attraction		
+	of Attraction		
+	of Decrepification		
+	of Decrepification		
+	of Bone Imprisonment		
+	of Bone Imprisonment		
+	of Iron Golem Creation		
+	of Iron Golem Creation		
+	of Lower Resistance		
+	of Lower Resistance		
+	of Poison Novas		
+	of Poison Novas		
+	of Bone Spirits		
+	of Bone Spirits		
+	of Fire Golem Summoning		
+	of Fire Golem Summoning		
+	of Revivification		
+	of Revivification		
+	of Sacrifice		
+	of Sacrifice		
+	of Holy Bolts		
+	of Holy Bolts		
+	of Zeal		
+	of Zeal		
+	of Vengeance		
+	of Vengeance		
+	of Blessed Hammers		
+	of Blessed Hammers		
+	of Conversion		
+	of Conversion		
+	of Fist of the Heavens		
+	of Fist of the Heavens		
+	of Bashing		
+	of Bashing		
+	of Howling		
+	of Howling		
+	of Potion Finding		
+	of Potion Finding		
+	of Taunting		
+	of Taunting		
+	of Shouting		
+	of Shouting		
+	of Stunning		
+	of Stunning		
+	of Item Finding		
+	of Item Finding		
+	of Concentration		
+	of Concentration		
+	of Battle Cry		
+	of Battle Cry		
+	of Battle Orders		
+	of Battle Orders		
+	of Grim Ward		
+	of Grim Ward		
+	of War Cry		
+	of War Cry		
+	of Battle Command		
+	of Battle Command		
+	of Firestorms		
+	of Firestorms		
+	of Molten Boulders		
+	of Molten Boulders		
+	of Eruption		
+	of Eruption		
+	of Cyclone Armor		
+	of Cyclone Armor		
+	of Twister		
+	of Twister		
+	of Volcano		
+	of Volcano		
+	of Tornado		
+	of Tornado		
+	of Armageddon		
+	of Armageddon		
+	of Hurricane		
+	of Hurricane		
+	of Damage Amplification		
+	of the Icicle		
+	of the Glacier		
+	of Fire		
+	of Burning		
+	of Lightning		
+	of Thunder		
+	of Daring		
+	of Daring		
+	of Knowledge		
+	of Knowledge		
+	of Virility		
+	of Virility		
+	of Readiness		
+	of Craftsmanship		
+	of Quality		
+	of Maiming		
+	of Craftsmanship		
+	of Quality		
+	of Craftsmanship		
+	of Blight		
+	of Venom		
+	of Pestilence		
+	of Anthrax		
+	of Blight		
+	of Venom		
+	of Pestilence		
+	of Anthrax		
+	of Blight		
+	of Venom		
+	of Pestilence		
+	of Anthrax		
+	of Frost		
+	of the Icicle		
+	of the Glacier		
+	of Winter		
+	of Frost		
+	of the Icicle		
+	of the Glacier		
+	of Winter		
+	of Frost		
+	of the Icicle		
+	of the Glacier		
+	of Winter		
+	of Flame		
+	of Fire		
+	of Burning		
+	of Incineration		
+	of Flame		
+	of Fire		
+	of Burning		
+	of Incineration		
+	of Flame		
+	of Fire		
+	of Burning		
+	of Incineration		
+	of Shock		
+	of Lightning		
+	of Thunder		
+	of Storms		
+	of Shock		
+	of Lightning		
+	of Thunder		
+	of Storms		
+	of Shock		
+	of Lightning		
+	of Thunder		
+	of Storms		
+	of Dexterity		
+	of Dexterity		
+	of Strength		
+	of Strength		
+	of Thorns		
+	of Frost		
+	of Flame		
+	of Blight		
+	of Shock		
+	of Regeneration		
+	of Energy		
+	of Light		
+	of the Leech		
+	of the Locust		
+	of the Lamprey		
+	of the Bat		
+	of the Wraith		
+	of the Vampire		
+*=======================以下是Rare和Crafted名字			
+0			
+	Bite		
+	Scratch		
+	Scalpel		
+	Fang		
+	Gutter		
+	Thirst		
+	Razor		
+	Scythe		
+	Edge		
+	Saw		
+	Splitter		
+	Cleaver		
+	Sever		
+	Sunder		
+	Rend		
+	Mangler		
+	Slayer		
+	Reaver		
+	Spawn		
+	Gnash		
+	Star		
+	Blow		
+	Smasher		
+	Bane		
+	Crusher		
+	Breaker		
+	Grinder		
+	Crack		
+	Mallet		
+	Knell		
+	Lance		
+	Spike		
+	Impaler		
+	Skewer		
+	Prod		
+	Scourge		
+	Wand		
+	Wrack		
+	Barb		
+	Needle		
+	Dart		
+	Bolt		
+	Quarrel		
+	Fletch		
+	Flight		
+	Nock		
+	Horn		
+	Stinger		
+	Quill		
+	Goad		
+	Branch		
+	Spire		
+	Song		
+	Call		
+	Cry		
+	Spell		
+	Chant		
+	Weaver		
+	Gnarl		
+	Visage		
+	Crest		
+	Circlet		
+	Veil		
+	Hood		
+	Mask		
+	Brow		
+	Casque		
+	Visor		
+	Cowl		
+	Hide		
+	Pelt		
+	Carapace		
+	Coat		
+	Wrap		
+	Suit		
+	Cloak		
+	Shroud		
+	Jack		
+	Mantle		
+	Guard		
+	Badge		
+	Rock		
+	Aegis		
+	Ward		
+	Tower		
+	Shield		
+	Wing		
+	Mark		
+	Emblem		
+	Hand		
+	Fist		
+	Claw		
+	Clutches		
+	Grip		
+	Grasp		
+	Hold		
+	Touch		
+	Finger		
+	Knuckle		
+	Shank		
+	Spur		
+	Tread		
+	Stalker		
+	Greaves		
+	Blazer		
+	Nails		
+	Trample		
+	Brogues		
+	Track		
+	Slippers		
+	Clasp		
+	Buckle		
+	Harness		
+	Lock		
+	Fringe		
+	Winding		
+	Chain		
+	Strap		
+	Lash		
+	Cord		
+	Knot		
+	Circle		
+	Loop		
+	Eye		
+	Turn		
+	Spiral		
+	Coil		
+	Gyre		
+	Band		
+	Whorl		
+	Talisman		
+	Heart		
+	Noose		
+	Necklace		
+	Collar		
+	Beads		
+	Torc		
+	Gorget		
+	Scarab		
+	Wood		
+	Brand		
+	Bludgeon		
+	Cudgel		
+	Loom		
+	Harp		
+	Master		
+	Bar		
+	Hew		
+	Crook		
+	Mar		
+	Shell		
+	Stake		
+	Picket		
+	Pale		
+	Flange		
+	Beast		
+	Eagle		
+	Raven		
+	Viper		
+	Ghoul		
+	Skull		
+	Blood		
+	Dread		
+	Doom		
+	Grim		
+	Bone		
+	Death		
+	Shadow		
+	Storm		
+	Rune		
+	Plague		
+	Stone		
+	Wraith		
+	Spirit		
+	Storm		
+	Demon		
+	Cruel		
+	Empyrian		
+	Bramble		
+	Pain		
+	Loath		
+	Glyph		
+	Imp		
+	Fiend		
+	Hailstone		
+	Gale		
+	Dire		
+	Soul		
+	Brimstone		
+	Corpse		
+	Carrion		
+	Armageddon		
+	Havoc		
+	Bitter		
+	Entropy		
+	Chaos		
+	Order		
+	Rule		
+	Warp		
+	Rift		
+	Corruption		
+*=======================以下是暗金名字(Unique Name)			
+	The Gnasher		
+	Deathspade		
+	Bladebone		
+	Mindrend		
+	Rakescar		
+	Fechmars Axe		
+	Goreshovel		
+	The Chieftan		
+	Brainhew		
+	The Humongous		
+	Iros Torch		
+	Maelstromwrath		
+	Gravenspine		
+	Umes Lament		
+	Felloak		
+	Knell Striker		
+	Rusthandle		
+	Stormeye		
+	Stoutnail		
+	Crushflange		
+	Bloodrise		
+	The Generals Tan Do Li Ga		
+	Ironstone		
+	Bonesob		
+	Steeldriver		
+	Rixots Keen		
+	Blood Crescent		
+	Krintizs Skewer		
+	Gleamscythe		
+	Azurewrath		
+	Griswolds Edge		
+	Hellplague		
+	Culwens Point		
+	Shadowfang		
+	Soulflay		
+	Kinemils Awl		
+	Blacktongue		
+	Ripsaw		
+	The Patriarch		
+	Gull		
+	The Diggler		
+	The Jade Tan Do		
+	Irices Shard		
+	The Dragon Chang		
+	Razortine		
+	Bloodthief		
+	Lance of Yaggai		
+	The Tannr Gorerod		
+	Dimoaks Hew		
+	Steelgoad		
+	Soul Harvest		
+	The Battlebranch		
+	Woestave		
+	The Grim Reaper		
+	Bane Ash		
+	Serpent Lord		
+	Lazarus Spire		
+	The Salamander		
+	The Iron Jang Bong		
+	Pluckeye		
+	Witherstring		
+	Rimeraven		
+	Piercerib		
+	Pullspite		
+	Wizendraw		
+	Hellclap		
+	Blastbark		
+	Leadcrow		
+	Ichorsting		
+	Hellcast		
+	Doomspittle		
+	War Bonnet		
+	Tarnhelm		
+	Coif of Glory		
+	Duskdeep		
+	Wormskull		
+	Howltusk		
+	Undead Crown		
+	The Face of Horror		
+	Greyform		
+	Blinkbats Form		
+	The Centurion		
+	Twitchthroe		
+	Darkglow		
+	Hawkmail		
+	Sparking Mail		
+	Venomsward		
+	Iceblink		
+	Boneflesh		
+	Rockfleece		
+	Rattlecage		
+	Goldskin		
+	Victors Silk		
+	Heavenly Garb		
+	Pelta Lunata		
+	Umbral Disk		
+	Stormguild		
+	Wall of the Eyeless		
+	Swordback Hold		
+	Steelclash		
+	Bverrit Keep		
+	The Ward		
+	The Hand of Broc		
+	Bloodfist		
+	Chance Guards		
+	Magefist		
+	Frostburn		
+	Hotspur		
+	Gorefoot		
+	Treads of Cthon		
+	Goblin Toe		
+	Tearhaunch		
+	Lenyms Cord		
+	Snakecord		
+	Nightsmoke		
+	Goldwrap		
+	Bladebuckle		
+	Nokozan Relic		
+	The Eye of Etlich		
+	The Mahim-Oak Curio		
+	Nagelring		
+	Manald Heal		
+	The Stone of Jordan		
+	Amulet of the Viper		
+	Staff of Kings		
+	Horadric Staff		
+	Hell Forge Hammer		
+	Khalim's Flail		
+	Khalim's Will		
+	Coldkill		
+	Butcher's Pupil		
+	Islestrike		
+	Pompe's Wrath		
+	Guardian Naga		
+	Warlord's Trust		
+	Spellsteel		
+	Stormrider		
+	Boneslayer Blade		
+	The Minataur		
+	Suicide Branch		
+	Carin Shard		
+	Arm of King Leoric		
+	Blackhand Key		
+	Dark Clan Crusher		
+	Zakarum's Hand		
+	The Fetid Sprinkler		
+	Hand of Blessed Light		
+	Fleshrender		
+	Sureshrill Frost		
+	Moonfall		
+	Baezil's Vortex		
+	Earthshaker		
+	Bloodtree Stump		
+	The Gavel of Pain		
+	Bloodletter		
+	Coldsteel Eye		
+	Hexfire		
+	Blade of Ali Baba		
+	Ginther's Rift		
+	Headstriker		
+	Plague Bearer		
+	The Atlantian		
+	Crainte Vomir		
+	Bing Sz Wang		
+	The Vile Husk		
+	Cloudcrack		
+	Todesfaelle Flamme		
+	Swordguard		
+	Spineripper		
+	Heart Carver		
+	Blackbog's Sharp		
+	Stormspike		
+	The Impaler		
+	Kelpie Snare		
+	Soulfeast Tine		
+	Hone Sundan		
+	Spire of Honor		
+	The Meat Scraper		
+	Blackleach Blade		
+	Athena's Wrath		
+	Pierre Tombale Couant		
+	Husoldal Evo		
+	Grim's Burning Dead		
+	Razorswitch		
+	Ribcracker		
+	Chromatic Ire		
+	Warpspear		
+	Skullcollector		
+	Skystrike		
+	Riphook		
+	Kuko Shakaku		
+	Endlesshail		
+	Whichwild String		
+	Cliffkiller		
+	Magewrath		
+	Godstrike Arch		
+	Langer Briser		
+	Pus Spiter		
+	Buriza-Do Kyanon		
+	Demon Machine		
+	Armor		
+	Peasent Crown		
+	Rockstopper		
+	Stealskull		
+	Darksight Helm		
+	Valkiry Wing		
+	Crown of Thieves		
+	Blackhorn's Face		
+	Vampiregaze		
+	The Spirit Shroud		
+	Skin of the Vipermagi		
+	Skin of the Flayerd One		
+	Ironpelt		
+	Spiritforge		
+	Crow Caw		
+	Shaftstop		
+	Duriel's Shell		
+	Skullder's Ire		
+	Guardian Angel		
+	Toothrow		
+	Atma's Wail		
+	Black Hades		
+	Corpsemourn		
+	Que-Hegan's Wisdon		
+	Visceratuant		
+	Mosers Blessed Circle		
+	Stormchaser		
+	Tiamat's Rebuke		
+	Kerke's Sanctuary		
+	Radimant's Sphere		
+	Lidless Wall		
+	Lance Guard		
+	Venom Grip		
+	Gravepalm		
+	Ghoulhide		
+	Lavagout		
+	Hellmouth		
+	Infernostride		
+	Waterwalk		
+	Silkweave		
+	Wartraveler		
+	Gorerider		
+	String of Ears		
+	Razortail		
+	Gloomstrap		
+	Snowclash		
+	Thudergod's Vigor		
+	Elite Uniques		
+	Harlequin Crest		
+	Veil of Steel		
+	The Gladiator's Bane		
+	Arkaine's Valor		
+	Blackoak Shield		
+	Stormshield		
+	Hellslayer		
+	Messerschmidt's Reaver		
+	Baranar's Star		
+	Schaefer's Hammer		
+	The Cranium Basher		
+	Lightsabre		
+	Doombringer		
+	The Grandfather		
+	Wizardspike		
+	Constricting Ring		
+	Stormspire		
+	Eaglehorn		
+	Windforce		
+	Rings		
+	Bul Katho's Wedding Band		
+	The Cat's Eye		
+	The Rising Sun		
+	Crescent Moon		
+	Mara's Kaleidoscope		
+	Atma's Scarab		
+	Dwarf Star		
+	Raven Frost		
+	Highlord's Wrath		
+	Saracen's Chance		
+	Class Specific		
+	Arreat's Face		
+	Homunculus		
+	Titan's Revenge		
+	Lycander's Aim		
+	Lycander's Flank		
+	The Oculus		
+	Herald of Zakarum		
+	Bartuc's Cut-Throat		
+	Jalal's Mane		
+	The Scalper		
+	Bloodmoon		
+	Djinnslayer		
+	Deathbit		
+	Warshrike		
+	Gutsiphon		
+	Razoredge		
+	Gore Ripper		
+	Demonlimb		
+	Steelshade		
+	Tomb Reaver		
+	Deaths's Web		
+	Nature's Peace		
+	Azurewrath		
+	Seraph's Hymn		
+	Zakarum's Salvation		
+	Fleshripper		
+	Odium		
+	Horizon's Tornado		
+	Stone Crusher		
+	Jadetalon		
+	Shadowdancer		
+	Cerebus' Bite		
+	Tyrael's Might		
+	Souldrain		
+	Runemaster		
+	Deathcleaver		
+	Executioner's Justice		
+	Stoneraven		
+	Leviathan		
+	Larzuk's Champion		
+	Wisp Projector		
+	Gargoyle's Bite		
+	Lacerator		
+	Mang Song's Lesson		
+	Viperfork		
+	Ethereal Edge		
+	Demonhorn's Edge		
+	The Reaper's Toll		
+	Spiritkeeper		
+	Hellrack		
+	Alma Negra		
+	Darkforge Spawn		
+	Widowmaker		
+	Bloodraven's Charge		
+	Ghostflame		
+	Shadowkiller		
+	Gimmershred		
+	Griffon's Eye		
+	Windhammer		
+	Thunderstroke		
+	Giantmaimer		
+	Demon's Arch		
+	Boneflame		
+	Steelpillar		
+	Nightwing's Veil		
+	Crown of Ages		
+	Andariel's Visage		
+	Darkfear		
+	Dragonscale		
+	Steel Carapice		
+	Medusa's Gaze		
+	Ravenlore		
+	Boneshade		
+	Nethercrow		
+	Flamebellow		
+	Fathom		
+	Wolfhowl		
+	Spirit Ward		
+	Kira's Guardian		
+	Ormus' Robes		
+	Gheed's Fortune		
+	Stormlash		
+	Halaberd's Reign		
+	Warriv's Warder		
+	Spike Thorn		
+	Dracul's Grasp		
+	Frostwind		
+	Templar's Might		
+	Eschuta's temper		
+	Firelizard's Talons		
+	Sandstorm Trek		
+	Marrowwalk		
+	Heaven's Light		
+	Merman's Speed		
+	Arachnid Mesh		
+	Nosferatu's Coil		
+	Metalgrid		
+	Verdugo's Hearty Cord		
+	Sigurd's Staunch		
+	Carrion Wind		
+	Giantskull		
+	Ironward		
+	Annihilus		
+	Arioc's Needle		
+	Cranebeak		
+	Nord's Tenderizer		
+	Earthshifter		
+	Wraithflight		
+	Bonehew		
+	Ondal's Wisdom		
+	The Reedeemer		
+	Headhunter's Glory		
+	Steelrend		
+	Rainbow Facet		
+	Rainbow Facet		
+	Rainbow Facet		
+	Rainbow Facet		
+	Rainbow Facet		
+	Rainbow Facet		
+	Rainbow Facet		
+	Rainbow Facet		
+	Hellfire Torch	地狱火炬	地獄火炬
+	The Cold Rupture	冰寒裂缝	冰寒裂縫
+	The Flame Rift	火焰裂隙	火焰裂隙
+	The Crack of the Heavens	天堂裂击	天堂裂擊
+	The Rotting Fissure	腐败裂痕	腐敗裂痕
+	The Bone Break	分筋裂骨	分筋裂骨
+	The Black Cleft	漆黑裂口	漆黑裂口
+*=======================以下是套装名字(Set Name)			
+	Civerb's Ward		
+	Civerb's Icon		
+	Civerb's Cudgel		
+	Hsarus' Iron Heel		
+	Hsarus' Iron Fist		
+	Hsarus' Iron Stay		
+	Cleglaw's Tooth		
+	Cleglaw's Claw		
+	Cleglaw's Pincers		
+	Iratha's Collar		
+	Iratha's Cuff		
+	Iratha's Coil		
+	Iratha's Cord		
+	Isenhart's Lightbrand		
+	Isenhart's Parry		
+	Isenhart's Case		
+	Isenhart's Horns		
+	Vidala's Barb		
+	Vidala's Fetlock		
+	Vidala's Ambush		
+	Vidala's Snare		
+	Milabrega's Orb		
+	Milabrega's Rod		
+	Milabrega's Diadem		
+	Milabrega's Robe		
+	Cathan's Rule		
+	Cathan's Mesh		
+	Cathan's Visage		
+	Cathan's Sigil		
+	Cathan's Seal		
+	Tancred's Crowbill		
+	Tancred's Spine		
+	Tancred's Hobnails		
+	Tancred's Weird		
+	Tancred's Skull		
+	Sigon's Gage		
+	Sigon's Visor		
+	Sigon's Shelter		
+	Sigon's Sabot		
+	Sigon's Wrap		
+	Sigon's Guard		
+	Infernal Cranium		
+	Infernal Torch		
+	Infernal Sign		
+	Berserker's Headgear		
+	Berserker's Hauberk		
+	Berserker's Hatchet		
+	Death's Hand		
+	Death's Guard		
+	Death's Touch		
+	Angelic Sickle		
+	Angelic Mantle		
+	Angelic Halo		
+	Angelic Wings		
+	Arctic Horn		
+	Arctic Furs		
+	Arctic Binding		
+	Arctic Mitts		
+	Arcanna's Sign		
+	Arcanna's Deathwand		
+	Arcanna's Head		
+	Arcanna's Flesh		
+	Natalya's Totem		
+	Natalya's Mark		
+	Natalya's Shadow		
+	Natalya's Soul		
+	Aldur's Stony Gaze		
+	Aldur's Deception		
+	Aldur's Gauntlet		
+	Aldur's Advance		
+	Immortal King's Will		
+	Immortal King's Soul Cage 		
+	Immortal King's Detail		
+	Immortal King's Forge		
+	Immortal King's Pillar		
+	Immortal King's Stone Crusher		
+	Tal Rasha's Fire-Spun Cloth		
+	Tal Rasha's Adjudication		
+	Tal Rasha's Lidless Eye		
+	Tal Rasha's Guardianship		
+	Tal Rasha's Horadric Crest		
+	Griswold's Valor		
+	Griswold's Heart		
+	Griswolds's Redemption		
+	Griswold's Honor		
+	Trang-Oul's Guise		
+	Trang-Oul's Scales		
+	Trang-Oul's Wing		
+	Trang-Oul's Claws		
+	Trang-Oul's Girth		
+	M'avina's True Sight		
+	M'avina's Embrace		
+	M'avina's Icy Clutch		
+	M'avina's Tenet		
+	M'avina's Caster		
+	Telling of Beads		
+	Laying of Hands		
+	Rite of Passage		
+	Spiritual Custodian		
+	Credendum		
+	Dangoon's Teaching		
+	Heaven's Taebaek		
+	Haemosu's Adament		
+	Ondal's Almighty		
+	Guillaume's Face		
+	Wilhelm's Pride		
+	Magnus' Skin		
+	Wihtstan's Guard		
+	Hwanin's Splendor		
+	Hwanin's Refuge		
+	Hwanin's Seal		
+	Hwanin's Justice		
+	Sazabi's Cobalt Redeemer		
+	Sazabi's Ghost Liberator		
+	Sazabi's Mental Sheath		
+	Bul-Kathos' Sacred Charge		
+	Bul-Kathos' Tribal Guardian		
+	Cow King's Horns		
+	Cow King's Hide		
+	Cow King's Hoofs		
+	Naj's Puzzler		
+	Naj's Light Plate		
+	Naj's Circlet		
+	McAuley's Paragon		
+	McAuley's Riprap		
+	McAuley's Taboo		
+	McAuley's Superstition		
+*=======================以下是符文之语名字(Rune Name)			
+27	Ancient's Pledge		
+30	Beast		
+32	Black		
+34	Bone		
+35	Bramble		
+36	Brand		
+37	Breath of the Dying		
+39	Call to Arms		
+40	Chains of Honor		
+42	Chaos		
+43	Crescent Moon		
+46	Death		
+51	Destruction		
+52	Doom		
+53	Dragon		
+55	Dream		
+56	Duress		
+57	Edge		
+59	Enigma		
+60	Enlightenment		
+62	Eternity		
+63	Exile		
+64	Faith		
+65	Famine		
+66	Flickering Flame		
+67	Fortitude		
+70	Fury		
+71	Gloom		
+73	Grief		
+74	Hand of Justice		
+75	Harmory		
+77	Heart of the Oak		
+80	Holy Thunder		
+81	Honor		
+85	Ice		
+86	Infinity		
+88	Insight		
+91	King's Grace		
+92	Kingslayer		
+95	Last Wish		
+97	Lawbringer		
+98	Leaf		
+100	Lionheart		
+101	Lore		
+106	Malice		
+107	Melody		
+108	Memory		
+109	Mist		
+112	Myth		
+113	Nadir		
+116	Oath		
+117	Obedience		
+119	Obsession		
+120	Passion		
+122	Pattern		
+123	Peace		
+124	Winter		
+128	Phoenix		
+131	Plague		
+134	Pride		
+135	Principle		
+137	Prudence		
+141	Radiance		
+142	Rain		
+145	Rhyme		
+146	Rift		
+147	Sanctuary		
+151	Silence		
+153	Smoke		
+155	Spirit		
+156	Splendor		
+158	Stealth		
+159	Steel		
+162	Stone		
+164	Strength		
+173	Treachery		
+176	Unbending Will		
+179	Venom		
+185	Wealth		
+187	White		
+188	Wind		
+190	Wisdom		
+193	Wrath		
+195	Zephyr		
+2718	Delirium		
+2784	Hustle	催促	催促
+2785	Hustle	催促	催促
+2786	Mosaic	嵌饰	嵌飾
+2787	Metamorphosis	变化	變化
+2788	Ground	接地	接地
+2789	Temper	和缓	和緩
+2790	Hearth	火炉	火爐
+2791	Cure	治愈	治癒
+2792	Bulwark	壁垒	壁壘
