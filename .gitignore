@@ -278,3 +278,15 @@ __pycache__/
 
 # Compiled tools
 /Generate Data/gen_data
+
+# Qt/CMake build directories
+build/
+build_qmake/
+cmake_build/
+
+# Qt auto-generated files
+.qmake.stash
+moc_*.cpp
+qrc_*.cpp
+*.o
+*.pro.user
