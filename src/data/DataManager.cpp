@@ -3,7 +3,7 @@
 #include <QFile>
 #include <QCoreApplication>
 #include <QLocale>
-#include <iostream>
+#include <QDebug>
 
 #include <string>
 #include <fstream>
@@ -45,15 +45,15 @@ D2Error::D2Error(int msgId)
 
 bool DataManager::loadAll(const QString& dataPath) {
 	m_sDataPath = dataPath;
-	std::cerr << "  loadAll: reading lang..." << std::endl;
+	qDebug() << "  loadAll: reading lang...";
 	if (!readLangRes()) return false;
-	std::cerr << "  loadAll: reading items..." << std::endl;
+	qDebug() << "  loadAll: reading items...";
 	if (!readItemRes()) return false;
-	std::cerr << "  loadAll: reading props..." << std::endl;
+	qDebug() << "  loadAll: reading props...";
 	if (!readPropRes()) return false;
-	std::cerr << "  loadAll: reading newchar..." << std::endl;
+	qDebug() << "  loadAll: reading newchar...";
 	if (!readNewChar()) return false;
-	std::cerr << "  loadAll: done" << std::endl;
+	qDebug() << "  loadAll: done";
 	return true;
 }
 

@@ -283,6 +283,7 @@ __pycache__/
 build/
 build_qmake/
 cmake_build/
+build_linux/
 
 # Qt auto-generated files
 .qmake.stash

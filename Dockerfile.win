@@ -1,0 +1,64 @@
+FROM ubuntu:24.04
+
+RUN apt-get update -qq && apt-get install -y -qq \
+    python3-pip python3-venv cmake \
+    g++-mingw-w64-x86-64 \
+    binutils-mingw-w64-x86-64 \
+    qt6-base-dev qt6-base-dev-tools \
+    p7zip-full \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install aqtinstall
+RUN python3 -m venv /opt/venv && \
+    . /opt/venv/bin/activate && \
+    pip3 install aqtinstall -q
+
+# Download Qt6 for mingw
+RUN . /opt/venv/bin/activate && \
+    aqt install-qt --outputdir /opt/qt windows desktop 6.7.3 win64_mingw
+
+# Copy source
+COPY . /src
+WORKDIR /src
+
+# Create wrapper scripts to replace Windows Qt tools with host versions
+RUN for tool in moc uic rcc; do \
+      printf '#!/bin/sh\nexec /usr/lib/qt6/libexec/%s "$@"\n' "$tool" > /opt/qt/6.7.3/mingw_64/bin/$tool.exe && \
+      chmod +x /opt/qt/6.7.3/mingw_64/bin/$tool.exe; \
+    done
+
+# CMake toolchain
+RUN printf 'set(CMAKE_SYSTEM_NAME Windows)\n\
+set(CMAKE_SYSTEM_PROCESSOR x86_64)\n\
+set(CMAKE_C_COMPILER x86_64-w64-mingw32-gcc)\n\
+set(CMAKE_CXX_COMPILER x86_64-w64-mingw32-g++)\n\
+set(CMAKE_RC_COMPILER x86_64-w64-mingw32-windres)\n\
+set(CMAKE_FIND_ROOT_PATH /opt/qt/6.7.3/mingw_64 /usr/x86_64-w64-mingw32)\n\
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)\n\
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)\n\
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)\n\
+set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)\n\
+# Static link libstdc++ and libgcc to avoid runtime DLL issues on Windows\n\
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static-libstdc++ -static-libgcc")\n\
+' > /toolchain.cmake
+
+# Build
+RUN mkdir -p build_win && cd build_win && \
+    cmake /src \
+    -DCMAKE_TOOLCHAIN_FILE=/toolchain.cmake \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_PREFIX_PATH=/opt/qt/6.7.3/mingw_64 && \
+    cmake --build . --parallel $(nproc)
+
+# Package entrypoint
+RUN mkdir -p /package && cp /src/build_win/DiabloEdit.exe /package/ && \
+    cp -r /opt/qt/6.7.3/mingw_64/bin/*.dll /package/ && \
+    mkdir -p /package/plugins && \
+    cp -r /opt/qt/6.7.3/mingw_64/plugins/* /package/plugins/ && \
+    cp -r /src/data /package/data
+
+VOLUME /output
+CMD cp -r /package/* /output/ && \
+    cd /output && \
+    7z a /output/DiabloEdit-windows-x64.zip . && \
+    echo "=== PACKAGE DONE ==="
