@@ -45,14 +45,16 @@ void CQuestInfoData::WriteData(COutBitsStream& bs) const {
 		<< unknown4;
 }
 
-void CQuestInfo::ReadData(CInBitsStream& bs) {
+void CQuestInfo::ReadData(CInBitsStream& bs, DWORD version) {
+	(void)version;
 	bs >> dwMajic >> dwActs >> wSize;
 	if (dwMajic != 0x216F6F57 || wSize != 0x12A)
 		throw D2Error(13);
 	for (auto& p : QIData) p.ReadData(bs);
 }
 
-void CQuestInfo::WriteData(COutBitsStream& bs) const {
+void CQuestInfo::WriteData(COutBitsStream& bs, DWORD version) const {
+	(void)version;
 	bs << DWORD(0x216F6F57) << dwActs << WORD(0x12A);
 	for (const auto& p : QIData) p.WriteData(bs);
 }
@@ -65,15 +67,27 @@ void CWaypointData::WriteData(COutBitsStream& bs) const {
 	bs << unkown << Waypoints << unkown2;
 }
 
-void CWaypoints::ReadData(CInBitsStream& bs) {
+void CWaypoints::ReadData(CInBitsStream& bs, DWORD version) {
 	bs >> wMajic >> unkown >> wSize;
-	if (wMajic != 0x5357 || wSize != 0x50)
+	if (wMajic != 0x5357)
 		throw D2Error(14);
+	if (!IsD2R(version) && wSize != 0x50)
+		throw D2Error(14);
+	if (IsD2R(version)) {
+		// D2R: unkown和wSize均为DWORD(各4字节)，旧版为WORD(各2字节)，共多4字节
+		WORD d2rExtra[2];
+		bs >> d2rExtra;
+	}
 	for (auto& p : wp) p.ReadData(bs);
 }
 
-void CWaypoints::WriteData(COutBitsStream& bs) const {
-	bs << WORD(0x5357) << unkown << WORD(0x50);
+void CWaypoints::WriteData(COutBitsStream& bs, DWORD version) const {
+	bs << WORD(0x5357) << unkown << wSize;
+	if (IsD2R(version)) {
+		bs << WORD(0) << WORD(0);
+	}
+	if (IsD2R(version))
+		bs << WORD(0) << WORD(0);
 	for (const auto& p : wp) p.WriteData(bs);
 }
 
@@ -188,6 +202,8 @@ void CD2S_Struct::Reset() {
 	stCorpse.Reset();
 	stMercenary.Reset();
 	stGolem.Reset();
+	wMagic666C = 0x666C;
+	dwUnknown666C = 0;
 }
 
 void CD2S_Struct::ReadData(CInBitsStream& bs) {
@@ -224,30 +240,40 @@ void CD2S_Struct::ReadData(CInBitsStream& bs) {
 		bs >> NamePTR >> unkown8;
 	}
 	if (isV31) bs >> unkown8;
-	qDebug() << "R1a";
-	QuestInfo.ReadData(bs);
-	qDebug() << "R1b";
-	Waypoints.ReadData(bs);
-	qDebug() << "R2";
+	QuestInfo.ReadData(bs, dwVersion);
+	Waypoints.ReadData(bs, dwVersion);
+	fprintf(stderr, "POS after Waypoints=%u\n", (unsigned)bs.BytePos()); fflush(stderr);
 	bs >> NPC;
-	qDebug() << "R3";
+	fprintf(stderr, "POS after NPC=%u\n", (unsigned)bs.BytePos()); fflush(stderr);
 	PlayerStats.ReadData(bs);
-	qDebug() << "R3a";
+	fprintf(stderr, "POS before PS=%u\n", (unsigned)bs.BytePos()); fflush(stderr);
 	Skills.ReadData(bs);
-	qDebug() << "R4";
 	ItemList.ReadData(bs, dwVersion);
-	qDebug() << "R5";
 	stCorpse.ReadData(bs, dwVersion);
-	qDebug() << "R6";
-	if (isExpansion()) {
+	if (isExpansion() || isV31) {
 		stMercenary.ReadData(bs, HasMercenary(), dwVersion);
 		stGolem.ReadData(bs, dwVersion);
 	}
-	bs.AlignByte();
-	qDebug() << "R7";
-	if (!bs.Good() || bs.DataSize() != bs.BytePos())
+	if (isV31) {
+		bs.AlignByte();
+		const DWORD remaining = bs.DataSize() - bs.BytePos();
+		if (remaining >= 6) {
+			WORD peekMagic = 0;
+			bs >> peekMagic;
+			if (peekMagic == 0x666C) {
+				wMagic666C = peekMagic;
+				bs >> dwUnknown666C;
+			} else {
+				bs.SeekBack(2);
+			}
+		}
+	} else {
+		bs.AlignByte();
+	}
+	if (!bs.Good() || bs.DataSize() < bs.BytePos())
 		throw D2Error(11);
-	qDebug() << "R8";
+	if (!isV31 && bs.DataSize() != bs.BytePos())
+		throw D2Error(11);
 }
 
 BOOL CD2S_Struct::WriteData(COutBitsStream& bs) const {
@@ -275,18 +301,26 @@ BOOL CD2S_Struct::WriteData(COutBitsStream& bs) const {
 		bs << NamePTR << unkown8;
 	}
 	if (isV31) bs << unkown8;
-	QuestInfo.WriteData(bs);
-	Waypoints.WriteData(bs);
+	QuestInfo.WriteData(bs, dwVersion);
+	Waypoints.WriteData(bs, dwVersion);
 	bs << NPC;
+	if (isV31) {
+		bs << WORD(0);
+	}
 	PlayerStats.WriteData(bs);
 	Skills.WriteData(bs);
 	ItemList.WriteData(bs, dwVersion);
 	stCorpse.WriteData(bs, dwVersion);
-	if (isExpansion()) {
+	if (isExpansion() || isV31) {
 		stMercenary.WriteData(bs, HasMercenary(), dwVersion);
 		stGolem.WriteData(bs, dwVersion);
 	}
-	bs.AlignByte();
+	if (isV31 && wMagic666C != 0) {
+		bs.AlignByte();
+		bs << wMagic666C << dwUnknown666C;
+	} else {
+		bs.AlignByte();
+	}
 	bs << offset_value(offSize, bs.BytePos());
 	auto& data = bs.Data();
 	const DWORD dwCrc = ComputCRC(&data[0], data.size(), 0);

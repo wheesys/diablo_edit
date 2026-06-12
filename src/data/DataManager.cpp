@@ -40,11 +40,13 @@ DataManager::~DataManager() = default;
 D2Error::D2Error(int msgId)
     : std::runtime_error("D2Error")
     , m_msg(g_dataMgr ? g_dataMgr->msg(msgId) : QStringLiteral("Error %1").arg(msgId))
+    , m_code(msgId)
 {
 }
 
 bool DataManager::loadAll(const QString& dataPath) {
 	m_sDataPath = dataPath;
+	g_dataMgr = this; // 必须在 readNewChar() 之前设置，Item 解析依赖此全局指针
 	qDebug() << "  loadAll: reading lang...";
 	if (!readLangRes()) return false;
 	qDebug() << "  loadAll: reading items...";
