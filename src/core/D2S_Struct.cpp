@@ -3,9 +3,9 @@
 #include "DataManagerFwd.h"
 
 #include <QFile>
+#include <QDebug>
 #include <algorithm>
 #include <iterator>
-#include <iostream>
 
 using namespace std;
 
@@ -21,7 +21,7 @@ static BOOL ValidateCrc(std::vector<BYTE>& data, DWORD dwCrc, DWORD dwOff) {
 	*reinterpret_cast<DWORD*>(&data[dwOff]) = 0;
 	DWORD computed = ComputCRC(&data[0], data.size(), 0);
 	BOOL ok = (dwCrc == computed);
-	std::cerr << "CRC: stored=0x" << std::hex << dwCrc << " computed=0x" << computed << " ok=" << ok << std::endl;
+	qDebug().nospace() << "CRC: stored=0x" << Qt::hex << dwCrc << " computed=0x" << computed << " ok=" << ok;
 	return ok;
 }
 
@@ -214,29 +214,40 @@ void CD2S_Struct::ReadData(CInBitsStream& bs) {
 		BYTE NamePTR31[0x94];
 		bs >> NamePTR31;
 		CopyMemory(NamePTR, NamePTR31, sizeof(NamePTR31));
+	} else if (IsPtr24AndAbove(dwVersion)) {
+		// D2R PTR2.4/2.5 (0x62-0x68): NamePTR 为 0x40 字节
+		BYTE NamePTR24[0x40];
+		bs >> NamePTR24;
+		CopyMemory(NamePTR, NamePTR24, sizeof(NamePTR24));
+		bs >> unkown8;
 	} else {
 		bs >> NamePTR >> unkown8;
 	}
 	if (isV31) bs >> unkown8;
+	qDebug() << "R1a";
 	QuestInfo.ReadData(bs);
+	qDebug() << "R1b";
 	Waypoints.ReadData(bs);
+	qDebug() << "R2";
 	bs >> NPC;
-	std::cerr << "R3" << std::endl;
+	qDebug() << "R3";
 	PlayerStats.ReadData(bs);
-	std::cerr << "R3a" << std::endl;
+	qDebug() << "R3a";
 	Skills.ReadData(bs);
-	std::cerr << "R4" << std::endl;
+	qDebug() << "R4";
 	ItemList.ReadData(bs, dwVersion);
-	std::cerr << "R5" << std::endl;
+	qDebug() << "R5";
 	stCorpse.ReadData(bs, dwVersion);
-	std::cerr << "R6" << std::endl;
+	qDebug() << "R6";
 	if (isExpansion()) {
 		stMercenary.ReadData(bs, HasMercenary(), dwVersion);
 		stGolem.ReadData(bs, dwVersion);
 	}
 	bs.AlignByte();
+	qDebug() << "R7";
 	if (!bs.Good() || bs.DataSize() != bs.BytePos())
 		throw D2Error(11);
+	qDebug() << "R8";
 }
 
 BOOL CD2S_Struct::WriteData(COutBitsStream& bs) const {
@@ -256,6 +267,10 @@ BOOL CD2S_Struct::WriteData(COutBitsStream& bs) const {
 		<< dwMercControl << wMercName << wMercType << dwMercExp << unkown7;
 	if (isV31) {
 		bs << NamePTR;
+	} else if (IsPtr24AndAbove(dwVersion)) {
+		// D2R PTR2.4/2.5: NamePTR 只写 0x40 字节
+		bs.WriteBytes(NamePTR, 0x40);
+		bs << unkown8;
 	} else {
 		bs << NamePTR << unkown8;
 	}

@@ -78,6 +78,11 @@ add_executable(${PROJECT_NAME}
     resources/resources.qrc
 )
 
+# MinGW: 去掉 Windows 命令行窗口
+if(MINGW)
+    set_target_properties(${PROJECT_NAME} PROPERTIES WIN32_EXECUTABLE TRUE)
+endif()
+
 target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src
     ${CMAKE_CURRENT_SOURCE_DIR}/src/core
@@ -96,3 +101,10 @@ file(COPY
     ${CMAKE_CURRENT_SOURCE_DIR}/data/
     DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/data
 )
+
+# 数据生成工具
+option(BUILD_DATA_TOOLS "Build data generation tools" ON)
+if(BUILD_DATA_TOOLS)
+    add_subdirectory(tools/generate_data)
+    add_subdirectory(tools/verify_property)
+endif()

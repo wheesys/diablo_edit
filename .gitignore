@@ -283,6 +283,12 @@ __pycache__/
 build/
 build_qmake/
 cmake_build/
+build_linux/
+
+# Serena (code analysis tool)
+.serena/cache/
+.serena/memories/
+.serena/project.local.yml
 
 # Qt auto-generated files
 .qmake.stash

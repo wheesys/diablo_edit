@@ -4,7 +4,13 @@
 
 Diablo II 角色存档编辑器。加载和编辑 `.d2s` 文件。
 
-已测试版本：1.09, 1.10, 1.13, Diablo II: Resurrected (PTR 2.4/2.5/2.6)
+已测试版本：1.09, 1.10, 1.13, Diablo II: Resurrected (PTR 2.4/2.5/2.6/3.1)
+
+> ⚠️ 受限于资源条件，当前仅能进行 D2R 3.1 版本的测试。如需支持更多版本，欢迎协助提交对应版本的存档文件（`.d2s`）。如能提供该版本的原始 `.txt` 数据表文件，将更有效地推进开发工作。
+>
+> 解包工具参考：[D2RExtractor](https://github.com/levinium/D2RExtractor)
+>
+> 提交 `.txt` 文件的 PR 时，请将文件放在 `doc/source/txt/<版本号>/` 路径下，目录结构应与解包后的 `global/excel/` 保持一致（即 `doc/source/txt/<版本号>/global/excel/armor.txt` 等）。
 
 ## 截图
 
@@ -42,6 +48,8 @@ cmake --build . --parallel
 本仓库源自 [daidodo/diablo_edit](https://github.com/daidodo/diablo_edit)（MIT License），由 [@DoZerg](https://github.com/daidodo) 创建的原 MFC 版 Diablo II 角色编辑器。
 
 本项目在其基础上进行了 Qt6 框架迁移和跨平台重构，感谢原作者的出色工作。
+
+D2R 3.1 原始数据表（`.txt`）通过 [D2RExtractor](https://github.com/levinium/D2RExtractor) 解包获得，感谢 [@levinium](https://github.com/levinium) 提供的工具。
 
 ## License
 

@@ -127,6 +127,7 @@ void MainWindow::onFileOpen()
     try {
         m_character.ReadFile(path);
     } catch (const D2Error& e) {
+        qWarning() << "D2Error:" << e.message();
         QMessageBox::critical(this, QStringLiteral("Error"),
             QStringLiteral("Failed to load file:\n%1\n\n%2").arg(path, e.message()));
         return;

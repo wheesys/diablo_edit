@@ -226,6 +226,16 @@ public:
 			bits_ = 0;
 		}
 	}
+
+	// 写入指定长度的字节数组（用于写入部分字段）
+	COutBitsStream & WriteBytes(const BYTE* data, DWORD len) {
+		if (ensure(len)) {
+			std::memcpy(&data_[bytes_], data, len);
+			bytes_ += len;
+		}
+		return *this;
+	}
+
 	COutBitsStream & operator <<(BOOL b) { return writeBits(bits(b, 1)); }
 	COutBitsStream & operator <<(const Bits<const DWORD> & m) { return writeBits(m); }
 	COutBitsStream & operator <<(const Bits<DWORD> & m) { return writeBits(m); }
