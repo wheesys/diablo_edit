@@ -62,18 +62,10 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Install system dependencies
+      - name: Install system dependencies & Qt6
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y libgl1-mesa-dev libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0
-
-      - name: Install Qt6
-        uses: jurplel/install-qt-action@v4
-        with:
-          version: '6.8.*'
-          host: 'linux'
-          target: 'desktop'
-          arch: 'gcc_64'
+          sudo apt-get install -y qt6-base-dev libglx-dev libgl1-mesa-dev
 
       - name: Configure CMake
         run: cmake -B build -DCMAKE_BUILD_TYPE=Release
