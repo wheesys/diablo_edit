@@ -14,19 +14,11 @@
 #include "core/D2S_Struct.h"
 #include "core/D2Item.h"
 #include "data/DataManager.h"
-#include <signal.h>
-#include <cstdlib>
 
 // 全局 DataManager 指针（项目代码依赖此全局变量）
 DataManager* g_dataMgr = nullptr;
 
-void sig_handler(int) {
-    qCritical() << "捕获SIGABRT - 属性ID越界!";
-    exit(1);
-}
-
 int main(int argc, char *argv[]) {
-    signal(SIGABRT, sig_handler);
     QCoreApplication app(argc, argv);
 
     if (argc < 3) {
