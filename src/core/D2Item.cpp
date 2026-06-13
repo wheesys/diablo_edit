@@ -259,7 +259,7 @@ void CExtItemInfo::ReadData(CInBitsStream& bs, DWORD version, BOOL bIsCharm, BOO
 	case 6: pRareName.ensure().ReadData(bs); break;
 	case 7: bs >> bits(wUniID, 12); break;
 	case 8: pCraftName.ensure().ReadData(bs); break;
-	default: throw D2Error(7)
+	default: throw D2Error(7);
 	}
 	if (bRuneWord) bs >> bits(wRune, 16);
 	if (bPersonalized) {

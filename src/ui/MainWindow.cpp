@@ -7,6 +7,7 @@
 #include "NewItemDialog.h"
 #include "core/ImageManager.h"
 
+#include <QDebug>
 #include <QMenuBar>
 #include <QToolBar>
 #include <QFileDialog>
