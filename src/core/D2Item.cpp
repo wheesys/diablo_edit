@@ -389,11 +389,10 @@ const CItemMetaData* CItemInfo::ReadData(CInBitsStream& bs, DWORD version, BOOL 
 		if (IsNameValid()) throw D2Error(6);
 		else throw D2Error(18);
 	}
-	if (!bSimple)
-		pExtItemInfo.ensure().ReadData(bs, version, pItemData->IsCharm, bRuneWord, bPersonalized, pItemData->HasMonsterID, pItemData->SpellId);
-	if (IsGold()) pGold.ensure().ReadData(bs);
-	bs >> bHasRand;
 	if (!bSimple) {
+		pExtItemInfo.ensure().ReadData(bs, version, pItemData->IsCharm, bRuneWord, bPersonalized, pItemData->HasMonsterID, pItemData->SpellId);
+		if (IsGold()) pGold.ensure().ReadData(bs);
+		bs >> bHasRand;
 			if (bHasRand) {
 				// v105: 3个时间戳 (96 bits), 旧版: 4个 (128 bits)
 				const int nTimestamps = IsRotWAndAbove(version) ? 3 : 4;
@@ -404,8 +403,10 @@ const CItemMetaData* CItemInfo::ReadData(CInBitsStream& bs, DWORD version, BOOL 
 				}
 			}
 		pTpSpInfo.ensure().ReadData(bs, version, pItemData->HasDef, pItemData->HasDur, bSocketed, pItemData->IsStacked, pExtItemInfo->IsSet(), bRuneWord);
-	} else if (isD2R && pItemData->iPadBits > 0) {
-		bs >> bits(iPad, pItemData->iPadBits);
+	} else {
+		if (IsGold()) pGold.ensure().ReadData(bs);
+		if (isD2R && pItemData->iPadBits > 0)
+			bs >> bits(iPad, pItemData->iPadBits);
 	}
 	return pItemData;
 }
@@ -415,10 +416,10 @@ void CItemInfo::WriteData(COutBitsStream& bs, const CItemMetaData& itemData, DWO
 	for (auto b : sTypeName)
 		if (isD2R) g_huffmanTree.writeData(bs, b);
 		else bs << bits(b, 8);
-	if (!bSimple)
+	if (!bSimple) {
 		pExtItemInfo->WriteData(bs, version, itemData.IsCharm, bRuneWord, bPersonalized, itemData.HasMonsterID, itemData.SpellId);
-	if (IsGold()) pGold->WriteData(bs);
-	bs << bHasRand;
+		if (IsGold()) pGold->WriteData(bs);
+		bs << bHasRand;
 		if (bHasRand) {
 			// v105: 3个时间戳 (96 bits)
 			const int nTimestamps = IsRotWAndAbove(version) ? 3 : 4;
@@ -428,10 +429,11 @@ void CItemInfo::WriteData(COutBitsStream& bs, const CItemMetaData& itemData, DWO
 				bs << bits(i, 32);
 			}
 		}
-	if (!bSimple) {
 		pTpSpInfo->WriteData(bs, version, itemData.HasDef, itemData.HasDur, bSocketed, itemData.IsStacked, pExtItemInfo->IsSet(), bRuneWord);
-	} else if (isD2R && itemData.iPadBits > 0) {
-		bs << bits(iPad, itemData.iPadBits);
+	} else {
+	if (IsGold()) pGold->WriteData(bs);
+		if (isD2R && itemData.iPadBits > 0)
+			bs << bits(iPad, itemData.iPadBits);
 	}
 }
 

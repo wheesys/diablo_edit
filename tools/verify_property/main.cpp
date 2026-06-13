@@ -78,8 +78,13 @@ int main(int argc, char *argv[]) {
     for (size_t i = 0; i < items.size(); ++i) {
         const auto &item = items[i];
 
-        // 获取物品名称
-        QString itemName = item.ItemName();
+        // 获取物品名称(可能因数据无效而崩溃，保守处理)
+        QString itemName;
+        try {
+            itemName = item.ItemName();
+        } catch (...) {
+            itemName = QStringLiteral("(unknown)");
+        }
 
         // 获取属性列表
         if (!item.HasPropertyList()) continue;
