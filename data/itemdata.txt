@@ -7,6 +7,7 @@ hpf				9	1
 mpf				9	1																		
 vps				9	1																		
 yps				9	1																		
+hrb				1	0		1
 rvs				9	1																		
 rvl				9	1																		
 wms				9	1																		
@@ -101,7 +102,6 @@ skf					1												1
 sku					1												1						
 skl					1												1						
 skz					1												1						
-hrb																							
 cm1													1										
 cm2			12										1										
 cm3			13										1										

@@ -318,7 +318,14 @@ void CTypeSpecificInfo::ReadData(CInBitsStream& bs, DWORD version, BOOL bHasDef,
 		if (iMaxDurability) bs >> bits(iCurDur, 9);
 	}
 	if (bSocketed) { bs >> bits(iSocket, 4); if (iSocket < 1) iSocket = 1; }
-	if (bIsStacked) bs >> bits(iQuantity, 9);
+		if (IsRotWAndAbove(version)) {
+			// v105: 物品总是有 1-bit 数量标志位 (即使非堆叠物品也写 0)
+			BOOL bHasQuantity;
+			bs >> bHasQuantity;
+			if (bHasQuantity) bs >> bits(iQuantity.ensure(), 9);
+		} else if (bIsStacked) {
+			bs >> bits(iQuantity, 9);
+		}
 	if (bIsSet) for (auto& b : aHasSetPropList.ensure()) if (bs.Good()) bs >> b;
 	stPropertyList.ReadData(bs, version);
 	if (bIsSet) for (size_t i = 0; bs.Good() && i < aHasSetPropList.size(); ++i) if (aHasSetPropList[i]) apSetProperty[i].ensure().ReadData(bs, version);
@@ -326,19 +333,25 @@ void CTypeSpecificInfo::ReadData(CInBitsStream& bs, DWORD version, BOOL bHasDef,
 }
 
 void CTypeSpecificInfo::WriteData(COutBitsStream& bs, DWORD version, BOOL bHasDef, BOOL bHasDur, BOOL bSocketed, BOOL bIsStacked, BOOL bIsSet, BOOL bRuneWord) const {
-	if (bHasDef) bs << bits(iDefence, 11);
-	if (bHasDur) {
-		bs << bits(iMaxDurability, 8);
-		if (iMaxDurability) bs << bits(iCurDur, 9);
+		if (bHasDef) bs << bits(iDefence, 11);
+		if (bHasDur) {
+			bs << bits(iMaxDurability, 8);
+			if (iMaxDurability) bs << bits(iCurDur, 9);
+		}
+		if (bSocketed) bs << bits(iSocket, 4);
+		if (IsRotWAndAbove(version)) {
+			// v105: 总是写 1-bit 数量标志位
+			BOOL hasQty = bIsStacked && iQuantity.exist();
+			bs << hasQty;
+			if (hasQty) bs << bits(iQuantity, 9);
+		} else if (bIsStacked) {
+			bs << bits(iQuantity, 9);
+		}
+		if (bIsSet) for (auto b : aHasSetPropList) if (bs.Good()) bs << b;
+		stPropertyList.WriteData(bs, version);
+		if (bIsSet) for (size_t i = 0; bs.Good() && i < aHasSetPropList.size(); ++i) if (aHasSetPropList[i]) apSetProperty[i]->WriteData(bs, version);
+		if (bRuneWord) stRuneWordPropertyList->WriteData(bs, version);
 	}
-	if (bSocketed) bs << bits(iSocket, 4);
-	if (bIsStacked) bs << bits(iQuantity, 9);
-	if (bIsSet) for (auto b : aHasSetPropList) if (bs.Good()) bs << b;
-	stPropertyList.WriteData(bs, version);
-	if (bIsSet) for (size_t i = 0; bs.Good() && i < aHasSetPropList.size(); ++i) if (aHasSetPropList[i]) apSetProperty[i]->WriteData(bs, version);
-	if (bRuneWord) stRuneWordPropertyList->WriteData(bs, version);
-}
-
 pair<int, int> CTypeSpecificInfo::Sockets() const {
 	const int b = min(MAX_SOCKETS, (iSocket.exist() ? (int)iSocket : 0));
 	int e = stPropertyList.ExtSockets();
@@ -381,7 +394,15 @@ const CItemMetaData* CItemInfo::ReadData(CInBitsStream& bs, DWORD version, BOOL 
 	if (IsGold()) pGold.ensure().ReadData(bs);
 	bs >> bHasRand;
 	if (!bSimple) {
-		if (bHasRand) for (auto& i : pTimeStampFlag.ensure()) if (bs.Good()) bs >> bits(i, 32);
+			if (bHasRand) {
+				// v105: 3个时间戳 (96 bits), 旧版: 4个 (128 bits)
+				const int nTimestamps = IsRotWAndAbove(version) ? 3 : 4;
+				int tscount = 0;
+				for (auto& i : pTimeStampFlag.ensure()) {
+					if (tscount++ >= nTimestamps || !bs.Good()) break;
+					bs >> bits(i, 32);
+				}
+			}
 		pTpSpInfo.ensure().ReadData(bs, version, pItemData->HasDef, pItemData->HasDur, bSocketed, pItemData->IsStacked, pExtItemInfo->IsSet(), bRuneWord);
 	} else if (isD2R && pItemData->iPadBits > 0) {
 		bs >> bits(iPad, pItemData->iPadBits);
@@ -398,7 +419,15 @@ void CItemInfo::WriteData(COutBitsStream& bs, const CItemMetaData& itemData, DWO
 		pExtItemInfo->WriteData(bs, version, itemData.IsCharm, bRuneWord, bPersonalized, itemData.HasMonsterID, itemData.SpellId);
 	if (IsGold()) pGold->WriteData(bs);
 	bs << bHasRand;
-	if (bHasRand) for (auto i : pTimeStampFlag) if (bs.Good()) bs << bits(i, 32);
+		if (bHasRand) {
+			// v105: 3个时间戳 (96 bits)
+			const int nTimestamps = IsRotWAndAbove(version) ? 3 : 4;
+			int tscount = 0;
+			for (auto i : pTimeStampFlag) {
+				if (tscount++ >= nTimestamps || !bs.Good()) break;
+				bs << bits(i, 32);
+			}
+		}
 	if (!bSimple) {
 		pTpSpInfo->WriteData(bs, version, itemData.HasDef, itemData.HasDur, bSocketed, itemData.IsStacked, pExtItemInfo->IsSet(), bRuneWord);
 	} else if (isD2R && itemData.iPadBits > 0) {
@@ -494,12 +523,20 @@ void CD2Item::ReadData(CInBitsStream& bs, DWORD version) {
 		>> bDisabled >> bits(iUNKNOWN_10, 2) >> bSocketed >> bUNKNOWN_03
 		>> bNew >> bBadEquipped >> bUNKNOWN_04 >> bEar >> bNewbie
 		>> bits(iUNKNOWN_05, 3) >> bSimple >> bEthereal >> bUNKNOWN_06
-		>> bPersonalized >> bUNKNOWN_07 >> bRuneWord;
-	if (IsD2R(dwVersion))
-		bs >> bits(iUNKNOWN_09, 8);
-	else
+		>> bPersonalized >> bUNKNOWN_07 >> bRuneWord
+		>> bits(iUNKNOWN_11, 3)		// v105: 32-bit flags 的最后5位
+		>> bits(iUNKNOWN_13, 2);
+	if (IsD2R(dwVersion)) {
+		if (IsRotWAndAbove(dwVersion))
+			bs >> bits(iUNKNOWN_09, 3);	// v105: 3 bits extension (=5)
+		else
+			bs >> bits(iUNKNOWN_09, 8);	// v97-v99: 8 bits extension
+	} else
 		bs >> bits(iUNKNOWN_08, 5) >> bits(wVersion, 10);
-	bs >> bits(iLocation, 3) >> bits(iPosition, 4) >> bits(iColumn, 4) >> bits(iRow, 4) >> bits(iStoredIn, 3);
+	if (IsD2R(dwVersion))
+		bs >> bits(iLocation, 3) >> bits(iPosition, 4) >> bits(iColumn, 4) >> bits(iRow, 3) >> bUNKNOWN_12 >> bits(iStoredIn, 3);
+	else
+		bs >> bits(iLocation, 3) >> bits(iPosition, 4) >> bits(iColumn, 4) >> bits(iRow, 4) >> bits(iStoredIn, 3);
 	if (bEar) {
 		pEar.ensure().ReadData(bs, dwVersion);
 		pItemData = g_dataMgr->itemMetaData(0x20726165);	// "ear "
@@ -525,10 +562,20 @@ void CD2Item::WriteData(COutBitsStream& bs, DWORD version) const {
 			<< BOOL(FALSE) << bits(iUNKNOWN_10, 2) << bSocketed << bUNKNOWN_03
 			<< bNew << bBadEquipped << bUNKNOWN_04 << bEar << bNewbie
 			<< bits(iUNKNOWN_05, 3) << bSimple << bEthereal << bUNKNOWN_06
-			<< bPersonalized << bUNKNOWN_07 << bRuneWord;
-		if (isD2R) bs << bits(iUNKNOWN_09, 8);
-		else bs << bits(iUNKNOWN_08, 5) << bits(wVersion, 10);
-		bs << bits(iLocation, 3) << bits(iPosition, 4) << bits(iColumn, 4) << bits(iRow, 4) << bits(iStoredIn, 3);
+			<< bPersonalized << bUNKNOWN_07 << bRuneWord
+			<< bits(iUNKNOWN_11, 3)		// v105: 32-bit flags 的最后5位
+			<< bits(iUNKNOWN_13, 2);
+		if (isD2R) {
+			if (IsRotWAndAbove(version))
+				bs << bits(BYTE(5), 3);	// v105: 3 bits extension = 5
+			else
+				bs << bits(iUNKNOWN_09, 8);	// v97-v99: 8 bits extension
+		} else
+			bs << bits(iUNKNOWN_08, 5) << bits(wVersion, 10);
+		if (isD2R)
+			bs << bits(iLocation, 3) << bits(iPosition, 4) << bits(iColumn, 4) << bits(iRow, 3) << bUNKNOWN_12 << bits(iStoredIn, 3);
+		else
+			bs << bits(iLocation, 3) << bits(iPosition, 4) << bits(iColumn, 4) << bits(iRow, 4) << bits(iStoredIn, 3);
 		if (bEar) pEar->WriteData(bs, version);
 		else pItemInfo->WriteData(bs, *pItemData, version, bSimple, bRuneWord, bPersonalized, bSocketed);
 	}

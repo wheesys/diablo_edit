@@ -171,10 +171,13 @@ struct CD2Item
 	BYTE	iUNKNOWN_08 = 0;
 	WORD	wVersion = 101;
 	BYTE	iUNKNOWN_09 = 0xA0;
+	BYTE	iUNKNOWN_11 = 0;	// 3 bits, 追加的标志位 (v105 32-bit flags 补全)
+	BYTE	iUNKNOWN_13 = 0;	// 2 bits, 追加的标志位 (v105 32-bit flags 最后2位)
 	BYTE	iLocation = 0;
 	BYTE	iPosition = 0;
 	BYTE	iColumn = 0;
 	BYTE	iRow = 0;
+	BOOL	bUNKNOWN_12 = FALSE;	// 1 bit, D2R行与存储之间的填充位
 	BYTE	iStoredIn = 1;
 	MayExist<CEar>			pEar;
 	MayExist<CItemInfo>		pItemInfo;
