@@ -245,11 +245,22 @@ bool DataManager::readPropRes() {
 		parse(ls, id);
 		if (id >= props.size()) props.resize(id + 1);
 		parse(ls, verMin);
-		for (CPropertyField f{}; parse(ls, f.bits) && parse(ls, f.base) && parse(ls, f.min) && f.bits > 0; ) {
-			parse(ls, f.max);
-			fields.push_back(f.Normalize());
-		}
-		parse(ls, def);
+			// 读取所有剩余制表分隔数值，取最后一个为DefaultValue
+			std::vector<int> vals;
+			for (int v; parse(ls, v); ) vals.push_back(v);
+			def = vals.empty() ? 0 : vals.back();
+			if (!vals.empty()) vals.pop_back();
+			// 按4个一组(bits,base,min,max)解析属性字段
+			for (size_t i = 0; i + 3 < vals.size(); i += 4) {
+				if (vals[i] > 0) {
+					CPropertyField f;
+					f.bits = vals[i];
+					f.base = vals[i+1];
+					f.min = vals[i+2];
+					f.max = vals[i+3];
+					fields.push_back(f.Normalize());
+				}
+			}
 		props[id].addData(CPropertyMetaDataItem(verMin, fields, def));
 	}
 	props.swap(m_vPropertyMetaData);
