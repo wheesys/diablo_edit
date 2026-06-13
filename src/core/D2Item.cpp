@@ -259,7 +259,7 @@ void CExtItemInfo::ReadData(CInBitsStream& bs, DWORD version, BOOL bIsCharm, BOO
 	case 6: pRareName.ensure().ReadData(bs); break;
 	case 7: bs >> bits(wUniID, 12); break;
 	case 8: pCraftName.ensure().ReadData(bs); break;
-	default: fprintf(stderr, "D2Item.cpp:262 throw D2Error(7)\n"); fflush(stderr); throw D2Error(7);
+	default: throw D2Error(7)
 	}
 	if (bRuneWord) bs >> bits(wRune, 16);
 	if (bPersonalized) {
@@ -373,8 +373,8 @@ const CItemMetaData* CItemInfo::ReadData(CInBitsStream& bs, DWORD version, BOOL 
 		else bs >> bits(b, 8);
 	auto pItemData = g_dataMgr->itemMetaData(dwTypeID);
 	if (!pItemData) {
-		if (IsNameValid()) { fprintf(stderr, "D2Item.cpp:376 throw D2Error(6)\n"); fflush(stderr); throw D2Error(6); }
-		else { fprintf(stderr, "D2Item.cpp:377 throw D2Error(18)\n"); fflush(stderr); throw D2Error(18); }
+		if (IsNameValid()) throw D2Error(6);
+		else throw D2Error(18);
 	}
 	if (!bSimple)
 		pExtItemInfo.ensure().ReadData(bs, version, pItemData->IsCharm, bRuneWord, bPersonalized, pItemData->HasMonsterID, pItemData->SpellId);
@@ -555,7 +555,7 @@ void CD2Item::WriteFile(QFile& file) const {
 void CItemList::ReadData(CInBitsStream& bs, DWORD version) {
 	WORD nItems;
 	bs >> wMajic >> nItems;
-	if (wMajic != 0x4D4A) { fprintf(stderr, "D2Item.cpp:558 throw D2Error(17)\n"); fflush(stderr); throw D2Error(17); }
+	if (wMajic != 0x4D4A) throw D2Error(17);
 	vItems.resize(nItems);
 	for (auto& item : vItems) { if (!bs.Good()) break; item.ReadData(bs, version); }
 }

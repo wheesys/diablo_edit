@@ -46,6 +46,9 @@ void CQuestInfoData::WriteData(COutBitsStream& bs) const {
 }
 
 void CQuestInfo::ReadData(CInBitsStream& bs, DWORD version) {
+	// QuestInfo 格式在所有版本（包括 D2R 3.1）中保持一致：
+	// header(10 bytes) + 3 * CQuestInfoData(96 bytes) = 298 bytes
+	// wSize 固定为 0x12A，无版本差异
 	(void)version;
 	bs >> dwMajic >> dwActs >> wSize;
 	if (dwMajic != 0x216F6F57 || wSize != 0x12A)
@@ -54,6 +57,7 @@ void CQuestInfo::ReadData(CInBitsStream& bs, DWORD version) {
 }
 
 void CQuestInfo::WriteData(COutBitsStream& bs, DWORD version) const {
+	// 与 ReadData 相同，所有版本格式一致
 	(void)version;
 	bs << DWORD(0x216F6F57) << dwActs << WORD(0x12A);
 	for (const auto& p : QIData) p.WriteData(bs);
@@ -242,11 +246,8 @@ void CD2S_Struct::ReadData(CInBitsStream& bs) {
 	if (isV31) bs >> unkown8;
 	QuestInfo.ReadData(bs, dwVersion);
 	Waypoints.ReadData(bs, dwVersion);
-	fprintf(stderr, "POS after Waypoints=%u\n", (unsigned)bs.BytePos()); fflush(stderr);
 	bs >> NPC;
-	fprintf(stderr, "POS after NPC=%u\n", (unsigned)bs.BytePos()); fflush(stderr);
 	PlayerStats.ReadData(bs);
-	fprintf(stderr, "POS before PS=%u\n", (unsigned)bs.BytePos()); fflush(stderr);
 	Skills.ReadData(bs);
 	ItemList.ReadData(bs, dwVersion);
 	stCorpse.ReadData(bs, dwVersion);
