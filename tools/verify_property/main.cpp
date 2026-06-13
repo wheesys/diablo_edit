@@ -8,6 +8,7 @@
 #include <QCoreApplication>
 #include <QDebug>
 #include <QFile>
+#include <cstdio>
 #include <fstream>
 #include <iostream>
 
@@ -19,6 +20,7 @@
 DataManager* g_dataMgr = nullptr;
 
 int main(int argc, char *argv[]) {
+    fprintf(stderr, "VERIFY: main() started\n"); fflush(stderr);
     QCoreApplication app(argc, argv);
 
     if (argc < 3) {
@@ -30,6 +32,7 @@ int main(int argc, char *argv[]) {
     qInfo() << "=== 加载数据文件 ===";
     DataManager mgr;
     if (!mgr.loadAll(argv[2])) {
+        fprintf(stderr, "VERIFY: loadAll failed\n"); fflush(stderr);
         qCritical() << "数据文件加载失败!";
         return 1;
     }
@@ -42,6 +45,7 @@ int main(int argc, char *argv[]) {
     qInfo() << "\n=== 读取存档 ===" << argv[1];
     QFile file(argv[1]);
     if (!file.open(QFile::ReadOnly)) {
+        fprintf(stderr, "VERIFY: file open failed\n"); fflush(stderr);
         qCritical() << "无法打开存档文件!";
         return 1;
     }
@@ -55,6 +59,7 @@ int main(int argc, char *argv[]) {
         CInBitsStream bs(reinterpret_cast<const BYTE*>(data.constData()), data.size());
         d2s.ReadData(bs);
     } catch (const D2Error &e) {
+        fprintf(stderr, "VERIFY: ReadData threw D2Error code=%d\n", e.code()); fflush(stderr);
         qCritical() << "解析失败:" << e.message();
         return 1;
     }
@@ -108,5 +113,6 @@ int main(int argc, char *argv[]) {
     } else {
         qWarning() << "  结论: ❌ 存在超出 property.dat 定义范围的属性ID!";
     }
+    fprintf(stderr, "VERIFY: success\n"); fflush(stderr);
     return 0;
 }

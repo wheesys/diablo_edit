@@ -40,11 +40,13 @@ DataManager::~DataManager() = default;
 D2Error::D2Error(int msgId)
     : std::runtime_error("D2Error")
     , m_msg(g_dataMgr ? g_dataMgr->msg(msgId) : QStringLiteral("Error %1").arg(msgId))
+    , m_code(msgId)
 {
 }
 
 bool DataManager::loadAll(const QString& dataPath) {
 	m_sDataPath = dataPath;
+	g_dataMgr = this; // 必须在 readNewChar() 之前设置，Item 解析依赖此全局指针
 	qDebug() << "  loadAll: reading lang...";
 	if (!readLangRes()) return false;
 	qDebug() << "  loadAll: reading items...";
@@ -243,11 +245,22 @@ bool DataManager::readPropRes() {
 		parse(ls, id);
 		if (id >= props.size()) props.resize(id + 1);
 		parse(ls, verMin);
-		for (CPropertyField f{}; parse(ls, f.bits) && parse(ls, f.base) && parse(ls, f.min) && f.bits > 0; ) {
-			parse(ls, f.max);
-			fields.push_back(f.Normalize());
-		}
-		parse(ls, def);
+			// 读取所有剩余制表分隔数值，取最后一个为DefaultValue
+			std::vector<int> vals;
+			for (int v; parse(ls, v); ) vals.push_back(v);
+			def = vals.empty() ? 0 : vals.back();
+			if (!vals.empty()) vals.pop_back();
+			// 按4个一组(bits,base,min,max)解析属性字段
+			for (size_t i = 0; i + 3 < vals.size(); i += 4) {
+				if (vals[i] > 0) {
+					CPropertyField f;
+					f.bits = vals[i];
+					f.base = vals[i+1];
+					f.min = vals[i+2];
+					f.max = vals[i+3];
+					fields.push_back(f.Normalize());
+				}
+			}
 		props[id].addData(CPropertyMetaDataItem(verMin, fields, def));
 	}
 	props.swap(m_vPropertyMetaData);

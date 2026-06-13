@@ -45,14 +45,20 @@ void CQuestInfoData::WriteData(COutBitsStream& bs) const {
 		<< unknown4;
 }
 
-void CQuestInfo::ReadData(CInBitsStream& bs) {
+void CQuestInfo::ReadData(CInBitsStream& bs, DWORD version) {
+	// QuestInfo 格式在所有版本（包括 D2R 3.1）中保持一致：
+	// header(10 bytes) + 3 * CQuestInfoData(96 bytes) = 298 bytes
+	// wSize 固定为 0x12A，无版本差异
+	(void)version;
 	bs >> dwMajic >> dwActs >> wSize;
 	if (dwMajic != 0x216F6F57 || wSize != 0x12A)
 		throw D2Error(13);
 	for (auto& p : QIData) p.ReadData(bs);
 }
 
-void CQuestInfo::WriteData(COutBitsStream& bs) const {
+void CQuestInfo::WriteData(COutBitsStream& bs, DWORD version) const {
+	// 与 ReadData 相同，所有版本格式一致
+	(void)version;
 	bs << DWORD(0x216F6F57) << dwActs << WORD(0x12A);
 	for (const auto& p : QIData) p.WriteData(bs);
 }
@@ -65,15 +71,26 @@ void CWaypointData::WriteData(COutBitsStream& bs) const {
 	bs << unkown << Waypoints << unkown2;
 }
 
-void CWaypoints::ReadData(CInBitsStream& bs) {
+void CWaypoints::ReadData(CInBitsStream& bs, DWORD version) {
 	bs >> wMajic >> unkown >> wSize;
-	if (wMajic != 0x5357 || wSize != 0x50)
+	if (wMajic != 0x5357)
 		throw D2Error(14);
+	if (!IsD2R(version) && wSize != 0x50)
+		throw D2Error(14);
+	if (IsD2R(version) && !IsPtr31AndAbove(version)) {
+		// D2R 2.4~2.6: unkown和wSize均为DWORD(各4字节)，旧版为WORD(各2字节)，共多4字节
+		// v3.1 不需要额外读取
+		WORD d2rExtra[2];
+		bs >> d2rExtra;
+	}
 	for (auto& p : wp) p.ReadData(bs);
 }
 
-void CWaypoints::WriteData(COutBitsStream& bs) const {
-	bs << WORD(0x5357) << unkown << WORD(0x50);
+void CWaypoints::WriteData(COutBitsStream& bs, DWORD version) const {
+	bs << WORD(0x5357) << unkown << wSize;
+	if (IsD2R(version) && !IsPtr31AndAbove(version)) {
+		bs << WORD(0) << WORD(0);
+	}
 	for (const auto& p : wp) p.WriteData(bs);
 }
 
@@ -188,6 +205,8 @@ void CD2S_Struct::Reset() {
 	stCorpse.Reset();
 	stMercenary.Reset();
 	stGolem.Reset();
+	wMagic666C = 0x666C;
+	dwUnknown666C = 0;
 }
 
 void CD2S_Struct::ReadData(CInBitsStream& bs) {
@@ -215,39 +234,55 @@ void CD2S_Struct::ReadData(CInBitsStream& bs) {
 		bs >> NamePTR31;
 		CopyMemory(NamePTR, NamePTR31, sizeof(NamePTR31));
 	} else if (IsPtr24AndAbove(dwVersion)) {
-		// D2R PTR2.4/2.5 (0x62-0x68): NamePTR 为 0x40 字节
-		BYTE NamePTR24[0x40];
+		// D2R PTR2.4/2.5/2.6 (0x62-0x68): NamePTR 为 0x3C 字节
+		BYTE NamePTR24[0x3C];
 		bs >> NamePTR24;
 		CopyMemory(NamePTR, NamePTR24, sizeof(NamePTR24));
-		bs >> unkown8;
 	} else {
-		bs >> NamePTR >> unkown8;
+		bs >> NamePTR;
 	}
-	if (isV31) bs >> unkown8;
-	qDebug() << "R1a";
-	QuestInfo.ReadData(bs);
-	qDebug() << "R1b";
-	Waypoints.ReadData(bs);
-	qDebug() << "R2";
-	bs >> NPC;
-	qDebug() << "R3";
+	bs >> unkown8;
+	if (IsD2R(dwVersion) && !isV31) {
+		BYTE unkownD2RExtra[4];
+		bs >> unkownD2RExtra;
+	}
+	QuestInfo.ReadData(bs, dwVersion);
+	Waypoints.ReadData(bs, dwVersion);
+	if (IsD2R(dwVersion) && !isV31) {
+		BYTE npcBuf[0x30];
+		bs >> npcBuf;
+		CopyMemory(NPC, npcBuf, sizeof(npcBuf));
+	} else {
+		bs >> NPC;
+	}
 	PlayerStats.ReadData(bs);
-	qDebug() << "R3a";
 	Skills.ReadData(bs);
-	qDebug() << "R4";
 	ItemList.ReadData(bs, dwVersion);
-	qDebug() << "R5";
 	stCorpse.ReadData(bs, dwVersion);
-	qDebug() << "R6";
-	if (isExpansion()) {
+	if (isExpansion() || isV31) {
 		stMercenary.ReadData(bs, HasMercenary(), dwVersion);
 		stGolem.ReadData(bs, dwVersion);
 	}
-	bs.AlignByte();
-	qDebug() << "R7";
-	if (!bs.Good() || bs.DataSize() != bs.BytePos())
+	if (isV31) {
+		bs.AlignByte();
+		const DWORD remaining = bs.DataSize() - bs.BytePos();
+		if (remaining >= 6) {
+			WORD peekMagic = 0;
+			bs >> peekMagic;
+			if (peekMagic == 0x666C) {
+				wMagic666C = peekMagic;
+				bs >> dwUnknown666C;
+			} else {
+				bs.SeekBack(2);
+			}
+		}
+	} else {
+		bs.AlignByte();
+	}
+	if (!bs.Good() || bs.DataSize() < bs.BytePos())
 		throw D2Error(11);
-	qDebug() << "R8";
+	if (!isV31 && bs.DataSize() != bs.BytePos())
+		throw D2Error(11);
 }
 
 BOOL CD2S_Struct::WriteData(COutBitsStream& bs) const {
@@ -268,25 +303,36 @@ BOOL CD2S_Struct::WriteData(COutBitsStream& bs) const {
 	if (isV31) {
 		bs << NamePTR;
 	} else if (IsPtr24AndAbove(dwVersion)) {
-		// D2R PTR2.4/2.5: NamePTR 只写 0x40 字节
-		bs.WriteBytes(NamePTR, 0x40);
-		bs << unkown8;
+		// D2R PTR2.4/2.5/2.6: NamePTR 写 0x3C 字节
+		bs.WriteBytes(NamePTR, 0x3C);
 	} else {
-		bs << NamePTR << unkown8;
+		bs << NamePTR;
 	}
-	if (isV31) bs << unkown8;
-	QuestInfo.WriteData(bs);
-	Waypoints.WriteData(bs);
-	bs << NPC;
+	bs << unkown8;
+	if (IsD2R(dwVersion) && !IsPtr31AndAbove(dwVersion)) {
+		bs << DWORD(0);
+	}
+	QuestInfo.WriteData(bs, dwVersion);
+	Waypoints.WriteData(bs, dwVersion);
+	if (IsD2R(dwVersion) && !IsPtr31AndAbove(dwVersion)) {
+		bs.WriteBytes(NPC, 0x30);
+	} else {
+		bs << NPC;
+	}
 	PlayerStats.WriteData(bs);
 	Skills.WriteData(bs);
 	ItemList.WriteData(bs, dwVersion);
 	stCorpse.WriteData(bs, dwVersion);
-	if (isExpansion()) {
+	if (isExpansion() || isV31) {
 		stMercenary.WriteData(bs, HasMercenary(), dwVersion);
 		stGolem.WriteData(bs, dwVersion);
 	}
-	bs.AlignByte();
+	if (isV31 && wMagic666C != 0) {
+		bs.AlignByte();
+		bs << wMagic666C << dwUnknown666C;
+	} else {
+		bs.AlignByte();
+	}
 	bs << offset_value(offSize, bs.BytePos());
 	auto& data = bs.Data();
 	const DWORD dwCrc = ComputCRC(&data[0], data.size(), 0);

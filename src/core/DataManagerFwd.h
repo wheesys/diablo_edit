@@ -14,11 +14,13 @@ extern DataManager* g_dataMgr;
 // D2 文件解析异常（替代 MFC 的 throw ::theApp.MsgBoxInfo(n) 模式）
 class D2Error : public std::runtime_error {
 public:
-    explicit D2Error(const QString& msg) : std::runtime_error(msg.toStdString()), m_msg(msg) {}
+    explicit D2Error(const QString& msg) : std::runtime_error(msg.toStdString()), m_msg(msg), m_code(-1) {}
     explicit D2Error(int msgId); // 从消息ID构建错误信息
     const QString& message() const { return m_msg; }
+    int code() const { return m_code; }
 private:
     QString m_msg;
+    int m_code;
 };
 
 // 跨平台 UTF-8 名称编解码（替代 MultiByteToWideChar/WideCharToMultiByte）

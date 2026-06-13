@@ -36,8 +36,8 @@ struct CQuestInfo
 	WORD	wSize;
 	CQuestInfoData	QIData[3];
 	void Reset() {}
-	void ReadData(CInBitsStream& bs);
-	void WriteData(COutBitsStream& bs) const;
+	void ReadData(CInBitsStream& bs, DWORD version);
+	void WriteData(COutBitsStream& bs, DWORD version) const;
 };
 
 struct CWaypointData
@@ -56,8 +56,8 @@ struct CWaypoints
 	WORD	wSize;
 	CWaypointData	wp[3];
 	void Reset() {}
-	void ReadData(CInBitsStream& bs);
-	void WriteData(COutBitsStream& bs) const;
+	void ReadData(CInBitsStream& bs, DWORD version);
+	void WriteData(COutBitsStream& bs, DWORD version) const;
 };
 
 struct CPlayerStats
@@ -128,7 +128,7 @@ struct CD2S_Struct
 	BOOL HasCorpse() const { return stCorpse.HasCorpse(); }
 	BOOL HasMercenary() const { return IsD2R(dwVersion) ? (dwMercControl != 0) : (wMercName > 0); }
 	BOOL isLadder() const { return (charType & 0x40) != 0; }
-	BOOL isExpansion() const { return IsPtr31AndAbove(dwVersion) ? TRUE : (charType & 0x20) != 0; }
+	BOOL isExpansion() const { return (charType & 0x20) != 0; }
 	BOOL isDiedBefore() const { return (charType & 0x8) != 0; }
 	BOOL isHardcore() const { return (charType & 0x4) != 0; }
 	void Reset();
@@ -179,4 +179,6 @@ public:
 	CCorpse			stCorpse;
 	CMercenary		stMercenary;
 	CGolem			stGolem;
+	WORD			wMagic666C;
+	DWORD			dwUnknown666C;
 };

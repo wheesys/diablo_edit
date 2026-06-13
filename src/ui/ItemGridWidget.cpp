@@ -153,7 +153,8 @@ CItemView::CItemView(const CD2Item& it, EEquip eq, EPosition pos, int x, int y)
     , gridWidth((it.MetaData().Range >> 4) & 0xF)
     , gridHeight(it.MetaData().Range & 0xF)
 {
-    gemItems.resize(item.Sockets(), -1);
+    gemItems.resize(item.Sockets());
+    gemItems.fill(-1);
 }
 
 QSize CItemView::viewSize() const {
@@ -197,7 +198,8 @@ GridView::GridView(EPosition pos, const PositionInfo& info)
     , m_rows(info.rows)
 {
     int cellCount = (isGrid() ? m_cols * m_rows : (hasNormalII(EPosition(pos)) || hasCorpseII(EPosition(pos)) ? 2 : 1));
-    m_itemIndex.resize(cellCount, -1);
+    m_itemIndex.resize(cellCount);
+    m_itemIndex.fill(-1);
 }
 
 bool GridView::isGrid() const { return ::isGrid(EPosition(m_position)); }
@@ -286,7 +288,7 @@ ItemGridWidget::~ItemGridWidget() = default;
 void ItemGridWidget::initGridView() {
     m_gridViews.clear();
     for (int i = STASH; i < POSITION_END; ++i)
-        m_gridViews.emplace_back(EPosition(i), POSITION_INFO[i]);
+        m_gridViews.push_back(GridView(EPosition(i), POSITION_INFO[i]));
     setD2R(true);
 }
 
@@ -950,7 +952,7 @@ void ItemGridWidget::addItemInGrid(const CD2Item& item, int body) {
     EPosition pos = std::get<0>(t);
     int x = std::get<1>(t), y = std::get<2>(t);
     int index = m_itemViews.size();
-    m_itemViews.emplace_back(item, equip, pos, x, y);
+    m_itemViews.push_back(CItemView(item, equip, pos, x, y));
 
     if (isInMouse(pos)) {
         m_pickedItemIndex = index;
@@ -967,7 +969,7 @@ void ItemGridWidget::addItemInGrid(const CD2Item& item, int body) {
             if (gem.iColumn < 0 || gem.iColumn >= m_itemViews[index].gemItems.size())
                 continue;
             m_itemViews[index].gemItems[gem.iColumn] = m_itemViews.size();
-            m_itemViews.emplace_back(gem, itemToEquip(gem), IN_SOCKET, gem.iColumn, 0);
+            m_itemViews.push_back(CItemView(gem, itemToEquip(gem), IN_SOCKET, gem.iColumn, 0));
         }
     }
 }
