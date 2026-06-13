@@ -77,8 +77,9 @@ void CWaypoints::ReadData(CInBitsStream& bs, DWORD version) {
 		throw D2Error(14);
 	if (!IsD2R(version) && wSize != 0x50)
 		throw D2Error(14);
-	if (IsD2R(version)) {
-		// D2R: unkown和wSize均为DWORD(各4字节)，旧版为WORD(各2字节)，共多4字节
+	if (IsD2R(version) && !IsPtr31AndAbove(version)) {
+		// D2R 2.4~2.6: unkown和wSize均为DWORD(各4字节)，旧版为WORD(各2字节)，共多4字节
+		// v3.1 不需要额外读取
 		WORD d2rExtra[2];
 		bs >> d2rExtra;
 	}
@@ -87,11 +88,9 @@ void CWaypoints::ReadData(CInBitsStream& bs, DWORD version) {
 
 void CWaypoints::WriteData(COutBitsStream& bs, DWORD version) const {
 	bs << WORD(0x5357) << unkown << wSize;
-	if (IsD2R(version)) {
+	if (IsD2R(version) && !IsPtr31AndAbove(version)) {
 		bs << WORD(0) << WORD(0);
 	}
-	if (IsD2R(version))
-		bs << WORD(0) << WORD(0);
 	for (const auto& p : wp) p.WriteData(bs);
 }
 
@@ -235,18 +234,27 @@ void CD2S_Struct::ReadData(CInBitsStream& bs) {
 		bs >> NamePTR31;
 		CopyMemory(NamePTR, NamePTR31, sizeof(NamePTR31));
 	} else if (IsPtr24AndAbove(dwVersion)) {
-		// D2R PTR2.4/2.5 (0x62-0x68): NamePTR 为 0x40 字节
-		BYTE NamePTR24[0x40];
+		// D2R PTR2.4/2.5/2.6 (0x62-0x68): NamePTR 为 0x3C 字节
+		BYTE NamePTR24[0x3C];
 		bs >> NamePTR24;
 		CopyMemory(NamePTR, NamePTR24, sizeof(NamePTR24));
-		bs >> unkown8;
 	} else {
-		bs >> NamePTR >> unkown8;
+		bs >> NamePTR;
 	}
-	if (isV31) bs >> unkown8;
+	bs >> unkown8;
+	if (IsD2R(dwVersion) && !isV31) {
+		BYTE unkownD2RExtra[4];
+		bs >> unkownD2RExtra;
+	}
 	QuestInfo.ReadData(bs, dwVersion);
 	Waypoints.ReadData(bs, dwVersion);
-	bs >> NPC;
+	if (IsD2R(dwVersion) && !isV31) {
+		BYTE npcBuf[0x30];
+		bs >> npcBuf;
+		CopyMemory(NPC, npcBuf, sizeof(npcBuf));
+	} else {
+		bs >> NPC;
+	}
 	PlayerStats.ReadData(bs);
 	Skills.ReadData(bs);
 	ItemList.ReadData(bs, dwVersion);
@@ -295,18 +303,21 @@ BOOL CD2S_Struct::WriteData(COutBitsStream& bs) const {
 	if (isV31) {
 		bs << NamePTR;
 	} else if (IsPtr24AndAbove(dwVersion)) {
-		// D2R PTR2.4/2.5: NamePTR 只写 0x40 字节
-		bs.WriteBytes(NamePTR, 0x40);
-		bs << unkown8;
+		// D2R PTR2.4/2.5/2.6: NamePTR 写 0x3C 字节
+		bs.WriteBytes(NamePTR, 0x3C);
 	} else {
-		bs << NamePTR << unkown8;
+		bs << NamePTR;
 	}
-	if (isV31) bs << unkown8;
+	bs << unkown8;
+	if (IsD2R(dwVersion) && !IsPtr31AndAbove(dwVersion)) {
+		bs << DWORD(0);
+	}
 	QuestInfo.WriteData(bs, dwVersion);
 	Waypoints.WriteData(bs, dwVersion);
-	bs << NPC;
-	if (isV31) {
-		bs << WORD(0);
+	if (IsD2R(dwVersion) && !IsPtr31AndAbove(dwVersion)) {
+		bs.WriteBytes(NPC, 0x30);
+	} else {
+		bs << NPC;
 	}
 	PlayerStats.WriteData(bs);
 	Skills.WriteData(bs);
