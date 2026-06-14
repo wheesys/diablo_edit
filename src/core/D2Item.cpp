@@ -386,6 +386,7 @@ const CItemMetaData* CItemInfo::ReadData(CInBitsStream& bs, DWORD version, BOOL 
 		else bs >> bits(b, 8);
 	auto pItemData = g_dataMgr->itemMetaData(dwTypeID);
 	if (!pItemData) {
+		fflush(stderr);
 		if (IsNameValid()) throw D2Error(6);
 		else throw D2Error(18);
 	}
@@ -546,10 +547,17 @@ void CD2Item::ReadData(CInBitsStream& bs, DWORD version) {
 		pItemData = pItemInfo.ensure().ReadData(bs, dwVersion, bSimple, bRuneWord, bPersonalized, bSocketed);
 	}
 	ASSERT(pItemData);
-		// v105: simple 物品（非 socket filler, location!=6）有 16-bit trailing marker
-		if (bSimple && IsRotWAndAbove(dwVersion) && iLocation != 6) {
-			WORD trailingMarker;
-			bs >> trailingMarker;
+		// v105: simple 物品 trailing 处理
+		// 非 socket filler (location!=6): 16-bit trailing marker (WORD=2)
+		// socket filler (location==6): 8-bit field (value=2) per d2r-horadric-tools
+		if (bSimple && IsRotWAndAbove(dwVersion)) {
+			if (iLocation == 6) {
+				BYTE socketTrail;
+				bs >> bits(socketTrail, 8);	// socket filler: 8-bit field
+			} else {
+				WORD trailingMarker;
+				bs >> trailingMarker;	// non-socket: 16-bit trailing marker
+			}
 		}
 	bs.AlignByte();
 	aGemItems.resize(Gems());
@@ -586,9 +594,15 @@ void CD2Item::WriteData(COutBitsStream& bs, DWORD version) const {
 		if (bEar) pEar->WriteData(bs, version);
 		else pItemInfo->WriteData(bs, *pItemData, version, bSimple, bRuneWord, bPersonalized, bSocketed);
 	}
-		// v105: simple 物品（非 socket filler）写 16-bit trailing marker
-		if (bSimple && IsRotWAndAbove(version) && iLocation != 6)
-			bs << WORD(2);
+		// v105: simple 物品 trailing 处理
+		// 非 socket filler (location!=6): 16-bit trailing marker (WORD=2)
+		// socket filler (location==6): 8-bit field (value=2) per d2r-horadric-tools
+		if (bSimple && IsRotWAndAbove(version)) {
+			if (iLocation == 6)
+				bs << bits<BYTE>(2, 8);
+			else
+				bs << WORD(2);
+		}
 	bs.AlignByte();
 	for (auto item : aGemItems) if (bs.Good()) item.WriteData(bs, version);
 }
