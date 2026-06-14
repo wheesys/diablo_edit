@@ -82,6 +82,9 @@ public:
 			bytes_ -= back;
 	}
 
+	void SavePosition(DWORD& b, DWORD& bi) const { b = bytes_; bi = bits_; }
+	void RestorePosition(DWORD b, DWORD bi) { bytes_ = b; bits_ = bi; bad_ = false; }
+
 	void SkipUntil(const char * pattern) {
 		ASSERT(pattern);
 		if (ensure(0)) {
