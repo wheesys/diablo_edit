@@ -248,7 +248,20 @@ void CD2S_Struct::ReadData(CInBitsStream& bs) {
 	}
 	QuestInfo.ReadData(bs, dwVersion);
 	Waypoints.ReadData(bs, dwVersion);
-	if (IsD2R(dwVersion) && !isV31) {
+	if (isV31) {
+		// v105+: NPC bytes are variable-length (42 observed, not 48=0x30)
+		// Use std::search to find "gf" marker dynamically
+		ZeroMemory(NPC, sizeof(NPC));
+		const auto& raw = bs.Data();
+		const DWORD curPos = bs.BytePos();
+		const auto* begin = reinterpret_cast<const char*>(&raw[curPos]);
+		const auto* end = begin + (raw.size() - curPos);
+		auto match = std::search(begin, end, "gf", "gf" + 2);
+		const DWORD npcLen = (match != end) ? (DWORD)(match - begin) : sizeof(NPC);
+		if (npcLen > 0 && npcLen <= sizeof(NPC))
+			std::memcpy(NPC, begin, npcLen);
+		for (DWORD i = 0; i < npcLen; ++i) { BYTE d; bs >> d; }
+	} else if (IsD2R(dwVersion) && !isV31) {
 		BYTE npcBuf[0x30];
 		bs >> npcBuf;
 		CopyMemory(NPC, npcBuf, sizeof(npcBuf));

@@ -546,6 +546,11 @@ void CD2Item::ReadData(CInBitsStream& bs, DWORD version) {
 		pItemData = pItemInfo.ensure().ReadData(bs, dwVersion, bSimple, bRuneWord, bPersonalized, bSocketed);
 	}
 	ASSERT(pItemData);
+		// v105: simple 物品（非 socket filler, location!=6）有 16-bit trailing marker
+		if (bSimple && IsRotWAndAbove(dwVersion) && iLocation != 6) {
+			WORD trailingMarker;
+			bs >> trailingMarker;
+		}
 	bs.AlignByte();
 	aGemItems.resize(Gems());
 	for (auto& item : aGemItems) item.ReadData(bs, dwVersion);
@@ -581,6 +586,9 @@ void CD2Item::WriteData(COutBitsStream& bs, DWORD version) const {
 		if (bEar) pEar->WriteData(bs, version);
 		else pItemInfo->WriteData(bs, *pItemData, version, bSimple, bRuneWord, bPersonalized, bSocketed);
 	}
+		// v105: simple 物品（非 socket filler）写 16-bit trailing marker
+		if (bSimple && IsRotWAndAbove(version) && iLocation != 6)
+			bs << WORD(2);
 	bs.AlignByte();
 	for (auto item : aGemItems) if (bs.Good()) item.WriteData(bs, version);
 }

@@ -67,6 +67,7 @@ public:
 	}
 	DWORD DataSize() const { return (DWORD)data_.size(); }
 	DWORD BytePos() const{return bytes_;}
+		DWORD BitPos() const{return bits_;}
 	bool Good() const { return !bad_; }
 	std::vector<BYTE> & Data() { return data_; }
 
