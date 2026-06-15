@@ -168,7 +168,13 @@ void CMercenary::WriteData(COutBitsStream& bs, BOOL hasMercenary, DWORD version)
 void CGolem::ReadData(CInBitsStream& bs, DWORD version) {
 	bs >> wMagic >> bHasGolem;
 	if (wMagic != 0x666B) throw D2Error(21);
-	if (bHasGolem) pItem.ensure().ReadData(bs, version);
+	if (bHasGolem) {
+		if (IsPtr31AndAbove(version)) {
+			; // v105: Golem savebits pending, skip item parsing
+		} else {
+			pItem.ensure().ReadData(bs, version);
+		}
+	}
 }
 
 void CGolem::WriteData(COutBitsStream& bs, DWORD version) const {

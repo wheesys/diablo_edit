@@ -183,7 +183,8 @@ class COutBitsStream
 public:
 	COutBitsStream() :bytes_(0), bits_(0), bad_(false) {}
 	DWORD BytePos() const { return bytes_; }
-	bool Good() const { return !bad_; }
+		DWORD BitPos() const { return bits_; }
+		bool Good() const { return !bad_; }
 	const std::vector<BYTE> & Data() {
 		ensure(0);
 		data_.resize(bytes_);

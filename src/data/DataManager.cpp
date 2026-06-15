@@ -322,7 +322,9 @@ UINT DataManager::sectionToIndex(LangSection section, UINT index) const {
 // --- Language string forwarding ---
 
 #define D2_LANG_GETTER(name, section) \
-	QString DataManager::name(UINT index) const { return getString(sectionToIndex(section, index)); }
+	QString DataManager::name(UINT index) const { \
+		return index < sectionSize(section) ? getString(sectionToIndex(section, index)) : QString(); \
+	}
 
 D2_LANG_GETTER(langTitle, DUMMY_START)
 D2_LANG_GETTER(menuPrompt, MENU_PROMPT)

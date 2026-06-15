@@ -547,6 +547,12 @@ void CD2Item::ReadData(CInBitsStream& bs, DWORD version) {
 		pItemData = pItemInfo.ensure().ReadData(bs, dwVersion, bSimple, bRuneWord, bPersonalized, bSocketed);
 	}
 	ASSERT(pItemData);
+		// v105: non-simple 物品在属性列表终止符后若恰好字节对齐，需消耗 1-bit padding
+		if (!bSimple && IsRotWAndAbove(dwVersion) && bs.BitPos() == 0) {
+			BOOL padding;
+			bs >> padding;
+		}
+
 		// v105: simple 物品 trailing 处理
 		// 非 socket filler (location!=6): 16-bit trailing marker (WORD=2)
 		// socket filler (location==6): 8-bit field (value=2) per d2r-horadric-tools
@@ -594,6 +600,10 @@ void CD2Item::WriteData(COutBitsStream& bs, DWORD version) const {
 		if (bEar) pEar->WriteData(bs, version);
 		else pItemInfo->WriteData(bs, *pItemData, version, bSimple, bRuneWord, bPersonalized, bSocketed);
 	}
+		// v105: non-simple 物品 1-bit padding（与 ReadData 对应）
+		if (!bSimple && IsRotWAndAbove(version) && bs.BitPos() == 0) {
+			bs << BOOL(FALSE);
+		}
 		// v105: simple 物品 trailing 处理
 		// 非 socket filler (location!=6): 16-bit trailing marker (WORD=2)
 		// socket filler (location==6): 8-bit field (value=2) per d2r-horadric-tools
