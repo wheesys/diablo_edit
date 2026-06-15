@@ -280,16 +280,21 @@ void CD2S_Struct::ReadData(CInBitsStream& bs) {
 	}
 	if (isV31) {
 		bs.AlignByte();
-		const DWORD remaining = bs.DataSize() - bs.BytePos();
-		if (remaining >= 6) {
-			WORD peekMagic = 0;
-			bs >> peekMagic;
-			if (peekMagic == 0x666C) {
-				wMagic666C = peekMagic;
+		// v105 golem section format:
+		//   [item bytes] + TAIL_BRIDGE(0x0100) + 0x666C + dwUnknown666C
+		// TAIL_BRIDGE is always present between golem item and 0x666C trailer.
+		// Use SavePosition/RestorePosition for backward compatibility with
+		// files that may lack TAIL_BRIDGE (written by older versions).
+		DWORD savedByte = 0, savedBit = 0;
+		bs.SavePosition(savedByte, savedBit);
+		WORD bridge = 0, lf = 0;
+		bs >> bridge >> lf;
+		if (bridge == 0x0100 && lf == 0x666C && bs.Good()) {
+			wMagic666C = lf;
+			if (bs.BytePos() + 4 <= bs.DataSize())
 				bs >> dwUnknown666C;
-			} else {
-				bs.SeekBack(2);
-			}
+		} else {
+			bs.RestorePosition(savedByte, savedBit);
 		}
 	} else {
 		bs.AlignByte();
@@ -344,6 +349,7 @@ BOOL CD2S_Struct::WriteData(COutBitsStream& bs) const {
 	}
 	if (isV31 && wMagic666C != 0) {
 		bs.AlignByte();
+		bs << WORD(0x0100);  // TAIL_BRIDGE
 		bs << wMagic666C << dwUnknown666C;
 	} else {
 		bs.AlignByte();
