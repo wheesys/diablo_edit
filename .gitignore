@@ -293,6 +293,19 @@ build_linux/
 # Qt auto-generated files
 .qmake.stash
 moc_*.cpp
+moc_predefs.h
 qrc_*.cpp
 *.o
 *.pro.user
+
+# Compiled binaries
+DiabloEdit
+tools/verify_property/verify_property
+tools/verify_property/verify_property_be39
+tools/build_itemdata/build_itemdata
+tools/verify_merc/test_merc
+tools/generate_data/generate_data
+tools/trace_ps
+
+# IDE personal config
+.serena/.gitignore
