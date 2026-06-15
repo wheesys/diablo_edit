@@ -558,9 +558,13 @@ void CD2Item::ReadData(CInBitsStream& bs, DWORD version) {
 		// socket filler (location==6): 8-bit field (value=2) per d2r-horadric-tools
 		if (bSimple && IsRotWAndAbove(dwVersion)) {
 			if (iLocation == 6) {
-				BYTE socketTrail;
-				bs >> bits(socketTrail, 8);	// socket filler: 8-bit field
-			} else {
+					BYTE socketTrail;
+					bs >> bits(socketTrail, 8);	// 8-bit field (=2)
+					// v105 socket filler padding: ensure 11-byte minimum
+					const DWORD bitsRem = bs.BitPos();
+					if (bitsRem == 0 || bitsRem == 7)
+						bs >> bits(socketTrail, 2);
+				} else {
 				WORD trailingMarker;
 				bs >> trailingMarker;	// non-socket: 16-bit trailing marker
 			}
@@ -608,9 +612,12 @@ void CD2Item::WriteData(COutBitsStream& bs, DWORD version) const {
 		// 非 socket filler (location!=6): 16-bit trailing marker (WORD=2)
 		// socket filler (location==6): 8-bit field (value=2) per d2r-horadric-tools
 		if (bSimple && IsRotWAndAbove(version)) {
-			if (iLocation == 6)
-				bs << bits<BYTE>(2, 8);
-			else
+			if (iLocation == 6) {
+					bs << bits<BYTE>(2, 8);
+					const DWORD bitsRem = bs.BitPos();
+					if (bitsRem == 0 || bitsRem == 7)
+						bs << bits<WORD>(0, 2);
+				} else
 				bs << WORD(2);
 		}
 	bs.AlignByte();
