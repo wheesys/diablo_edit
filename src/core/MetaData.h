@@ -17,6 +17,9 @@ struct CItemMetaData
 	WORD NameIndex = 0;
 	BYTE Equip = 0;
 	BYTE Range = 0;
+
+	/** 返回物品类型代码（4字符，如 "elx", "hpo"） */
+	const char* typeCode() const { return reinterpret_cast<const char*>(sTypeName); }
 	BOOL Simple = FALSE;
 	BOOL Normal = FALSE;
 	BOOL White = FALSE;

@@ -9,9 +9,11 @@ set(CMAKE_AUTOUIC ON)
 
 # Qt6 查找
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
+find_package(Qt6 COMPONENTS Test)  # 测试框架（可选）
 
-# 源文件
-set(CORE_SOURCES
+# === OBJECT libraries（避免重复编译，供 main 和 tests 共用）===
+
+add_library(diablo_core_obj OBJECT
     src/core/BinDataStream.cpp
     src/core/MetaData.cpp
     src/core/D2Item.cpp
@@ -19,7 +21,24 @@ set(CORE_SOURCES
     src/core/ImageManager.cpp
     src/core/quicklz.cpp
 )
+target_include_directories(diablo_core_obj PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/core
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/data
+)
+target_link_libraries(diablo_core_obj PUBLIC Qt6::Core Qt6::Gui)
 
+add_library(diablo_data_obj OBJECT
+    src/data/DataManager.cpp
+)
+target_include_directories(diablo_data_obj PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/core
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/data
+)
+target_link_libraries(diablo_data_obj PUBLIC Qt6::Core Qt6::Gui)
+
+# 头文件集（仅用于 IDE 展示，不影响编译）
 set(CORE_HEADERS
     src/core/D2Types.h
     src/core/D2Version.h
@@ -33,10 +52,6 @@ set(CORE_HEADERS
     src/core/quicklz.h
     src/core/quicklz.c.h
     src/core/compress_quicklz.h
-)
-
-set(DATA_SOURCES
-    src/data/DataManager.cpp
 )
 
 set(DATA_HEADERS
@@ -69,10 +84,10 @@ set(UI_HEADERS
     src/ui/FoundryDialog.h
 )
 
-# 主可执行文件
+# === 主可执行文件 ===
 add_executable(${PROJECT_NAME}
-    ${CORE_SOURCES}
-    ${DATA_SOURCES}
+    $<TARGET_OBJECTS:diablo_core_obj>
+    $<TARGET_OBJECTS:diablo_data_obj>
     ${UI_SOURCES}
     src/main.cpp
     resources/resources.qrc
@@ -107,4 +122,11 @@ option(BUILD_DATA_TOOLS "Build data generation tools" ON)
 if(BUILD_DATA_TOOLS)
     add_subdirectory(tools/generate_data)
     add_subdirectory(tools/verify_property)
+endif()
+
+# === 测试 ===
+option(BUILD_TESTS "Build test suite" ON)
+if(BUILD_TESTS AND Qt6Test_FOUND)
+    enable_testing()
+    add_subdirectory(tests)
 endif()

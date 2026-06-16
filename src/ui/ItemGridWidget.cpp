@@ -146,7 +146,12 @@ static std::tuple<int, int, int, int, int> positionToItem(EPosition pos, int x, 
 
 CItemView::CItemView(const CD2Item& it, EEquip eq, EPosition pos, int x, int y)
     : item(it)
-    , picIndex(it.MetaData().PicIndex)
+    , picIndex([&it]() -> int {
+        // 优先通过物品代码查找图片索引
+        auto* img = ImageManager::instance();
+        int idx = img->picIndexForCode(it.MetaData().typeCode());
+        return idx >= 0 ? idx : it.MetaData().PicIndex;
+    }())
     , equip(eq)
     , position(pos)
     , gridX(x), gridY(y)

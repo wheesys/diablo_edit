@@ -98,7 +98,9 @@ void NewItemDialog::onTreeSelectionChanged() {
     auto* meta = g_dataMgr->itemMetaData(typeID);
     if (!meta) return;
 
-    m_displayPicIndex = meta->PicIndex;
+    m_displayPicIndex = ImageManager::instance()->picIndexForCode(meta->typeCode());
+    if (m_displayPicIndex < 0)
+        m_displayPicIndex = meta->PicIndex; // fallback
     QPixmap pix = ImageManager::instance()->getPixmap(m_displayPicIndex);
     if (!pix.isNull()) {
         m_previewLabel->setPixmap(pix.scaled(56, 56, Qt::KeepAspectRatio, Qt::SmoothTransformation));

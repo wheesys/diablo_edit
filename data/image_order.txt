@@ -1,0 +1,323 @@
+elx	Misc/Elixir.bmp
+hpo	Misc/Hpo.bmp
+mpo	Misc/Mpo.bmp
+hpf	Misc/Hpf.bmp
+mpf	Misc/Mpf.bmp
+vps	Misc/Stamina Potion.bmp
+yps	Misc/Antidote Potion.bmp
+rvs	Misc/Reiuvenation Potion.bmp
+rvl	Misc/Full Reiuvenation Potion.bmp
+wms	Misc/Thawing Potion.bmp
+tbk	Misc/Tome of Town Portal.bmp
+ibk	Misc/Tome of Identify.bmp
+amu	Misc/Amulet.bmp
+vip	Misc/Top of the Horadric Staff.bmp
+rin	Misc/Ring.bmp
+gld	Misc/Gold.bmp
+jnf	Misc/Scroll of Jnifuss.bmp
+bkd	Misc/Key to the Cairn Stones.bmp
+aqv	Misc/Arrows.bmp
+tch	Misc/Torch.bmp
+cqv	Misc/Bolts.bmp
+tsc	Misc/Scroll of Town Portal.bmp
+isc	Misc/Scroll of Identify.bmp
+hrt	Misc/Skeleton Heart.bmp
+brz	Misc/Skeleton Brain.bmp
+jaw	Misc/Skeleton Jawbone.bmp
+eyz	Misc/Skeleton Eye.bmp
+hrn	Misc/Skeleton Horn.bmp
+tal	Misc/Skeleton Tail.bmp
+flg	Misc/Skeleton Flag.bmp
+fng	Misc/Skeleton Fang.bmp
+qll	Misc/Skeleton Quill.bmp
+sol	Misc/Skeleton Soul.bmp
+scz	Misc/Skeleton Scalp.bmp
+spe	Misc/Skeleton Spleen.bmp
+key	Misc/Key.bmp
+luv	Misc/the Black Tower Key.bmp
+xyz	Misc/Potion of Life.bmp
+jnd	Misc/a Jade Figuring.bmp
+g34	Misc/the Golden Bird.bmp
+bbb	Misc/Lam Esen's Tome.bmp
+box	Misc/Horadric Cube.bmp
+tr1	Misc/Horadric Scroll.bmp
+mss	Misc/Mephisto's Soulstone.bmp
+ass	Misc/Book of Skill.bmp
+qey	Misc/Khalim's Eye.bmp
+qhr	Misc/Khalim's Heart.bmp
+qbr	Misc/Khalim's Brain.bmp
+rin	Misc/Khalim's Ear.bmp
+gcv	Misc/Chipped Amethyst.bmp
+gfv	Misc/Flawed Amethyst.bmp
+gsv	Misc/Amethyst.bmp
+gzv	Misc/Flawless Amethyst.bmp
+gpv	Misc/Perfect Amethyst.bmp
+gcy	Misc/Chipped Topaz.bmp
+gfy	Misc/Flawed Topaz.bmp
+gsy	Misc/Topaz.bmp
+gly	Misc/Flawless Topaz.bmp
+gpy	Misc/Perfect Topaz.bmp
+gcb	Misc/Chipped Sapphire.bmp
+gss	Misc/Flawed Saphire.bmp
+gsb	Misc/Sapphire.bmp
+glb	Misc/Flawless Sapphire.bmp
+gpb	Misc/Perfect Sapphire.bmp
+gcg	Misc/Chipped Emerald.bmp
+gfg	Misc/Flawed Emerald.bmp
+gsg	Misc/Emerald.bmp
+glg	Misc/Flawless Emerald.bmp
+gpg	Misc/Perfect Emerald.bmp
+gcr	Misc/Chipped Ruby.bmp
+gpr	Misc/Flawled Ruby.bmp
+gsr	Misc/Ruby.bmp
+glr	Misc/Flawless Ruby.bmp
+gpr	Misc/Perfect Ruby.bmp
+gcw	Misc/Chipped Diamond.bmp
+gfw	Misc/Flawed Diamond.bmp
+gsw	Misc/Diamond.bmp
+glw	Misc/Flawless Diamond.bmp
+gpw	Misc/Perfect Diamond.bmp
+hp1	Misc/Minor Healing Potion.bmp
+hp2	Misc/Light Healing Potion.bmp
+hp3	Misc/Healing Potion.bmp
+hp4	Misc/Greater Healing Potion.bmp
+hp5	Misc/Super Healing Potion.bmp
+mp1	Misc/Minor Mana Potion.bmp
+mp2	Misc/Light Mana Potion.bmp
+mp3	Misc/Mana Potion.bmp
+mp4	Misc/Greater Mana Potion.bmp
+mp5	Misc/Super Mana Potion.bmp
+skc	Misc/Chipped Skull.bmp
+skf	Misc/Flawed Skull.bmp
+sku	Misc/Skull.bmp
+skl	Misc/Flawless Skull.bmp
+skz	Misc/Perfect Skull.bmp
+hrb	Misc/Herb.bmp
+cm1	Misc/Small Charm.bmp
+cm2	Misc/Large Charm.bmp
+cm3	Misc/Grand Charm.bmp
+rps	Misc/Rps.bmp
+rpl	Misc/Rpl.bmp
+bps	Misc/Bps.bmp
+bpl	Misc/Bpl.bmp
+r01	Misc/El Rune.bmp
+r02	Misc/Eld Rune.bmp
+r03	Misc/Tir Rune.bmp
+r04	Misc/Nef Rune.bmp
+r05	Misc/Eth Rune.bmp
+r06	Misc/Ith Rune.bmp
+r07	Misc/Tal Rune.bmp
+r08	Misc/Ral Rune.bmp
+r09	Misc/Ort Rune.bmp
+r10	Misc/Thul Rune.bmp
+r11	Misc/Amn Rune.bmp
+r12	Misc/Sol Rune.bmp
+r13	Misc/Shael Rune.bmp
+r14	Misc/Dol Rune.bmp
+r15	Misc/Hel Rune.bmp
+r16	Misc/Io Rune.bmp
+r17	Misc/Lum Rune.bmp
+r18	Misc/Ko Rune.bmp
+r19	Misc/Fal Rune.bmp
+r20	Misc/Lem Rune.bmp
+r21	Misc/Pul Rune.bmp
+r22	Misc/Um Rune.bmp
+r23	Misc/Mal Rune.bmp
+r24	Misc/Ist Rune.bmp
+r25	Misc/Gul Rune.bmp
+r26	Misc/Vex Rune.bmp
+r27	Misc/Ohm Rune.bmp
+r28	Misc/Lo Rune.bmp
+r29	Misc/Sur Rune.bmp
+r30	Misc/Ber Rune.bmp
+r31	Misc/Jah Rune.bmp
+r32	Misc/Cham Rune.bmp
+r33	Misc/Zod Rune.bmp
+jew	Misc/Jewel.bmp
+ice	Misc/Malah's Potion.bmp
+0sc	Misc/Scroll of Knowledge.bmp
+tr2	Misc/Scroll of Resistance.bmp
+cap	帽子/01 Cap.bmp
+skp	帽子/02 Skull Cap.bmp
+hlm	帽子/03 Helm.bmp
+fhl	帽子/04 Full Helm.bmp
+ghm	帽子/05 Great Helm.bmp
+crn	帽子/06 Crown.bmp
+msk	帽子/07 Mask.bmp
+xh9	帽子/08 Grim Helm.bmp
+ci0	帽子/头冠/09 Circlet.bmp
+ci1	帽子/头冠/10 Coronet.bmp
+ci2	帽子/头冠/11 Tiara.bmp
+ci3	帽子/头冠/12 Diadem.bmp
+ba1	帽子/Bar专用/21 Jawbone Cap.bmp
+ba2	帽子/Bar专用/22 Fanged Helm.bmp
+ba3	帽子/Bar专用/23 Horned Helm.bmp
+ba4	帽子/Bar专用/24 Assault Helmet.bmp
+ba5	帽子/Bar专用/25 Avenger Guard.bmp
+dr1	帽子/Dru专用/16 Wolf Head.bmp
+dr2	帽子/Dru专用/17 Hawk Helm.bmp
+dr3	帽子/Dru专用/18 Antlers.bmp
+dr5	帽子/Dru专用/19 Spirit Mask.bmp
+dr4	帽子/Dru专用/20 Falcon Mask.bmp
+lgl	手套/01 Leather Gloves.bmp
+vgl	手套/02 Heavy Gloves.bmp
+mgl	手套/03 Chain Gloves.bmp
+tgl	手套/04 Light Gauntlets.bmp
+hgl	手套/05 Gauntlets.bmp
+lbt	鞋子/01 Boots.bmp
+vbt	鞋子/02 Heavy Boots.bmp
+mbt	鞋子/03 Chain Boots.bmp
+tbt	鞋子/04 Light Plated Boots.bmp
+hbt	鞋子/05 Greaves.bmp
+lbl	腰带/01 Sash.bmp
+vbl	腰带/02 Light Belt.bmp
+mbl	腰带/03 Belt.bmp
+tbl	腰带/04 Heavy Belt.bmp
+hbl	腰带/05 Plated Belt.bmp
+qui	衣服/001 Quilted Armor.bmp
+lea	衣服/002 Leather Armor.bmp
+hla	衣服/003 Hard Leather Armor.bmp
+stu	衣服/004 Studded Leather.bmp
+rng	衣服/005 Ring Mail.bmp
+scl	衣服/006 Scale Mail.bmp
+chn	衣服/007 Chain Mail.bmp
+brs	衣服/008 Breast Plate.bmp
+spl	衣服/009 Splint Mail.bmp
+plt	衣服/010 Plate Mail.bmp
+xar	衣服/011 Field Mail.bmp
+gth	衣服/012 Gothic Plate.bmp
+ful	衣服/013 Full Plate Mail.bmp
+aar	衣服/014 Ancient Armor.bmp
+ltp	衣服/015 Light Plate.bmp
+buc	盾牌/01 Buckler.bmp
+sml	盾牌/02 Small Shield.bmp
+lrg	盾牌/03 Large Shield.bmp
+kit	盾牌/04 Kite Shield.bmp
+tow	盾牌/06 Tower Shield.bmp
+gts	盾牌/07 Gothic Shield.bmp
+bsh	盾牌/08 Bone Shield.bmp
+spk	盾牌/09 Spiked Shield.bmp
+pa1	盾牌/Pal专用/10 Targe.bmp
+pa2	盾牌/Pal专用/11 Rondache.bmp
+pa3	盾牌/Pal专用/12 Heraldic Shield.bmp
+pa4	盾牌/Pal专用/13 Aerin Shield.bmp
+pa5	盾牌/Pal专用/14 Crown Shield.bmp
+ne1	盾牌/Nec专用/01 Preserved Head.bmp
+ne2	盾牌/Nec专用/02 Zombie Head.bmp
+ne3	盾牌/Nec专用/03 Unraveller Head.bmp
+ne4	盾牌/Nec专用/04 Gargoyle Head.bmp
+ne5	盾牌/Nec专用/05 Demon Head.bmp
+hax	武器/斧头/01 Hand Axe.bmp
+axe	武器/斧头/02 Axe.bmp
+2ax	武器/斧头/03 Double Axe.bmp
+mpi	武器/斧头/04 Military Pick.bmp
+wax	武器/斧头/05 War Axe.bmp
+lax	武器/斧头/06 Large Axe.bmp
+bax	武器/斧头/07 Broad Axe.bmp
+btx	武器/斧头/08 Battle Axe.bmp
+gax	武器/斧头/09 Great Axe.bmp
+gix	武器/斧头/10 Gaint Axe.bmp
+wnd	武器/Nec杖/01 Wand.bmp
+ywn	武器/Nec杖/02 Yew Wand.bmp
+bwn	武器/Nec杖/03 Bone Wand.bmp
+gwn	武器/Nec杖/04 Grim Wand.bmp
+clb	武器/棒锤/01 Club.bmp
+spc	武器/棒锤/02 Spiked Club.bmp
+mac	武器/棒锤/03 Mace.bmp
+mst	武器/棒锤/04 Morning Star.bmp
+fla	武器/棒锤/05 Flail.bmp
+whm	武器/棒锤/06 War Hammer.bmp
+mau	武器/棒锤/07 Maul.bmp
+gma	武器/棒锤/08 Great Maul.bmp
+scp	武器/Pal杖/01 Scepter.bmp
+gsc	武器/Pal杖/02 Grand Scepter.bmp
+wsp	武器/Pal杖/03 War Scepter.bmp
+ssd	武器/刀剑/01 Short Sword.bmp
+scm	武器/刀剑/02 Scimitar.bmp
+sbr	武器/刀剑/03 Sabre.bmp
+flc	武器/刀剑/04 Falchion.bmp
+crs	武器/刀剑/05 Crystal Sword.bmp
+bsd	武器/刀剑/06 Broad Sword.bmp
+lsd	武器/刀剑/07 Long Sword.bmp
+wsd	武器/刀剑/08 War Sword.bmp
+2hs	武器/刀剑/09 Tow Handed Sword.bmp
+clm	武器/刀剑/10 Claymore.bmp
+gis	武器/刀剑/11 Giant Sword.bmp
+bsw	武器/刀剑/12 Bastard Sword.bmp
+flb	武器/刀剑/13 Flamberge.bmp
+gsd	武器/刀剑/14 Great Sword.bmp
+dgr	武器/刀剑/15 Dagger.bmp
+dir	武器/刀剑/16 Dirk.bmp
+kri	武器/刀剑/17 Kris.bmp
+bld	武器/刀剑/18 Blade.bmp
+tkf	武器/飞刀/1 Throwing Knife.bmp
+tax	武器/飞刀/2 Throwing Axe.bmp
+bkf	武器/飞刀/3 Balanced Knife.bmp
+bal	武器/飞刀/4 Balanced Axe.bmp
+jav	武器/标枪/1 Javelin.bmp
+pil	武器/标枪/2 Pilum.bmp
+ssp	武器/标枪/3 Short Spear.bmp
+glv	武器/标枪/4 Glaive.bmp
+tsp	武器/标枪/5 Throwing Spear.bmp
+spr	武器/长柄/01 Spear.bmp
+tri	武器/长柄/02 Trident.bmp
+brn	武器/长柄/03 Brandistock.bmp
+spt	武器/长柄/04 Spetum.bmp
+pik	武器/长柄/05 Pike.bmp
+bar	武器/长柄/06 Bardiche.bmp
+vou	武器/长柄/07 Voulge.bmp
+scy	武器/长柄/08 Scythe.bmp
+pax	武器/长柄/09 Poleaxe.bmp
+hal	武器/长柄/10 Halberd.bmp
+wsc	武器/长柄/11 War Scythe.bmp
+8ss	武器/Sor杖/01 Jo Staff.bmp
+lst	武器/Sor杖/02 Long Staff.bmp
+gst	武器/Sor杖/03 Ganrled Staff.bmp
+bst	武器/Sor杖/04 Battle Staff.bmp
+wst	武器/Sor杖/05 War Staff.bmp
+sbw	武器/弓弩/01 Short Bow.bmp
+hbw	武器/弓弩/02 Hunter's Bow.bmp
+lbw	武器/弓弩/03 Long Bow.bmp
+cbw	武器/弓弩/04 Composite Bow.bmp
+sbb	武器/弓弩/05 Short Battle Bow.bmp
+lbb	武器/弓弩/06 Long Battle Bow.bmp
+swb	武器/弓弩/07 Short War Bow.bmp
+lwb	武器/弓弩/08 Long War Bow.bmp
+lxb	武器/弓弩/09 Light Crossbow.bmp
+mxb	武器/弓弩/10 Crossbow.bmp
+hxb	武器/弓弩/11 Heavy Crossbow.bmp
+rxb	武器/弓弩/12 Repeating Crossbow.bmp
+gps	武器/毒药/01 Rancid Gas Potion.bmp
+ops	武器/毒药/02 Oil Potion.bmp
+gpm	武器/毒药/03 Choking Gas Potion.bmp
+opm	武器/毒药/04 Exploding Potion.bmp
+gpl	武器/毒药/05 Strangling Gas Potion.bmp
+opl	武器/毒药/06 Fulminating Potion.bmp
+d33	武器/任务/01 Decoy Gidbinn.bmp
+g33	武器/任务/02 The Gidbinn.bmp
+leg	武器/任务/03 Wirt's Leg.bmp
+hdm	武器/任务/04 Horadric Malus.bmp
+hfh	武器/任务/05 Hell Forge Hammer.bmp
+hst	武器/任务/06 Horadric Staff.bmp
+msf	武器/任务/07 Staff Of Kings.bmp
+qf1	武器/任务/08 Khalim's Flail.bmp
+qf2	武器/任务/09 Khalim's Will.bmp
+ktr	武器/Ass剪/01 Katar.bmp
+axf	武器/Ass剪/02 Hatchet Hands.bmp
+clw	武器/Ass剪/03 Claws.bmp
+skr	武器/Ass剪/04 Scissors Katar.bmp
+ob1	武器/Sor球/1 Eagle Orb.bmp
+ob2	武器/Sor球/2 Sacred Globe.bmp
+ob3	武器/Sor球/3 Smoked Sphere.bmp
+ob4	武器/Sor球/4 Clasped Orb.bmp
+ob5	武器/Sor球/5 Jared's Stone.bmp
+am1	武器/Ama专用/1 Stag Bow.bmp
+am2	武器/Ama专用/2 Reflex Bow.bmp
+am3	武器/Ama专用/3 Maiden Spear.bmp
+am4	武器/Ama专用/4 Maiden Pike.bmp
+am5	武器/Ama专用/5 Maiden Javelin.bmp
+toa	Misc/Token of Absolution.bmp
+fed	Misc/Twisted Essence of Destruction.bmp
+bet	Misc/Twisted Essence of Terror.bmp
+ceh	Misc/Twisted Essence of Hatred.bmp
+tes	Misc/Twisted Essence of Suffering.bmp
