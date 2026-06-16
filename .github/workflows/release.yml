@@ -51,6 +51,7 @@ jobs:
           $version = "${{ github.event.inputs.version || github.ref_name }}"
           $version = $version -replace '^v', ''
           Copy-Item -Recurse data build/Release/data
+          Copy-Item -Recurse resources build/Release/resources
           Compress-Archive -Path build/Release/* -DestinationPath ${{ env.APP_NAME }}-windows-x64-$version.zip
 
       - name: Upload artifact
@@ -82,6 +83,8 @@ jobs:
         run: |
           version="${{ github.event.inputs.version || github.ref_name }}"
           version="${version#v}"
+          cp -r data build/
+          cp -r resources build/
           cd build
           tar czf ../${{ env.APP_NAME }}-linux-x64-${version}.tar.gz *
           cd ..
