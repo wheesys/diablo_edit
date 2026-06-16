@@ -4,9 +4,14 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Release version (e.g., 1.0.0)'
+        description: '版本号 (e.g., 1.0.0)'
         required: true
         type: string
+      create_release:
+        description: '是否创建 GitHub Release'
+        required: true
+        type: boolean
+        default: false
   push:
     tags:
       - 'v*'
@@ -90,6 +95,7 @@ jobs:
   create-release:
     name: Create Release
     needs: [build-windows, build-linux]
+    if: github.event_name == 'push' || github.event.inputs.create_release == 'true'
     runs-on: ubuntu-latest
 
     steps:
