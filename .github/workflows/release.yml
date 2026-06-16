@@ -7,6 +7,16 @@ on:
         description: '版本号 (e.g., 1.0.0)'
         required: true
         type: string
+      build_windows:
+        description: '构建 Windows x64'
+        required: true
+        type: boolean
+        default: true
+      build_linux:
+        description: '构建 Linux x64'
+        required: true
+        type: boolean
+        default: true
       create_release:
         description: '是否创建 GitHub Release'
         required: true
@@ -22,6 +32,7 @@ env:
 jobs:
   build-windows:
     name: Build Windows x64
+    if: github.event_name == 'push' || github.event.inputs.build_windows == 'true'
     runs-on: windows-latest
 
     steps:
@@ -62,6 +73,7 @@ jobs:
 
   build-linux:
     name: Build Linux x64
+    if: github.event_name == 'push' || github.event.inputs.build_linux == 'true'
     runs-on: ubuntu-latest
 
     steps:
@@ -103,11 +115,13 @@ jobs:
 
     steps:
       - name: Download Windows artifact
+        if: github.event_name == 'push' || github.event.inputs.build_windows == 'true'
         uses: actions/download-artifact@v4
         with:
           name: ${{ env.APP_NAME }}-windows-x64
 
       - name: Download Linux artifact
+        if: github.event_name == 'push' || github.event.inputs.build_linux == 'true'
         uses: actions/download-artifact@v4
         with:
           name: ${{ env.APP_NAME }}-linux-x64
