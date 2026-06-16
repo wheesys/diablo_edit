@@ -52,9 +52,13 @@ add_test(NAME D2Item COMMAND test_d2item)
 
 # ====== test_itemgridwidget (visual) ======
 # Needs: ItemGridWidget.cpp (+ its own moc), g_dataMgr, ImageManager
+# ItemGridWidget.cpp references FoundryDialog and NewItemDialog, so their
+# implementations must be compiled into the test executable too.
 add_executable(test_itemgridwidget
     ui/test_itemgridwidget.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/../src/ui/ItemGridWidget.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/../src/ui/FoundryDialog.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/../src/ui/NewItemDialog.cpp
     $<TARGET_OBJECTS:diablo_core_obj>
     $<TARGET_OBJECTS:diablo_data_obj>
 )
