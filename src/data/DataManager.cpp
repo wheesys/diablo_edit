@@ -184,7 +184,7 @@ bool DataManager::readLangRes() {
 }
 
 bool DataManager::readItemRes() {
-	string out_buf = loadCompressedFile(m_sDataPath + QStringLiteral("/itemdata.dat"), "ITEM");
+	string out_buf = loadCompressedFile(m_sDataPath + QStringLiteral("/itemdata_31.dat"), "ITEM");
 	if (out_buf.empty()) return false;
 	istringstream iss(out_buf);
 	decltype(m_vItemMetaData) sections;
@@ -231,7 +231,7 @@ bool DataManager::readItemRes() {
 }
 
 bool DataManager::readPropRes() {
-	string out_buf = loadCompressedFile(m_sDataPath + QStringLiteral("/property.dat"), "PROP");
+	string out_buf = loadCompressedFile(m_sDataPath + QStringLiteral("/property_31.dat"), "PROP");
 	if (out_buf.empty()) return false;
 	istringstream iss(out_buf);
 	decltype(m_vPropertyMetaData) props;

@@ -566,7 +566,7 @@ void CD2Item::ReadData(CInBitsStream& bs, DWORD version) {
 						bs >> bits(socketTrail, 2);
 				} else {
 				WORD trailingMarker;
-				bs >> trailingMarker;	// non-socket: 16-bit trailing marker
+				bs >> bits(trailingMarker, 16);	// non-socket: 16-bit trailing marker (位读, Huffman 码后流可能未对齐)
 			}
 		}
 	bs.AlignByte();
@@ -618,7 +618,7 @@ void CD2Item::WriteData(COutBitsStream& bs, DWORD version) const {
 					if (bitsRem == 0 || bitsRem == 7)
 						bs << bits<WORD>(0, 2);
 				} else
-				bs << WORD(2);
+				bs << bits<WORD>(2, 16);	// non-socket: 位写 16-bit trailing marker
 		}
 	bs.AlignByte();
 	for (auto item : aGemItems) if (bs.Good()) item.WriteData(bs, version);
